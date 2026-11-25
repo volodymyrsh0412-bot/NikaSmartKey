@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_power">Przycisk zasilania (włączanie/wyłączanie ekranu)</string>
+    <string name="nika_vc_power_off">Nie używać</string>
+    <string name="nika_vc_power_double">Podwójne naciśnięcie</string>
+    <string name="nika_vc_power_triple">Potrójne naciśnięcie</string>
+    <string name="nika_vc_name">Twoje imię do powitania</string>
+    <string name="nika_vc_name_empty">nie podano</string>
+    <string name="nika_vc_greet">Cześć, %1$s!</string>
+    <string name="nika_vc_greet_plain">Cześć!</string>
+    <string name="nika_vc_greet_mode">Powitanie</string>
+    <string name="nika_vc_greet_mode_name">Cześć i imię</string>
+    <string name="nika_vc_greet_mode_hello">Tylko „Cześć”</string>
+    <string name="nika_vc_greet_mode_beep">Tylko sygnał dźwiękowy</string>
+</resources>

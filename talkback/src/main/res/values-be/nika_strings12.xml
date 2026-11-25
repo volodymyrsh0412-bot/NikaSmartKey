@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_power">Кнопка сілкавання (уключэнне/выключэнне экрана)</string>
+    <string name="nika_vc_power_off">Не выкарыстоўваць</string>
+    <string name="nika_vc_power_double">Падвойнае націсканне</string>
+    <string name="nika_vc_power_triple">Патройнае націсканне</string>
+    <string name="nika_vc_name">Тваё імя для прывітання</string>
+    <string name="nika_vc_name_empty">не пазначана</string>
+    <string name="nika_vc_greet">Прывітанне, %1$s!</string>
+    <string name="nika_vc_greet_plain">Прывітанне!</string>
+    <string name="nika_vc_greet_mode">Прывітанне</string>
+    <string name="nika_vc_greet_mode_name">Прывітанне і імя</string>
+    <string name="nika_vc_greet_mode_hello">Толькі «Прывітанне»</string>
+    <string name="nika_vc_greet_mode_beep">Толькі гукавы сігнал</string>
+</resources>

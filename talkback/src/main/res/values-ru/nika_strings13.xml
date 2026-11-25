@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_category">Голосовые команды Ники</string>
+    <string name="nika_vc_prefix">Голосовая команда: %1$s</string>
+    <string name="nika_vol_title">Громкость отклика</string>
+    <string name="nika_vol_value">%1$d %%</string>
+</resources>

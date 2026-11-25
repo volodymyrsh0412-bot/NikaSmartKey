@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+      android:key="@string/pref_speak_notifications_key"
+      android:defaultValue="@bool/pref_speak_notifications_default"
+      android:title="@string/title_pref_speak_notifications"
+      android:summary="@string/summary_pref_speak_notifications" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+      android:key="@string/pref_screenoff_key"
+      android:defaultValue="@bool/pref_screenoff_default"
+      android:title="@string/title_pref_speak_screenoff" />
+  <PreferenceCategory
+      android:key="nika_notif_cat_what"
+      android:title="@string/nika_notif_cat_what"
+      android:summary="@string/nika_notif_what_summary">
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_app"
+        android:defaultValue="false"
+        android:title="@string/nika_notif_app_title"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_time"
+        android:defaultValue="false"
+        android:title="@string/nika_notif_time_title"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_type"
+        android:defaultValue="true"
+        android:title="@string/nika_notif_type_title"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_head"
+        android:defaultValue="true"
+        android:title="@string/nika_notif_head_title"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_text"
+        android:defaultValue="true"
+        android:title="@string/nika_notif_text_title"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_noemoji"
+        android:defaultValue="false"
+        android:title="@string/nika_notif_noemoji"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <ListPreference
+        android:key="nika_notif_maxwords"
+        android:defaultValue="0"
+        android:title="@string/nika_notif_maxwords"
+        android:summary="%s"
+        android:entries="@array/nika_notif_maxwords_entries"
+        android:entryValues="@array/nika_notif_maxwords_values"
+        android:dependency="@string/pref_speak_notifications_key" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_notif_history_on"
+        android:defaultValue="true"
+        android:title="@string/nika_notif_history_on" />
+  </PreferenceCategory>
+</PreferenceScreen>

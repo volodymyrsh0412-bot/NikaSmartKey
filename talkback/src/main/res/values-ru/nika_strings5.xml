@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_tr_title">Переводчик</string>
+    <string name="nika_tr_summary">Перевод текста моделью на телефоне или онлайн-сервисом</string>
+    <string name="nika_tr_cat_general">Перевод</string>
+    <string name="nika_tr_cat_keys">Онлайн-сервисы: ключи и модели</string>
+    <string name="nika_tr_mode_title">Как переводить</string>
+    <string name="nika_tr_lang_title">Переводить на язык</string>
+    <string name="nika_tr_provider_title">Онлайн-сервис</string>
+    <string name="nika_tr_copy_title">Копировать перевод в буфер обмена</string>
+    <string name="nika_tr_copy_summary">Перевод всегда озвучивается. Действия для жестов в списке действий жестов, раздел «Переводчик».</string>
+    <string name="nika_tr_category">Переводчик</string>
+    <string name="nika_act_tr_last">Перевести последнюю озвученную фразу</string>
+    <string name="nika_act_tr_focus">Перевести элемент в фокусе (или выделенный текст)</string>
+    <string name="nika_act_tr_clipboard">Перевести буфер обмена</string>
+    <string name="nika_act_tr_screen">Перевести весь экран</string>
+    <string name="nika_tr_nothing">Нет текста для перевода</string>
+    <string name="nika_tr_clipboard_empty">Буфер обмена пуст или его не удалось прочитать</string>
+    <string name="nika_tr_working">Перевожу</string>
+    <string name="nika_tr_failed">Не удалось перевести</string>
+    <string name="nika_tr_no_network">Нет связи</string>
+    <string name="nika_tr_no_local">На телефоне нет модели. Загрузите её в настройках ИИ на устройстве</string>
+    <string name="nika_tr_no_key">Не указан ключ онлайн-сервиса</string>
+    <string name="nika_tr_claude_key_title">Ключ: Claude</string>
+    <string name="nika_tr_claude_model_title">Модель: Claude</string>
+    <string name="nika_tr_gemini_key_title">Ключ: Gemini</string>
+    <string name="nika_tr_gemini_model_title">Модель: Gemini</string>
+    <string name="nika_tr_openai_key_title">Ключ: GPT</string>
+    <string name="nika_tr_openai_model_title">Модель: GPT</string>
+    <string name="nika_tr_grok_key_title">Ключ: xAI Grok (Илон Маск)</string>
+    <string name="nika_tr_grok_model_title">Модель: xAI Grok (Илон Маск)</string>
+    <string name="nika_tr_deepseek_key_title">Ключ: DeepSeek</string>
+    <string name="nika_tr_deepseek_model_title">Модель: DeepSeek</string>
+    <string name="nika_tr_mistral_key_title">Ключ: Mistral</string>
+    <string name="nika_tr_mistral_model_title">Модель: Mistral</string>
+    <string name="nika_tr_groq_key_title">Ключ: Groq Llama</string>
+    <string name="nika_tr_groq_model_title">Модель: Groq Llama</string>
+    <string name="nika_tr_openrouter_key_title">Ключ: OpenRouter</string>
+    <string name="nika_tr_openrouter_model_title">Модель: OpenRouter</string>
+    <string name="nika_tr_custom_key_title">Ключ: Свой сервис (совместимый с OpenAI)</string>
+    <string name="nika_tr_custom_model_title">Модель: Свой сервис (совместимый с OpenAI)</string>
+    <string name="nika_tr_vivo_key_title">Ключ: Vivo (NVDACN)</string>
+    <string name="nika_tr_vivo_model_title">Модель: Vivo (NVDACN)</string>
+    <string name="nika_tr_custom_base_title">Свой сервис: адрес API (без /chat/completions)</string>
+    <string name="nika_tr_nvdacn_user_title">NVDACN: логин</string>
+    <string name="nika_tr_nvdacn_pass_title">NVDACN: пароль</string>
+    <string-array name="nika_tr_mode_entries">
+        <item>Автоматически: онлайн, а без ключа или связи на телефоне</item>
+        <item>Только на телефоне</item>
+        <item>Только онлайн</item>
+    </string-array>
+    <string-array name="nika_tr_lang_entries">
+        <item>Украинский</item>
+        <item>Английский</item>
+        <item>Русский</item>
+        <item>Белорусский</item>
+        <item>Польский</item>
+        <item>Немецкий</item>
+        <item>Французский</item>
+        <item>Испанский</item>
+        <item>Итальянский</item>
+        <item>Португальский</item>
+        <item>Чешский</item>
+        <item>Словацкий</item>
+        <item>Турецкий</item>
+        <item>Арабский</item>
+        <item>Китайский</item>
+        <item>Японский</item>
+        <item>Корейский</item>
+    </string-array>
+    <string-array name="nika_tr_provider_entries">
+        <item>Claude</item>
+        <item>Gemini</item>
+        <item>GPT</item>
+        <item>xAI Grok (Илон Маск)</item>
+        <item>DeepSeek</item>
+        <item>Mistral</item>
+        <item>Groq Llama</item>
+        <item>OpenRouter</item>
+        <item>Свой сервис (совместимый с OpenAI)</item>
+        <item>Vivo (NVDACN)</item>
+    </string-array>
+    <string name="nika_tr_prefix_title">Перед переводом</string>
+    <string-array name="nika_tr_prefix_entries">
+        <item>Сказать слово</item>
+        <item>Подать звук</item>
+        <item>Ничего</item>
+    </string-array>
+    <string name="nika_radial_gap_title">Расстояние между пунктами меню</string>
+    <string-array name="nika_radial_gap_entries">
+        <item>Стандартное</item>
+        <item>3°</item>
+        <item>5°</item>
+        <item>10°</item>
+        <item>15°</item>
+        <item>20°</item>
+        <item>30°</item>
+    </string-array>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:key="nika_side_enabled"
+        android:defaultValue="false"
+        android:title="@string/nika_side_enabled_title"
+        android:summary="@string/nika_side_enabled_summary" />
+  <ListPreference
+        android:key="nika_side_band_l"
+        android:defaultValue="10"
+        android:title="@string/nika_side_band_l_title"
+        android:summary="%s"
+        android:entries="@array/nika_edge_band_entries"
+        android:entryValues="@array/nika_edge_band_values" />
+  <ListPreference
+        android:key="nika_side_band_r"
+        android:defaultValue="10"
+        android:title="@string/nika_side_band_r_title"
+        android:summary="%s"
+        android:entries="@array/nika_edge_band_entries"
+        android:entryValues="@array/nika_edge_band_values" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_side_cat_len"
+        android:title="@string/nika_side_cat_len">
+    <ListPreference
+          android:key="nika_side_short_len"
+          android:defaultValue="10"
+          android:title="@string/nika_edge_short_len"
+          android:summary="%s"
+          android:entries="@array/nika_edge_short_entries"
+          android:entryValues="@array/nika_edge_short_values" />
+    <ListPreference
+          android:key="nika_side_long_len"
+          android:defaultValue="25"
+          android:title="@string/nika_edge_long_len"
+          android:summary="%s"
+          android:entries="@array/nika_edge_tlong_entries"
+          android:entryValues="@array/nika_edge_tlong_values" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_side_cat_lu"
+        android:title="@string/nika_side_cat_lu">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_lu_short_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_short_action" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_lu_long_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_long_action" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_side_cat_ld"
+        android:title="@string/nika_side_cat_ld">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_back"
+        android:key="nika_side_ld_short_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_short_action" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_ld_long_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_long_action" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_side_cat_ru"
+        android:title="@string/nika_side_cat_ru">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_ru_short_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_short_action" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_ru_long_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_long_action" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_side_cat_rd"
+        android:title="@string/nika_side_cat_rd">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_rd_short_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_short_action" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_side_rd_long_act"
+        android:summary="%s"
+        android:title="@string/nika_edge_long_action" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_side_cat_announce"
+        android:title="@string/nika_edge_cat_announce">
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+          android:key="nika_side_speak"
+          android:defaultValue="true"
+          android:title="@string/nika_edge_speak_title"
+          android:summary="@string/nika_edge_speak_summary" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+          android:key="nika_side_sound"
+          android:defaultValue="true"
+          android:title="@string/nika_edge_sound_title"
+          android:summary="@string/nika_edge_sound_summary" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+          android:key="nika_edge_debug"
+          android:defaultValue="false"
+          android:title="@string/nika_edge_debug_title"
+          android:summary="@string/nika_edge_debug_summary" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

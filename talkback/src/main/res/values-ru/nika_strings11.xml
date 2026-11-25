@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_hf_title">Справка и отзывы</string>
+    <string name="nika_hf_summary">Группа в Telegram, написать разработчику, руководство</string>
+    <string name="nika_up_title">Обновления</string>
+    <string name="nika_up_summary">Автоматическая проверка и проверить сейчас</string>
+    <string name="nika_key_vol_up_lock">Громкость вверх на заблокированном экране</string>
+    <string name="nika_key_vol_down_lock">Громкость вниз на заблокированном экране</string>
+    <string name="nika_clock_sw_progress_title">Озвучивать секундомер каждые</string>
+    <string name="nika_clock_timer_progress_title">Озвучивать остаток таймера каждые</string>
+    <string-array name="nika_clock_progress_entries">
+        <item>Не озвучивать</item>
+        <item>1 секунду</item>
+        <item>2 секунды</item>
+        <item>3 секунды</item>
+        <item>4 секунды</item>
+        <item>5 секунд</item>
+        <item>10 секунд</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>45 секунд</item>
+        <item>60 секунд</item>
+    </string-array>
+</resources>

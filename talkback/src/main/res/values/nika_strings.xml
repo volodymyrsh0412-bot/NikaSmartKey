@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_whats_new_title">What\'s new</string>
+    <string name="nika_whats_new_summary">Changes in this version</string>
+    <string name="nika_whats_new_message">Nika is a screen reader for Android.\n\nWhat\'s new in this version:\n\u2022 New items: Help and feedback (Telegram group, write to the developer, guide) and Updates (automatic check, check now).\n\u2022 Stopwatch and timer can say the time every 1 to 60 seconds, also on the lock screen (Clock settings).\n\u2022 Volume keys have their own actions for the lock screen.\n\u2022 The translator keys list names Grok (xAI) and Groq (Llama) differently.</string>
+    <string name="nika_feedback_title">Send feedback</string>
+    <string name="nika_feedback_summary">Write to the developer in Telegram: report a problem or suggest an idea</string>
+    <string name="nika_feedback_subject">Nika feedback (build %1$d)</string>
+    <string name="nika_feedback_body">\n\n---\nDevice: %1$s %2$s\nAndroid: %3$s\nBuild: %4$d</string>
+    <string name="nika_feedback_copied">No email app was found. The address %1$s was copied.</string>
+</resources>

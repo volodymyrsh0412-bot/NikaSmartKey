@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title of the notification and dialog that offer to install Nika under its new app ID. [CHAR LIMIT=NONE] -->
+    <string name="update_move_title">Nika is moving to a new app</string>
+    <!-- Text of the notification that offers to install Nika under its new app ID. [CHAR LIMIT=NONE] -->
+    <string name="update_move_notification_text">Install the new Nika; your settings come with it. Tap to install.</string>
+    <!-- Message of the dialog that offers to install Nika under its new app ID. [CHAR LIMIT=NONE] -->
+    <string name="update_move_dialog_message">Nika is moving to a new app ID, so it can install on more phones. Install the new Nika; your settings come with it. Then turn it on, and this one turns itself off.</string>
+    <!-- Announced before the install prompt for Nika under its new app ID. [CHAR LIMIT=NONE] -->
+    <string name="update_move_installing">Nika is moving to a new app ID. Install the new Nika; your settings come with it.</string>
+    <!-- Announced when the accessibility settings open after the new Nika is installed. [CHAR LIMIT=NONE] -->
+    <string name="update_move_turn_on">Turn on the new Nika, then the old one turns itself off.</string>
+    <!-- Shown when the downloaded update is not a Nika build that can be installed. [CHAR LIMIT=NONE] -->
+    <string name="update_wrong_package">The download is not a Nika update, so it was not installed</string>
+    <!-- Title of the notification that the new Nika shows once it took over from the old one. [CHAR LIMIT=NONE] -->
+    <string name="migration_moved_title">Nika moved to a new app</string>
+    <!-- Text of the notification that offers to uninstall the old Nika. [CHAR LIMIT=NONE] -->
+    <string name="migration_moved_text">Tap to remove the old one.</string>
+</resources>

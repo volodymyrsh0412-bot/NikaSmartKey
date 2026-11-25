@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_gem_cat"
+        android:title="@string/nika_gem_cat_title">
+    <EditTextPreference
+        android:key="nika_gem_live_words"
+        android:defaultValue="live,лайв"
+        android:title="@string/nika_gem_w_live"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:key="nika_gem_video_words"
+        android:defaultValue="камеру,камера,camera"
+        android:title="@string/nika_gem_w_video"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:key="nika_gem_screen_words"
+        android:defaultValue="показати екран,поділитися екраном,share screen,show screen"
+        android:title="@string/nika_gem_w_screen"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:key="nika_gem_text_words"
+        android:defaultValue="запитайте gemini,ask gemini,спросите gemini"
+        android:title="@string/nika_gem_w_text"
+        app:useSimpleSummaryProvider="true" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

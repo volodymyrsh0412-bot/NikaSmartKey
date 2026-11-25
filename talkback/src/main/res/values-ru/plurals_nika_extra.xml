@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="notification_list_group_count">
+    <item quantity="one">%d уведомление</item>
+    <item quantity="few">%d уведомления</item>
+    <item quantity="many">%d уведомлений</item>
+    <item quantity="other">%d уведомления</item>
+  </plurals>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_expanded">rozwinięte</string>
+    <string name="nika_vc_collapsed">zwinięte</string>
+    <string name="nika_vc_power_warn">Działa nie na wszystkich telefonach</string>
+    <string name="nika_vc_clear">Wyczyść</string>
+</resources>

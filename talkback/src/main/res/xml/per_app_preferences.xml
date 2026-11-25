@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <ListPreference
+        android:key="nika_app_selected"
+        android:title="@string/nika_app_pick_title"
+        android:summary="%s" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_app_cat"
+        android:title="@string/nika_app_cat_title">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_1_up"
+        android:summary="%s"
+        android:title="@string/nika_app_g_1_up" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_1_down"
+        android:summary="%s"
+        android:title="@string/nika_app_g_1_down" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_1_left"
+        android:summary="%s"
+        android:title="@string/nika_app_g_1_left" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_1_right"
+        android:summary="%s"
+        android:title="@string/nika_app_g_1_right" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_2_up"
+        android:summary="%s"
+        android:title="@string/nika_app_g_2_up" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_2_down"
+        android:summary="%s"
+        android:title="@string/nika_app_g_2_down" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_2_left"
+        android:summary="%s"
+        android:title="@string/nika_app_g_2_left" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_2_right"
+        android:summary="%s"
+        android:title="@string/nika_app_g_2_right" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_3_up"
+        android:summary="%s"
+        android:title="@string/nika_app_g_3_up" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_3_down"
+        android:summary="%s"
+        android:title="@string/nika_app_g_3_down" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_3_left"
+        android:summary="%s"
+        android:title="@string/nika_app_g_3_left" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_3_right"
+        android:summary="%s"
+        android:title="@string/nika_app_g_3_right" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_2_dtap"
+        android:summary="%s"
+        android:title="@string/nika_app_g_2_dtap" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_3_tap"
+        android:summary="%s"
+        android:title="@string/nika_app_g_3_tap" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_appg_3_dtap"
+        android:summary="%s"
+        android:title="@string/nika_app_g_3_dtap" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

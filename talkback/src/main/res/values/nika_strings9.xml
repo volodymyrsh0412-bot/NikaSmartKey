@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_notif_delete_one">Delete this one</string>
+    <string name="nika_bk_pick_title">What to restore</string>
+    <string name="nika_bk_restore">Restore</string>
+    <string name="nika_bk_g_main">Main settings</string>
+    <string name="nika_bk_g_gestures">Gestures and keys</string>
+    <string name="nika_bk_g_macros">Macros</string>
+    <string name="nika_bk_g_speech">Speech and voices</string>
+    <string name="nika_bk_g_notif">Notifications</string>
+    <string name="nika_bk_g_themes">Sound themes (files)</string>
+    <string name="nika_bk_g_scripts">Scripts (files)</string>
+    <string name="nika_val_keyboard_echo">Keyboard echo</string>
+    <string name="nika_val_punctuation">Punctuation</string>
+    <string name="nika_val_emoji">Emoji</string>
+    <string name="nika_val_say">%1$s: %2$s</string>
+    <string name="nika_act_setting_next">Quick setting: next</string>
+    <string name="nika_act_setting_prev">Quick setting: previous</string>
+    <string name="nika_act_value_next">Quick setting: next value</string>
+    <string name="nika_act_value_prev">Quick setting: previous value</string>
+    <string name="nika_act_slider_up">Slider in focus: increase</string>
+    <string name="nika_act_slider_down">Slider in focus: decrease</string>
+    <string name="nika_act_cursor_right">Text field: cursor right</string>
+    <string name="nika_act_cursor_left">Text field: cursor left</string>
+    <string name="nika_vol_hide_panel">Hide the volume panel</string>
+    <string name="nika_vol_hide_panel_summary">For a volume key without its own action: the volume changes but the panel is not shown</string>
+</resources>

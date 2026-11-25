@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_sv_title">Голас апавяшчэнняў і гадзінніка</string>
+    <string name="nika_sv_summary">Свая гучнасць, сінтэзатар і голас</string>
+    <string name="nika_sv_notif">Апавяшчэнні</string>
+    <string name="nika_sv_clock">Гаворачы гадзіннік</string>
+    <string name="nika_sv_engine">Сінтэзатар</string>
+    <string name="nika_sv_voice">Голас</string>
+    <string name="nika_sv_volume">Гучнасць</string>
+    <string name="nika_sv_default">Па змаўчанні</string>
+    <string name="nika_sv_loading">Загружаю галасы…</string>
+    <string name="nika_sv_novoices">Галасоў не знойдзена</string>
+    <string name="nika_sv_note">Асобна наладзь агучванне апавяшчэнняў і гаворачага гадзінніка. Калі нічога не мяняць, яны гавораць гэтак жа, як усё ў Nika.</string>
+    <string name="nika_vc_lang_auto">Аўтаматычна (як у тэлефона)</string>
+    <string name="nika_vc_mode_title">Як тэлефанаваць</string>
+    <string name="nika_vc_mode_phone">Адразу праз тэлефон, без пытання</string>
+    <string name="nika_vc_mode_ask">Пытаць кожны раз (сістэма дасць выбраць праграму)</string>
+    <string name="nika_vc_number_how">Нумар</string>
+    <string name="nika_vc_number_type">Увесці нумар</string>
+    <string name="nika_vc_number_contact">Выбраць з кантактаў</string>
+    <string name="nika_vc_label_callphone">Званок: %1$s (адразу)</string>
+    <string name="nika_vc_no_contact">Не ўдалося прачытаць кантакт</string>
+    <string name="nika_vc_call_noperm">Няма дазволу на званкі: адкрываю набор нумара</string>
+</resources>

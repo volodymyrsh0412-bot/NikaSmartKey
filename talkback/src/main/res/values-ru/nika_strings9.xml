@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_notif_delete_one">Удалить это</string>
+    <string name="nika_bk_pick_title">Что восстановить</string>
+    <string name="nika_bk_restore">Восстановить</string>
+    <string name="nika_bk_g_main">Основные настройки</string>
+    <string name="nika_bk_g_gestures">Жесты и клавиши</string>
+    <string name="nika_bk_g_macros">Макросы</string>
+    <string name="nika_bk_g_speech">Речь и голоса</string>
+    <string name="nika_bk_g_notif">Уведомления</string>
+    <string name="nika_bk_g_themes">Темы звуков (файлы)</string>
+    <string name="nika_bk_g_scripts">Скрипты (файлы)</string>
+    <string name="nika_val_keyboard_echo">Эхо клавиатуры</string>
+    <string name="nika_val_punctuation">Пунктуация</string>
+    <string name="nika_val_emoji">Эмодзи</string>
+    <string name="nika_val_say">%1$s: %2$s</string>
+    <string name="nika_act_setting_next">Быстрая настройка: следующая</string>
+    <string name="nika_act_setting_prev">Быстрая настройка: предыдущая</string>
+    <string name="nika_act_value_next">Быстрая настройка: следующее значение</string>
+    <string name="nika_act_value_prev">Быстрая настройка: предыдущее значение</string>
+    <string name="nika_act_slider_up">Ползунок в фокусе: увеличить</string>
+    <string name="nika_act_slider_down">Ползунок в фокусе: уменьшить</string>
+    <string name="nika_act_cursor_right">Поле ввода: курсор вправо</string>
+    <string name="nika_act_cursor_left">Поле ввода: курсор влево</string>
+    <string name="nika_vol_hide_panel">Не показывать панель громкости</string>
+    <string name="nika_vol_hide_panel_summary">Для клавиши громкости без своего действия: громкость меняется, но панель не показывается</string>
+</resources>

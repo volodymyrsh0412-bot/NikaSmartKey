@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nika_edge_band_entries">
+        <item>0,5 см</item>
+        <item>1 см</item>
+        <item>1,5 см</item>
+        <item>2 см</item>
+        <item>3 см</item>
+    </string-array>
+    <string-array name="nika_edge_short_entries">
+        <item>0,5 см</item>
+        <item>1 см</item>
+        <item>1,5 см</item>
+        <item>2 см</item>
+        <item>2,5 см</item>
+        <item>3 см</item>
+    </string-array>
+    <string-array name="nika_edge_blong_entries">
+        <item>1,5 см</item>
+        <item>2 см</item>
+        <item>2,5 см</item>
+        <item>3 см</item>
+        <item>4 см</item>
+        <item>5 см</item>
+        <item>6 см</item>
+    </string-array>
+    <string-array name="nika_edge_tlong_entries">
+        <item>1,5 см</item>
+        <item>2 см</item>
+        <item>2,5 см</item>
+        <item>3 см</item>
+        <item>4 см</item>
+        <item>5 см</item>
+        <item>6 см</item>
+    </string-array>
+</resources>

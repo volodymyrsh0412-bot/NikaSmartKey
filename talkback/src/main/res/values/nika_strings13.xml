@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_category">Voice commands of Nika</string>
+    <string name="nika_vc_prefix">Voice command: %1$s</string>
+    <string name="nika_vol_title">Feedback volume</string>
+    <string name="nika_vol_value">%1$d %%</string>
+</resources>

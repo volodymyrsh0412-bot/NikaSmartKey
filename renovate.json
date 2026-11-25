@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    "schedule:weekly"
+  ],
+  "labels": ["dependencies"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "QuickJS-NG, which CMake downloads. URL_HASH has to be updated by hand.",
+      "managerFilePatterns": ["/(^|/)scripting/quickjs/src/main/cpp/CMakeLists\\.txt$/"],
+      "matchStrings": [
+        "github\\.com/(?<depName>quickjs-ng/quickjs)/archive/refs/tags/(?<currentValue>v[0-9.]+)\\.tar\\.gz"
+      ],
+      "datasourceTemplate": "github-tags"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "AGP, Kotlin and the Compose compiler plugin must move together",
+      "matchPackageNames": [
+        "com.android.tools.build:gradle",
+        "com.android.application",
+        "com.android.library",
+        "/^org\\.jetbrains\\.kotlin/"
+      ],
+      "groupName": "build toolchain"
+    },
+    {
+      "description": "One PR for routine AndroidX and Compose updates",
+      "matchPackageNames": ["androidx.**"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "AndroidX"
+    },
+    {
+      "description": "Keep prereleases out unless we pin one by hand",
+      "matchDatasources": ["maven"],
+      "ignoreUnstable": true
+    },
+    {
+      "description": "Guava publishes -jre and -android flavors; stay on -android",
+      "matchPackageNames": ["com.google.guava:guava"],
+      "allowedVersions": "/-android$/"
+    }
+  ]
+}

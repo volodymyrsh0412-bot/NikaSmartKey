@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_hf_title">Довідка та відгуки</string>
+    <string name="nika_hf_summary">Група в Telegram, написати розробнику, посібник</string>
+    <string name="nika_up_title">Оновлення</string>
+    <string name="nika_up_summary">Автоматична перевірка і перевірити зараз</string>
+    <string name="nika_key_vol_up_lock">Гучність вгору на заблокованому екрані</string>
+    <string name="nika_key_vol_down_lock">Гучність вниз на заблокованому екрані</string>
+    <string name="nika_clock_sw_progress_title">Озвучувати секундомір кожні</string>
+    <string name="nika_clock_timer_progress_title">Озвучувати залишок таймера кожні</string>
+    <string-array name="nika_clock_progress_entries">
+        <item>Не озвучувати</item>
+        <item>1 секунду</item>
+        <item>2 секунди</item>
+        <item>3 секунди</item>
+        <item>4 секунди</item>
+        <item>5 секунд</item>
+        <item>10 секунд</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>45 секунд</item>
+        <item>60 секунд</item>
+    </string-array>
+</resources>

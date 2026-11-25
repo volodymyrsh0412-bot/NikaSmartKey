@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_whats_new_page_title">Nika \u2014 скрынрыдар для Android</string>
+    <string name="nika_whats_new_page_text">Што новага:\n\u2022 Новыя пункты: «Даведка і водгукі» (група Telegram, напісаць распрацоўшчыку, кіраўніцтва) і «Абнаўленні» (аўтаправерка, праверыць зараз).\n\u2022 Секундамер і таймер могуць агучваць час кожныя 1–60 секунд, таксама на заблакаваным экране (налады гадзінніка).\n\u2022 Для кнопак гучнасці ёсць асобныя дзеянні на заблакаваным экране.\n\u2022 У ключах перакладчыка Grok (xAI) і Groq (Llama) цяпер называюцца па-рознаму.</string>
+    <string name="nika_update_available">Ёсць абнаўленне: зборка %1$d</string>
+    <string name="nika_update_tap">Націсніце, каб спампаваць і ўстанавіць</string>
+    <string name="nika_telegram_title">Nika ў Telegram</string>
+    <string name="nika_telegram_summary">Група Nika ў Telegram: зносіны, пытанні, ідэі</string>
+    <string name="nika_keys_title">Для кнопкавых смартфонаў</string>
+    <string name="nika_keys_summary">Дзеянні для клавіш гучнасці, лічбаў, стрэлак і іншых клавіш</string>
+    <string name="nika_keys_enabled_title">Дзеянні клавіш</string>
+    <string name="nika_keys_enabled_summary">Уключае або выключае ўсе дзеянні клавіш ніжэй Кнопкі гучнасці не залежаць ад гэтага пераключальніка.</string>
+    <string name="nika_keys_arrows_title">Стрэлкі без дадатковай клавішы</string>
+    <string name="nika_keys_arrows_summary">Калі выключана, працуюць толькі спалучэнні з Alt і іншымі клавішамі</string>
+    <string name="nika_keys_skip_edit_title">У палях уводу не перахопліваць клавішы</string>
+    <string name="nika_keys_skip_edit_summary">Клавішы гучнасці працуюць заўсёды. У полі ўводу стрэлкі рухаюць курсор, а лічбы друкуюцца</string>
+    <string name="nika_keys_hold_title">Працягласць утрымання</string>
+    <string name="nika_keys_multi_title">Паўза паміж націскамі (падвойнае і патройнае)</string>
+    <string name="nika_press_tap1">Адно націсканне</string>
+    <string name="nika_press_hold">Утрыманне</string>
+    <string name="nika_press_tap2">Падвойнае націсканне</string>
+    <string name="nika_press_tap3">Патройнае націсканне</string>
+    <string name="nika_key_vol_up">Гучнасць уверх</string>
+    <string name="nika_key_vol_down">Гучнасць уніз</string>
+    <string name="nika_key_d0">Лічба 0</string>
+    <string name="nika_key_d1">Лічба 1</string>
+    <string name="nika_key_d2">Лічба 2</string>
+    <string name="nika_key_d3">Лічба 3</string>
+    <string name="nika_key_d4">Лічба 4</string>
+    <string name="nika_key_d5">Лічба 5</string>
+    <string name="nika_key_d6">Лічба 6</string>
+    <string name="nika_key_d7">Лічба 7</string>
+    <string name="nika_key_d8">Лічба 8</string>
+    <string name="nika_key_d9">Лічба 9</string>
+    <string name="nika_key_star">Зорачка</string>
+    <string name="nika_key_pound">Рашотка</string>
+    <string name="nika_key_up">Стрэлка ўверх</string>
+    <string name="nika_key_down">Стрэлка ўніз</string>
+    <string name="nika_key_left">Стрэлка ўлева</string>
+    <string name="nika_key_right">Стрэлка ўправа</string>
+    <string name="nika_key_c1">Адвольная клавіша 1</string>
+    <string name="nika_key_c2">Адвольная клавіша 2</string>
+    <string name="nika_key_c3">Адвольная клавіша 3</string>
+    <string name="nika_key_c4">Адвольная клавіша 4</string>
+    <string name="nika_keys_pick_title">Выбраць клавішу</string>
+    <string name="nika_keys_pick_none">Не выбрана</string>
+    <string name="nika_keys_capture_title">Націсніце клавішу</string>
+    <string name="nika_keys_capture_message">Націсніце клавішу, якую хочаце прызначыць. Назад скасоўвае.</string>
+    <string name="nika_keys_capture_clear">Ачысціць</string>
+    <string-array name="nika_keys_hold_entries">
+        <item>300 мс</item>
+        <item>400 мс</item>
+        <item>500 мс</item>
+        <item>700 мс</item>
+        <item>1000 мс</item>
+        <item>1500 мс</item>
+        <item>2000 мс</item>
+    </string-array>
+    <string-array name="nika_keys_multi_entries">
+        <item>200 мс</item>
+        <item>300 мс</item>
+        <item>350 мс</item>
+        <item>500 мс</item>
+        <item>700 мс</item>
+        <item>1000 мс</item>
+    </string-array>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_motion_shake1"
+        android:summary="%s"
+        android:title="@string/nika_motion_shake1" />
+  <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_motion_shake2"
+        android:summary="%s"
+        android:title="@string/nika_motion_shake2" />
+  <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_motion_shakel"
+        android:summary="%s"
+        android:title="@string/nika_motion_shakel" />
+  <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_motion_back2"
+        android:summary="%s"
+        android:title="@string/nika_motion_back2" />
+  <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_motion_back3"
+        android:summary="%s"
+        android:title="@string/nika_motion_back3" />
+  <ListPreference
+        android:key="nika_motion_sens"
+        android:defaultValue="1"
+        android:title="@string/nika_motion_sens_title"
+        android:summary="%s"
+        android:entries="@array/nika_motion_sens_entries"
+        android:entryValues="@array/nika_motion_sens_values" />
+</PreferenceScreen>

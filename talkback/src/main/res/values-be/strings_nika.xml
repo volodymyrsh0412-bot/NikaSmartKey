@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="title_pref_whats_new">Што новага</string>
+  <string name="summary_pref_whats_new">Змены ў гэтай версіі</string>
+  <string name="whats_new_version_title">Nika, першая версія</string>
+  <string name="whats_new_version_summary">• Праграма цяпер называецца Nika.\n• Абнаўленні правяраюцца на старонцы Nika на GitHub.\n• Новае: «Адправіць водгук» у раздзеле «Дапаможнік і даведка». Адкрывае ліст распрацоўшчыку.\n• Палепшаны пераклады на ўкраінскую, рускую, беларускую і польскую мовы.</string>
+  <string name="title_pref_send_feedback">Адправіць водгук</string>
+  <string name="summary_pref_send_feedback">Напісаць распрацоўшчыку па электроннай пошце</string>
+  <string name="feedback_email_subject">Водгук пра Nika</string>
+  <string name="feedback_no_email_app">Не знойдзена праграма для пошты. Напішыце на %1$s</string>
+</resources>

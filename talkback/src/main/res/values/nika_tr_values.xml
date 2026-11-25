@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nika_tr_mode_values" translatable="false">
+        <item>auto</item>
+        <item>local</item>
+        <item>online</item>
+    </string-array>
+    <string-array name="nika_tr_lang_values" translatable="false">
+        <item>uk</item>
+        <item>en</item>
+        <item>ru</item>
+        <item>be</item>
+        <item>pl</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>it</item>
+        <item>pt</item>
+        <item>cs</item>
+        <item>sk</item>
+        <item>tr</item>
+        <item>ar</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+    </string-array>
+    <string-array name="nika_tr_provider_values" translatable="false">
+        <item>claude</item>
+        <item>gemini</item>
+        <item>openai</item>
+        <item>grok</item>
+        <item>deepseek</item>
+        <item>mistral</item>
+        <item>groq</item>
+        <item>openrouter</item>
+        <item>custom</item>
+        <item>vivo</item>
+    </string-array>
+    <string-array name="nika_tr_prefix_values" translatable="false">
+        <item>word</item>
+        <item>sound</item>
+        <item>none</item>
+    </string-array>
+    <string-array name="nika_radial_gap_values" translatable="false">
+        <item>0</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="nika_clock_title">Zegar, minutnik i stoper</string>
+    <string name="nika_clock_summary">Mówiący zegar z godzinami ciszy, minutnik, stoper</string>
+    <string name="nika_clock_cat_clock">Mówiący zegar</string>
+    <string name="nika_clock_cat_timer">Minutnik</string>
+    <string name="nika_clock_enabled_title">Mów godzinę według harmonogramu</string>
+    <string name="nika_clock_enabled_summary">Działa także przy wyłączonym ekranie. Godzinę można też podać od razu gestem: akcje gestów „Zegar, minutnik i stoper”.</string>
+    <string name="nika_clock_interval_title">Jak często mówić</string>
+    <string name="nika_clock_quiet_title">Godziny ciszy (nie mów)</string>
+    <string name="nika_clock_quiet_from_title">Godziny ciszy: od</string>
+    <string name="nika_clock_quiet_to_title">Godziny ciszy: do</string>
+    <string name="nika_clock_battery_title">Podawaj poziom baterii</string>
+    <string name="nika_clock_timer_minutes_title">Czas minutnika</string>
+    <string name="nika_clock_midnight">Północ</string>
+    <string name="nika_clock_battery">Bateria %1$d%%</string>
+    <string name="nika_clock_charging">ładowanie</string>
+    <string name="nika_sw_paused">Stoper wstrzymany</string>
+    <string name="nika_sw_started">Stoper uruchomiony</string>
+    <string name="nika_sw_resumed">Stoper wznowiony</string>
+    <string name="nika_sw_zero">Stoper pokazuje zero</string>
+    <string name="nika_sw_reset_done">Stoper wyzerowany</string>
+    <string name="nika_timer_stopped">Minutnik zatrzymany</string>
+    <string name="nika_timer_started">Minutnik uruchomiony na %1$s</string>
+    <string name="nika_timer_idle">Minutnik nie działa</string>
+    <string name="nika_timer_left">Pozostało: %1$s</string>
+    <string name="nika_timer_done">Minutnik zakończył odliczanie</string>
+    <string name="nika_act_clock_say">Podaj godzinę i baterię</string>
+    <string name="nika_act_sw_toggle">Stoper: start lub pauza</string>
+    <string name="nika_act_sw_say">Stoper: podaj czas</string>
+    <string name="nika_act_sw_reset">Stoper: wyzeruj</string>
+    <string name="nika_act_timer_toggle">Minutnik: start lub stop</string>
+    <string name="nika_act_timer_say">Minutnik: ile zostało</string>
+    <string name="nika_clock_category">Zegar, minutnik i stoper</string>
+    <string name="nika_dur_h">%1$d godz.</string>
+    <string name="nika_dur_m">%1$d min</string>
+    <string name="nika_dur_s">%1$d s</string>
+    <plurals name="nika_clock_hours">
+        <item quantity="one">%d godzina</item>
+        <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
+        <item quantity="other">%d godziny</item>
+    </plurals>
+    <string name="nika_vcat_order">Kolejność i czas</string>
+    <string name="nika_vcat_keys">Klawiatura i formatowanie</string>
+    <string name="nika_vcat_screen">Ekran, powiadomienia i głośność</string>
+    <string name="nika_vcat_symbols">Symbole, emoji i identyfikatory</string>
+    <string name="nika_vcat_progress">Wskaźniki postępu</string>
+    <string name="nika_progress_mode_title">Odczytywanie wskaźników postępu</string>
+    <string name="nika_progress_percent_title">Podawaj wartość w procentach</string>
+    <string name="nika_progress_percent_summary">Zamiast tekstu aplikacji, na przykład „50 procent”. Dźwięk rośnie wraz z postępem.</string>
+    <string name="nika_progress_step_title">Podawaj co</string>
+    <string name="nika_progress_percent_fmt">%1$d%%</string>
+    <string-array name="nika_progress_mode_entries">
+        <item>Głos i dźwięk</item>
+        <item>Tylko głos</item>
+        <item>Tylko dźwięk</item>
+        <item>Nie odczytuj</item>
+    </string-array>
+    <string name="nika_clock_perm_title">Zezwolenie na alarmy i przypomnienia</string>
+    <string name="nika_clock_perm_summary">Otwiera ekran systemu. Zezwól na alarmy i przypomnienia, aby zegar, minutnik i stoper mówiły na czas.</string>
+</resources>

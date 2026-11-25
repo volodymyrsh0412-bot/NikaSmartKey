@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_clock_cat_clock"
+        android:title="@string/nika_clock_cat_clock">
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+          android:key="nika_clock_enabled"
+          android:defaultValue="true"
+          android:title="@string/nika_clock_enabled_title"
+          android:summary="@string/nika_clock_enabled_summary" />
+    <ListPreference
+          android:key="nika_clock_interval"
+          android:defaultValue="30"
+          android:title="@string/nika_clock_interval_title"
+          android:summary="%s"
+          android:entries="@array/nika_clock_interval_entries"
+          android:entryValues="@array/nika_clock_interval_values" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+          android:key="nika_clock_quiet"
+          android:defaultValue="true"
+          android:title="@string/nika_clock_quiet_title" />
+    <ListPreference
+          android:key="nika_clock_quiet_from"
+          android:defaultValue="23"
+          android:title="@string/nika_clock_quiet_from_title"
+          android:summary="%s"
+          android:entries="@array/nika_clock_hours_entries"
+          android:entryValues="@array/nika_clock_hours_values" />
+    <ListPreference
+          android:key="nika_clock_quiet_to"
+          android:defaultValue="7"
+          android:title="@string/nika_clock_quiet_to_title"
+          android:summary="%s"
+          android:entries="@array/nika_clock_hours_entries"
+          android:entryValues="@array/nika_clock_hours_values" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+          android:key="nika_clock_battery"
+          android:defaultValue="true"
+          android:title="@string/nika_clock_battery_title" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_clock_cat_timer"
+        android:title="@string/nika_clock_cat_timer">
+    <ListPreference
+          android:key="nika_clock_timer_minutes"
+          android:defaultValue="5"
+          android:title="@string/nika_clock_timer_minutes_title"
+          android:summary="%s"
+          android:entries="@array/nika_clock_timer_entries"
+          android:entryValues="@array/nika_clock_timer_values" />
+    <ListPreference
+          android:key="nika_clock_sw_progress"
+          android:defaultValue="0"
+          android:title="@string/nika_clock_sw_progress_title"
+          android:summary="%s"
+          android:entries="@array/nika_clock_progress_entries"
+          android:entryValues="@array/nika_clock_progress_values" />
+    <ListPreference
+          android:key="nika_clock_timer_progress"
+          android:defaultValue="0"
+          android:title="@string/nika_clock_timer_progress_title"
+          android:summary="%s"
+          android:entries="@array/nika_clock_progress_entries"
+          android:entryValues="@array/nika_clock_progress_values" />
+    <Preference
+          android:key="nika_clock_permission"
+          android:title="@string/nika_clock_perm_title"
+          android:summary="@string/nika_clock_perm_summary" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

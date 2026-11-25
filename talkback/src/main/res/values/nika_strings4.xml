@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="nika_clock_title">Clock, timer and stopwatch</string>
+    <string name="nika_clock_summary">Talking clock with quiet hours, countdown timer, stopwatch</string>
+    <string name="nika_clock_cat_clock">Talking clock</string>
+    <string name="nika_clock_cat_timer">Timer</string>
+    <string name="nika_clock_enabled_title">Speak the time on a schedule</string>
+    <string name="nika_clock_enabled_summary">Works also when the screen is off. The time can also be spoken at once with a gesture: see the gesture actions "Clock, timer and stopwatch".</string>
+    <string name="nika_clock_interval_title">How often to speak</string>
+    <string name="nika_clock_quiet_title">Quiet hours (do not speak)</string>
+    <string name="nika_clock_quiet_from_title">Quiet hours: from</string>
+    <string name="nika_clock_quiet_to_title">Quiet hours: to</string>
+    <string name="nika_clock_battery_title">Say the battery level</string>
+    <string name="nika_clock_timer_minutes_title">Timer length</string>
+    <string name="nika_clock_midnight">Midnight</string>
+    <string name="nika_clock_battery">Battery %1$d%%</string>
+    <string name="nika_clock_charging">charging</string>
+    <string name="nika_sw_paused">Stopwatch paused</string>
+    <string name="nika_sw_started">Stopwatch started</string>
+    <string name="nika_sw_resumed">Stopwatch resumed</string>
+    <string name="nika_sw_zero">Stopwatch is at zero</string>
+    <string name="nika_sw_reset_done">Stopwatch reset</string>
+    <string name="nika_timer_stopped">Timer stopped</string>
+    <string name="nika_timer_started">Timer started for %1$s</string>
+    <string name="nika_timer_idle">Timer is not running</string>
+    <string name="nika_timer_left">Left: %1$s</string>
+    <string name="nika_timer_done">Timer finished</string>
+    <string name="nika_act_clock_say">Say the time and battery</string>
+    <string name="nika_act_sw_toggle">Stopwatch: start or pause</string>
+    <string name="nika_act_sw_say">Stopwatch: say the time</string>
+    <string name="nika_act_sw_reset">Stopwatch: reset</string>
+    <string name="nika_act_timer_toggle">Timer: start or stop</string>
+    <string name="nika_act_timer_say">Timer: say the time left</string>
+    <string name="nika_clock_category">Clock, timer and stopwatch</string>
+    <string name="nika_dur_h">%1$d h</string>
+    <string name="nika_dur_m">%1$d min</string>
+    <string name="nika_dur_s">%1$d s</string>
+    <plurals name="nika_clock_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <string name="nika_vcat_order">Order and time</string>
+    <string name="nika_vcat_keys">Keyboard and formatting</string>
+    <string name="nika_vcat_screen">Screen, notifications and volume</string>
+    <string name="nika_vcat_symbols">Symbols, emoji and identifiers</string>
+    <string name="nika_vcat_progress">Progress indicators</string>
+    <string name="nika_progress_mode_title">Announce progress indicators</string>
+    <string name="nika_progress_percent_title">Say the value in percent</string>
+    <string name="nika_progress_percent_summary">Instead of the text of the app, for example 50 percent. The sound rises as the progress grows.</string>
+    <string name="nika_progress_step_title">Say every</string>
+    <string name="nika_progress_percent_fmt">%1$d%%</string>
+    <string-array name="nika_progress_mode_entries">
+        <item>Voice and sound</item>
+        <item>Voice only</item>
+        <item>Sound only</item>
+        <item>Do not announce</item>
+    </string-array>
+    <string name="nika_clock_perm_title">Allow exact alarms</string>
+    <string name="nika_clock_perm_summary">Opens the system screen. Allow alarms and reminders so the clock, the timer and the stopwatch speak on time.</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="whats_new_update"
+      android:title="@string/title_pref_whats_new" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="whats_new_version"
+      android:title="@string/nika_whats_new_page_title"
+      android:summary="@string/nika_whats_new_page_text"
+      android:selectable="false" />
+</PreferenceScreen>

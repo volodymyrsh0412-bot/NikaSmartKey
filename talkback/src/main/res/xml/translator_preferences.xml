@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_tr_cat_general"
+        android:title="@string/nika_tr_cat_general">
+    <ListPreference android:key="nika_tr_mode" android:defaultValue="auto" android:title="@string/nika_tr_mode_title" android:summary="%s" android:entries="@array/nika_tr_mode_entries" android:entryValues="@array/nika_tr_mode_values" />
+    <ListPreference android:key="nika_tr_prefix" android:defaultValue="word" android:title="@string/nika_tr_prefix_title" android:summary="%s" android:entries="@array/nika_tr_prefix_entries" android:entryValues="@array/nika_tr_prefix_values" />
+    <ListPreference android:key="nika_tr_lang" android:defaultValue="uk" android:title="@string/nika_tr_lang_title" android:summary="%s" android:entries="@array/nika_tr_lang_entries" android:entryValues="@array/nika_tr_lang_values" />
+    <ListPreference android:key="nika_tr_provider" android:defaultValue="gemini" android:title="@string/nika_tr_provider_title" android:summary="%s" android:entries="@array/nika_tr_provider_entries" android:entryValues="@array/nika_tr_provider_values" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference android:key="nika_tr_copy" android:defaultValue="false" android:title="@string/nika_tr_copy_title" android:summary="@string/nika_tr_copy_summary" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_tr_cat_keys"
+        android:title="@string/nika_tr_cat_keys">
+    <EditTextPreference android:key="nika_tr_claude_key" android:title="@string/nika_tr_claude_key_title" />
+    <EditTextPreference android:key="nika_tr_claude_model" android:title="@string/nika_tr_claude_model_title" />
+    <EditTextPreference android:key="nika_tr_gemini_key" android:title="@string/nika_tr_gemini_key_title" />
+    <EditTextPreference android:key="nika_tr_gemini_model" android:title="@string/nika_tr_gemini_model_title" />
+    <EditTextPreference android:key="nika_tr_openai_key" android:title="@string/nika_tr_openai_key_title" />
+    <EditTextPreference android:key="nika_tr_openai_model" android:title="@string/nika_tr_openai_model_title" />
+    <EditTextPreference android:key="nika_tr_grok_key" android:title="@string/nika_tr_grok_key_title" />
+    <EditTextPreference android:key="nika_tr_grok_model" android:title="@string/nika_tr_grok_model_title" />
+    <EditTextPreference android:key="nika_tr_deepseek_key" android:title="@string/nika_tr_deepseek_key_title" />
+    <EditTextPreference android:key="nika_tr_deepseek_model" android:title="@string/nika_tr_deepseek_model_title" />
+    <EditTextPreference android:key="nika_tr_mistral_key" android:title="@string/nika_tr_mistral_key_title" />
+    <EditTextPreference android:key="nika_tr_mistral_model" android:title="@string/nika_tr_mistral_model_title" />
+    <EditTextPreference android:key="nika_tr_groq_key" android:title="@string/nika_tr_groq_key_title" />
+    <EditTextPreference android:key="nika_tr_groq_model" android:title="@string/nika_tr_groq_model_title" />
+    <EditTextPreference android:key="nika_tr_openrouter_key" android:title="@string/nika_tr_openrouter_key_title" />
+    <EditTextPreference android:key="nika_tr_openrouter_model" android:title="@string/nika_tr_openrouter_model_title" />
+    <EditTextPreference android:key="nika_tr_custom_base" android:title="@string/nika_tr_custom_base_title" />
+    <EditTextPreference android:key="nika_tr_custom_key" android:title="@string/nika_tr_custom_key_title" />
+    <EditTextPreference android:key="nika_tr_custom_model" android:title="@string/nika_tr_custom_model_title" />
+    <EditTextPreference android:key="nika_tr_nvdacn_user" android:title="@string/nika_tr_nvdacn_user_title" />
+    <EditTextPreference android:key="nika_tr_nvdacn_pass" android:title="@string/nika_tr_nvdacn_pass_title" />
+    <EditTextPreference android:key="nika_tr_vivo_model" android:title="@string/nika_tr_vivo_model_title" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

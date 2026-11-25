@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_hf_title">Help and feedback</string>
+    <string name="nika_hf_summary">Telegram group, write to the developer, guide</string>
+    <string name="nika_up_title">Updates</string>
+    <string name="nika_up_summary">Automatic check and check now</string>
+    <string name="nika_key_vol_up_lock">Volume up on the lock screen</string>
+    <string name="nika_key_vol_down_lock">Volume down on the lock screen</string>
+    <string name="nika_clock_sw_progress_title">Say the stopwatch time every</string>
+    <string name="nika_clock_timer_progress_title">Say the time left of the timer every</string>
+    <string-array name="nika_clock_progress_entries">
+        <item>Do not say</item>
+        <item>1 second</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+        <item>45 seconds</item>
+        <item>60 seconds</item>
+    </string-array>
+    <string-array name="nika_clock_progress_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+    </string-array>
+</resources>

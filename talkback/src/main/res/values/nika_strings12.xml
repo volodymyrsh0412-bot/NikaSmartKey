@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_power">Power button (screen on/off)</string>
+    <string name="nika_vc_power_off">Do not use</string>
+    <string name="nika_vc_power_double">Double press</string>
+    <string name="nika_vc_power_triple">Triple press</string>
+    <string name="nika_vc_name">Your name for the greeting</string>
+    <string name="nika_vc_name_empty">not set</string>
+    <string name="nika_vc_greet">Hello, %1$s!</string>
+    <string name="nika_vc_greet_plain">Hello!</string>
+    <string name="nika_vc_greet_mode">Greeting</string>
+    <string name="nika_vc_greet_mode_name">Hello and my name</string>
+    <string name="nika_vc_greet_mode_hello">Only \u201cHello\u201d</string>
+    <string name="nika_vc_greet_mode_beep">Only a beep</string>
+</resources>

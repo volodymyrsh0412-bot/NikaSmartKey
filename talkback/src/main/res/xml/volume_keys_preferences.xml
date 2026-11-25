@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:defaultValue="false"
+        android:key="nika_vol_hide_panel"
+        android:summary="@string/nika_vol_hide_panel_summary"
+        android:title="@string/nika_vol_hide_panel" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_keys_cat_vol_up"
+        android:title="@string/nika_key_vol_up">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_tap1"
+        android:summary="%s"
+        android:title="@string/nika_press_tap1" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_hold"
+        android:summary="%s"
+        android:title="@string/nika_press_hold" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_tap2"
+        android:summary="%s"
+        android:title="@string/nika_press_tap2" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_tap3"
+        android:summary="%s"
+        android:title="@string/nika_press_tap3" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_keys_cat_vol_down"
+        android:title="@string/nika_key_vol_down">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_tap1"
+        android:summary="%s"
+        android:title="@string/nika_press_tap1" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_hold"
+        android:summary="%s"
+        android:title="@string/nika_press_hold" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_tap2"
+        android:summary="%s"
+        android:title="@string/nika_press_tap2" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_tap3"
+        android:summary="%s"
+        android:title="@string/nika_press_tap3" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_keys_cat_vol_up_lock"
+        android:title="@string/nika_key_vol_up_lock">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_lock_tap1"
+        android:summary="%s"
+        android:title="@string/nika_press_tap1" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_lock_hold"
+        android:summary="%s"
+        android:title="@string/nika_press_hold" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_lock_tap2"
+        android:summary="%s"
+        android:title="@string/nika_press_tap2" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_up_lock_tap3"
+        android:summary="%s"
+        android:title="@string/nika_press_tap3" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+        android:key="nika_keys_cat_vol_down_lock"
+        android:title="@string/nika_key_vol_down_lock">
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_lock_tap1"
+        android:summary="%s"
+        android:title="@string/nika_press_tap1" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_lock_hold"
+        android:summary="%s"
+        android:title="@string/nika_press_hold" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_lock_tap2"
+        android:summary="%s"
+        android:title="@string/nika_press_tap2" />
+    <com.google.android.accessibility.talkback.preference.base.GestureListPreference
+        android:defaultValue="@string/shortcut_value_unassigned"
+        android:key="nika_key_vol_down_lock_tap3"
+        android:summary="%s"
+        android:title="@string/nika_press_tap3" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

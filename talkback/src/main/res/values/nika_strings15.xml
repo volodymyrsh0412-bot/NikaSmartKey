@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_sv_title">Voice of notifications and clock</string>
+    <string name="nika_sv_summary">Own volume, synthesizer and voice</string>
+    <string name="nika_sv_notif">Notifications</string>
+    <string name="nika_sv_clock">Talking clock</string>
+    <string name="nika_sv_engine">Synthesizer</string>
+    <string name="nika_sv_voice">Voice</string>
+    <string name="nika_sv_volume">Volume</string>
+    <string name="nika_sv_default">Default</string>
+    <string name="nika_sv_loading">Loading the voices…</string>
+    <string name="nika_sv_novoices">No voices found</string>
+    <string name="nika_sv_note">Set the speech of the notifications and of the talking clock separately. If nothing is changed, they are spoken like everything else in Nika.</string>
+    <string name="nika_vc_lang_auto">Automatic (as the phone)</string>
+    <string name="nika_vc_mode_title">How to call</string>
+    <string name="nika_vc_mode_phone">Straight through the phone, without a question</string>
+    <string name="nika_vc_mode_ask">Ask every time (the system lets you choose the app)</string>
+    <string name="nika_vc_number_how">Number</string>
+    <string name="nika_vc_number_type">Type the number</string>
+    <string name="nika_vc_number_contact">Choose from the contacts</string>
+    <string name="nika_vc_label_callphone">Call to %1$s (straight)</string>
+    <string name="nika_vc_no_contact">Could not read the contact</string>
+    <string name="nika_vc_call_noperm">No permission to call: the dialer opens instead</string>
+</resources>

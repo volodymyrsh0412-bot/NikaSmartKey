@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_category">Polecenia głosowe Niki</string>
+    <string name="nika_vc_prefix">Polecenie głosowe: %1$s</string>
+    <string name="nika_vol_title">Głośność odpowiedzi</string>
+    <string name="nika_vol_value">%1$d %%</string>
+</resources>

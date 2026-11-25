@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_whats_new_title">Что нового</string>
+    <string name="nika_whats_new_summary">Изменения в этой версии</string>
+    <string name="nika_whats_new_message">Nika — скринридер для Android.\n\nЧто нового в этой версии:\n\u2022 Новые пункты: «Справка и отзывы» (группа Telegram, написать разработчику, руководство) и «Обновления» (автопроверка, проверить сейчас).\n\u2022 Секундомер и таймер могут озвучивать время каждые 1–60 секунд, в том числе на заблокированном экране (настройки часов).\n\u2022 Для кнопок громкости есть отдельные действия на заблокированном экране.\n\u2022 В ключах переводчика Grok (xAI) и Groq (Llama) теперь называются по-разному.</string>
+    <string name="nika_feedback_title">Написать отзыв</string>
+    <string name="nika_feedback_summary">Написать разработчику в Telegram: сообщить о проблеме или предложить идею</string>
+    <string name="nika_feedback_subject">Отзыв о Nika (сборка %1$d)</string>
+    <string name="nika_feedback_body">\n\n---\nУстройство: %1$s %2$s\nAndroid: %3$s\nСборка: %4$d</string>
+    <string name="nika_feedback_copied">Почтовое приложение не найдено. Адрес %1$s скопирован.</string>
+</resources>

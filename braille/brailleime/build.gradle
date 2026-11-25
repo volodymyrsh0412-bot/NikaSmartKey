@@ -1,0 +1,18 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "../../shared.gradle"
+
+android {
+    namespace = "com.google.android.accessibility.brailleime"
+}
+
+dependencies {
+    implementation project(':utils')
+    implementation project(':braillecommon')
+    implementation project(':brailleinterfaces')
+    implementation project(':brailleimeanalytics')
+    implementation project(':brailletranslate')
+    testImplementation libs.junit
+}

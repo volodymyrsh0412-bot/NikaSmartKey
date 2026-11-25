@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_hf_title">Pomoc i opinie</string>
+    <string name="nika_hf_summary">Grupa na Telegramie, napisz do twórcy, poradnik</string>
+    <string name="nika_up_title">Aktualizacje</string>
+    <string name="nika_up_summary">Automatyczne sprawdzanie i sprawdź teraz</string>
+    <string name="nika_key_vol_up_lock">Głośność w górę na zablokowanym ekranie</string>
+    <string name="nika_key_vol_down_lock">Głośność w dół na zablokowanym ekranie</string>
+    <string name="nika_clock_sw_progress_title">Podawaj czas stopera co</string>
+    <string name="nika_clock_timer_progress_title">Podawaj pozostały czas timera co</string>
+    <string-array name="nika_clock_progress_entries">
+        <item>Nie podawaj</item>
+        <item>1 sekunda</item>
+        <item>2 sekundy</item>
+        <item>3 sekundy</item>
+        <item>4 sekundy</item>
+        <item>5 sekund</item>
+        <item>10 sekund</item>
+        <item>15 sekund</item>
+        <item>30 sekund</item>
+        <item>45 sekund</item>
+        <item>60 sekund</item>
+    </string-array>
+</resources>

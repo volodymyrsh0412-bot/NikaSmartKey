@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="title_pref_whats_new">Co nowego</string>
+  <string name="summary_pref_whats_new">Zmiany w tej wersji</string>
+  <string name="whats_new_version_title">Nika, pierwsza wersja</string>
+  <string name="whats_new_version_summary">• Aplikacja nazywa się teraz Nika.\n• Aktualizacje są sprawdzane na stronie Nika w serwisie GitHub.\n• Nowość: „Wyślij opinię” w sekcji „Samouczek i pomoc”. Otwiera wiadomość e-mail do twórcy.\n• Ulepszone tłumaczenia na ukraiński, rosyjski, białoruski i polski.</string>
+  <string name="title_pref_send_feedback">Wyślij opinię</string>
+  <string name="summary_pref_send_feedback">Napisz do twórcy e-mailem</string>
+  <string name="feedback_email_subject">Opinia o Nika</string>
+  <string name="feedback_no_email_app">Nie znaleziono aplikacji pocztowej. Napisz na adres %1$s</string>
+</resources>

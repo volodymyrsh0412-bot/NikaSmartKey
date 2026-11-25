@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_sv_title">Głos powiadomień i zegara</string>
+    <string name="nika_sv_summary">Własna głośność, syntezator i głos</string>
+    <string name="nika_sv_notif">Powiadomienia</string>
+    <string name="nika_sv_clock">Mówiący zegar</string>
+    <string name="nika_sv_engine">Syntezator</string>
+    <string name="nika_sv_voice">Głos</string>
+    <string name="nika_sv_volume">Głośność</string>
+    <string name="nika_sv_default">Domyślny</string>
+    <string name="nika_sv_loading">Ładuję głosy…</string>
+    <string name="nika_sv_novoices">Nie znaleziono głosów</string>
+    <string name="nika_sv_note">Ustaw osobno odczytywanie powiadomień i mówiącego zegara. Jeśli nic nie zmienisz, mówią tak samo jak reszta Niki.</string>
+    <string name="nika_vc_lang_auto">Automatycznie (jak w telefonie)</string>
+    <string name="nika_vc_mode_title">Jak dzwonić</string>
+    <string name="nika_vc_mode_phone">Od razu przez telefon, bez pytania</string>
+    <string name="nika_vc_mode_ask">Pytaj za każdym razem (system pozwala wybrać aplikację)</string>
+    <string name="nika_vc_number_how">Numer</string>
+    <string name="nika_vc_number_type">Wpisz numer</string>
+    <string name="nika_vc_number_contact">Wybierz z kontaktów</string>
+    <string name="nika_vc_label_callphone">Połączenie: %1$s (od razu)</string>
+    <string name="nika_vc_no_contact">Nie udało się odczytać kontaktu</string>
+    <string name="nika_vc_call_noperm">Brak uprawnienia do połączeń: otwieram wybieranie numeru</string>
+</resources>

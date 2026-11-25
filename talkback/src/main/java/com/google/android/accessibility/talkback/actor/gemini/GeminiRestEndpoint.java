@@ -1,0 +1,280 @@
+/*
+ * Copyright (C) 2024 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.google.android.accessibility.talkback.actor.gemini;
+
+import static com.google.android.accessibility.talkback.actor.gemini.DataFieldUtils.FINISH_REASON_STOP;
+import static com.google.android.accessibility.talkback.actor.gemini.GeminiActor.Action.UNKNOWN;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.text.TextUtils;
+import android.util.Base64;
+import com.google.android.accessibility.talkback.actor.gemini.DataFieldUtils.GeminiResponse;
+import com.google.android.accessibility.talkback.actor.gemini.GeminiActor.ErrorReason;
+import com.google.android.accessibility.talkback.actor.gemini.GeminiActor.FinishReason;
+import com.google.android.accessibility.talkback.actor.gemini.GeminiActor.GeminiEndpoint;
+import com.google.android.accessibility.talkback.actor.gemini.GeminiActor.GeminiResponseListener;
+import com.google.android.accessibility.talkback.actor.gemini.GeminiCommand.CommonRequest;
+import com.google.android.accessibility.talkback.actor.gemini.GeminiRestRequestPerformer.GeminiRestResponseCallback;
+import com.google.android.accessibility.talkback.actor.gemini.local.OnDeviceAiSettings;
+import com.google.android.accessibility.talkback.actor.gemini.screenqa.OverviewResponse;
+import com.google.android.accessibility.utils.SharedPreferencesUtils;
+import com.google.android.libraries.accessibility.utils.log.LogUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/** Util class to communicate with Gemini APIs */
+public class GeminiRestEndpoint implements GeminiEndpoint {
+
+  private static final String TAG = "GeminiEndpoint";
+  private static final String GEMINI_URL =
+      "https://generativelanguage.googleapis.com/v1beta/models/";
+  private static final String GEMINI_URL_NO_PARAM = ":generateContent";
+
+  private final Context context;
+  private final SharedPreferences prefs;
+  private final String builtInApiKey;
+  private final GeminiRestRequestPerformer requestPerformer;
+  private final String safetyThresholdHarassment;
+  private final String safetyThresholdHateSpeech;
+  private final String safetyThresholdSexuallyExplicit;
+  private final String safetyThresholdDangerousContent;
+  private final String prefixPrompt;
+  private final ScreenOverviewRequester screenOverviewRequester;
+
+  /**
+   * @param builtInApiKey the key built into the app, used only while the user has not entered one
+   *     in settings
+   */
+  public GeminiRestEndpoint(
+      Context context, String builtInApiKey, GeminiRestRequestPerformer requestPerformer) {
+    this.context = context;
+    this.builtInApiKey = builtInApiKey;
+    this.requestPerformer = requestPerformer;
+    safetyThresholdHarassment = GeminiConfiguration.getSafetyThresholdHarassment(context);
+    safetyThresholdHateSpeech = GeminiConfiguration.getSafetyThresholdHateSpeech(context);
+    safetyThresholdSexuallyExplicit =
+        GeminiConfiguration.getSafetyThresholdSexuallyExplicit(context);
+    safetyThresholdDangerousContent =
+        GeminiConfiguration.getSafetyThresholdDangerousContent(context);
+    prefixPrompt = GeminiConfiguration.getPrefixPrompt(context);
+    screenOverviewRequester =
+        new ScreenOverviewRequester(
+            () -> {
+              SharedPreferences settings = SharedPreferencesUtils.getSharedPreferences(context);
+              if (!OnDeviceAiSettings.INSTANCE.isOnDevice(settings)) {
+                return PromptStyle.CLOUD;
+              }
+              return OnDeviceAiSettings.INSTANCE.shortPrompts(settings)
+                  ? PromptStyle.ON_DEVICE_SHORT
+                  : PromptStyle.ON_DEVICE;
+            },
+            (postData, callback) -> {
+              requestPerformer.performRequest(url(), apiKey(), postData, callback);
+              return kotlin.Unit.INSTANCE;
+            },
+            failure -> failure.userMessage(context));
+    prefs = SharedPreferencesUtils.getSharedPreferences(context);
+  }
+
+  /**
+   * Returns the API key, or an empty string when there is none. The key is read each time, so that
+   * a key entered in settings works at once.
+   */
+  private String apiKey() {
+    return GeminiApiKey.effectiveKey(prefs, builtInApiKey);
+  }
+
+  /** Looked up for each request, so that a model entered in settings is used at once. */
+  private String url() {
+    return GEMINI_URL + GeminiConfiguration.getGeminiModel(context) + GEMINI_URL_NO_PARAM;
+  }
+
+  private boolean isSupported() {
+    return !TextUtils.isEmpty(apiKey()) || requestPerformer.isKeylessInitialized();
+  }
+
+  @Override
+  public boolean createRequestGeminiCommand(
+      String command,
+      Bitmap screenshotCapture,
+      boolean manualTrigger,
+      GeminiResponseListener geminiResponseListener) {
+    return createRequestGeminiCommand(
+        new CommonRequest(
+            UNKNOWN,
+            command,
+            DataFieldUtils.encodeImageToByteArray(screenshotCapture),
+            manualTrigger,
+            geminiResponseListener));
+  }
+
+  @Override
+  public boolean createRequestGeminiCommand(GeminiCommand command) {
+    LogUtils.v(TAG, "createRequestGeminiCommand - %s", GeminiConfiguration.getGeminiModel(context));
+    String text;
+    byte[] imageByteArray;
+    GeminiResponseListener geminiResponseListener;
+    if (command instanceof GeminiCommand.CommonRequest commonRequest) {
+      text = commonRequest.getText();
+      imageByteArray = commonRequest.getScreenshot();
+      geminiResponseListener = commonRequest.getListener();
+    } else if (command instanceof GeminiCommand.ScreenOverview
+        || command instanceof GeminiCommand.ScreenQuery) {
+      return requestScreenOverviewOrQuery(command);
+    } else {
+      LogUtils.v(TAG, "Not a common request - Return.");
+      return false;
+    }
+
+    if (!checkGeminiAvailability(text, imageByteArray, geminiResponseListener)) {
+      return false;
+    }
+
+    try {
+      // Set safety settings
+      JSONArray safetySettings =
+          DataFieldUtils.createSafetySettingsJson(
+              safetyThresholdHarassment,
+              safetyThresholdHateSpeech,
+              safetyThresholdSexuallyExplicit,
+              safetyThresholdDangerousContent);
+
+      // Encode screenshot in base64
+      String encodedImage = Base64.encodeToString(imageByteArray, Base64.NO_WRAP);
+      if (TextUtils.isEmpty(encodedImage)) {
+        LogUtils.e(TAG, "Bitmap compression failed!");
+        geminiResponseListener.onError(ErrorReason.BITMAP_COMPRESSION_FAIL);
+        return false;
+      }
+
+      JSONObject postData =
+          DataFieldUtils.createPostDataJson(prefixPrompt + text, encodedImage, safetySettings);
+
+      requestPerformer.performRequest(
+          url(),
+          apiKey(),
+          postData,
+          new GeminiRestResponseCallback() {
+            @Override
+            public void onResponse(GeminiResponse response) {
+              if (response.finishReason() != null
+                  && response.finishReason().equals(FINISH_REASON_STOP)) { // Positive acknowledge
+                geminiResponseListener.onResponse(FinishReason.STOP, response.text());
+                LogUtils.v(TAG, "Gemini succeeds");
+              } else { // Redefine the hint of these kinds when the use cases are understood.
+                geminiResponseListener.onResponse(FinishReason.ERROR_BLOCKED, /* response= */ null);
+                LogUtils.e(
+                    TAG,
+                    "Gemini gave no answer, finish or block reason: %s",
+                    (response.blockReason() != null)
+                        ? response.blockReason()
+                        : response.finishReason());
+              }
+            }
+
+            @Override
+            public void onFailure(GeminiFailure failure) {
+              // The request performer has logged the failure. The listener speaks the text.
+              geminiResponseListener.onResponse(
+                  FinishReason.ERROR_RESPONSE, failure.userMessage(context));
+            }
+
+            @Override
+            public void onCancelled() {
+              LogUtils.v(TAG, "Cancelled a pending task.");
+              geminiResponseListener.onError(ErrorReason.JOB_CANCELLED);
+            }
+          });
+    } catch (JSONException e) {
+      LogUtils.e(TAG, "Error processing Gemini request: " + e.getMessage());
+      return false;
+    }
+    return true;
+  }
+
+  private boolean requestScreenOverviewOrQuery(GeminiCommand command) {
+    GeminiResponseCallback<OverviewResponse> listener =
+        command instanceof GeminiCommand.ScreenOverview overview
+            ? overview.getListener()
+            : ((GeminiCommand.ScreenQuery) command).getListener();
+    if (!isSupported()) {
+      listener.onError(ErrorReason.UNSUPPORTED);
+      return false;
+    }
+    if (!GeminiFunctionUtils.canReachModel(context)) {
+      listener.onError(ErrorReason.NETWORK_ERROR);
+      return false;
+    }
+    try {
+      JSONArray safetySettings =
+          DataFieldUtils.createSafetySettingsJson(
+              safetyThresholdHarassment,
+              safetyThresholdHateSpeech,
+              safetyThresholdSexuallyExplicit,
+              safetyThresholdDangerousContent);
+      if (command instanceof GeminiCommand.ScreenOverview overview) {
+        screenOverviewRequester.requestOverview(overview, safetySettings);
+      } else {
+        screenOverviewRequester.requestQuery((GeminiCommand.ScreenQuery) command, safetySettings);
+      }
+    } catch (JSONException e) {
+      LogUtils.e(TAG, "Error processing screen overview request: " + e.getMessage());
+      return false;
+    }
+    return true;
+  }
+
+  @Override
+  public void cancelCommand() {
+    requestPerformer.cancelExistingRequestIfNeeded();
+  }
+
+  @Override
+  public boolean hasPendingTransaction() {
+    return requestPerformer.hasPendingTransaction();
+  }
+
+  private boolean checkGeminiAvailability(
+      String command, byte[] imageByteArray, GeminiResponseListener geminiResponseListener) {
+    if (!isSupported()) {
+      LogUtils.d(TAG, "Gemini API is not supported");
+      geminiResponseListener.onError(ErrorReason.UNSUPPORTED);
+      return false;
+    }
+
+    if (!GeminiFunctionUtils.canReachModel(context)) {
+      LogUtils.d(TAG, "Internet is not connected");
+      geminiResponseListener.onError(ErrorReason.NETWORK_ERROR);
+      return false;
+    }
+
+    if (imageByteArray == null || imageByteArray.length == 0) {
+      LogUtils.d(TAG, "screenshot is not provided.");
+      geminiResponseListener.onError(ErrorReason.NO_IMAGE);
+      return false;
+    }
+    if (TextUtils.isEmpty(command)) {
+      LogUtils.d(TAG, "command part is empty.");
+      geminiResponseListener.onError(ErrorReason.EMPTY_PROMPT);
+      return false;
+    }
+    return true;
+  }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="notification_list_group_count">
+    <item quantity="one">%d сповіщення</item>
+    <item quantity="few">%d сповіщення</item>
+    <item quantity="many">%d сповіщень</item>
+    <item quantity="other">%d сповіщення</item>
+  </plurals>
+  <plurals name="on_device_ai_models_downloaded">
+    <item quantity="one">Завантажено %1$d модель</item>
+    <item quantity="few">Завантажено %1$d моделі</item>
+    <item quantity="many">Завантажено %1$d моделей</item>
+    <item quantity="other">Завантажено %1$d моделі</item>
+  </plurals>
+  <plurals name="on_device_ai_timeout_minutes">
+    <item quantity="one">%1$d хвилина</item>
+    <item quantity="few">%1$d хвилини</item>
+    <item quantity="many">%1$d хвилин</item>
+    <item quantity="other">%1$d хвилини</item>
+  </plurals>
+  <plurals name="sound_theme_exported">
+    <item quantity="one">Тему збережено з <xliff:g id="count" example="1">%d</xliff:g> звуком.</item>
+    <item quantity="few">Тему збережено з <xliff:g id="count" example="1">%d</xliff:g> звуками.</item>
+    <item quantity="many">Тему збережено з <xliff:g id="count" example="1">%d</xliff:g> звуками.</item>
+    <item quantity="other">Тему збережено з <xliff:g id="count" example="1">%d</xliff:g> звуку.</item>
+  </plurals>
+  <plurals name="sound_theme_sounds">
+    <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> звук.</item>
+    <item quantity="few"><xliff:g id="count" example="1">%d</xliff:g> звуки.</item>
+    <item quantity="many"><xliff:g id="count" example="1">%d</xliff:g> звуків.</item>
+    <item quantity="other"><xliff:g id="count" example="1">%d</xliff:g> звуку.</item>
+  </plurals>
+  <plurals name="sound_theme_vibrations">
+    <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> вібрація.</item>
+    <item quantity="few"><xliff:g id="count" example="1">%d</xliff:g> вібрації.</item>
+    <item quantity="many"><xliff:g id="count" example="1">%d</xliff:g> вібрацій.</item>
+    <item quantity="other"><xliff:g id="count" example="1">%d</xliff:g> вібрації.</item>
+  </plurals>
+</resources>

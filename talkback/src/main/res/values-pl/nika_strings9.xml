@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_notif_delete_one">Usuń to</string>
+    <string name="nika_bk_pick_title">Co przywrócić</string>
+    <string name="nika_bk_restore">Przywróć</string>
+    <string name="nika_bk_g_main">Ustawienia główne</string>
+    <string name="nika_bk_g_gestures">Gesty i klawisze</string>
+    <string name="nika_bk_g_macros">Makra</string>
+    <string name="nika_bk_g_speech">Mowa i głosy</string>
+    <string name="nika_bk_g_notif">Powiadomienia</string>
+    <string name="nika_bk_g_themes">Motywy dźwięków (pliki)</string>
+    <string name="nika_bk_g_scripts">Skrypty (pliki)</string>
+    <string name="nika_val_keyboard_echo">Echo klawiatury</string>
+    <string name="nika_val_punctuation">Interpunkcja</string>
+    <string name="nika_val_emoji">Emoji</string>
+    <string name="nika_val_say">%1$s: %2$s</string>
+    <string name="nika_act_setting_next">Szybkie ustawienie: następne</string>
+    <string name="nika_act_setting_prev">Szybkie ustawienie: poprzednie</string>
+    <string name="nika_act_value_next">Szybkie ustawienie: następna wartość</string>
+    <string name="nika_act_value_prev">Szybkie ustawienie: poprzednia wartość</string>
+    <string name="nika_act_slider_up">Suwak w fokusie: zwiększ</string>
+    <string name="nika_act_slider_down">Suwak w fokusie: zmniejsz</string>
+    <string name="nika_act_cursor_right">Pole tekstowe: kursor w prawo</string>
+    <string name="nika_act_cursor_left">Pole tekstowe: kursor w lewo</string>
+    <string name="nika_vol_hide_panel">Nie pokazuj panelu głośności</string>
+    <string name="nika_vol_hide_panel_summary">Dla klawisza głośności bez własnej akcji: głośność się zmienia, ale panel nie jest pokazany</string>
+</resources>

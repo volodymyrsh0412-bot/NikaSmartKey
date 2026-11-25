@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.scripting.NikaAgentFragment"
+        android:key="pref_nika_ai_agent"
+        android:summary="@string/nika_ai_agent_summary"
+        android:title="@string/nika_ai_agent_title">
+    <extra
+          android:name="script_id"
+          android:value="ai-agent" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreference>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.GeminiSettingsFragment"
+        android:key="pref_nika_gemini_settings"
+        android:summary="@string/summary_pref_gemini_support_disabled"
+        android:title="@string/title_pref_gemini_settings" />
+</PreferenceScreen>

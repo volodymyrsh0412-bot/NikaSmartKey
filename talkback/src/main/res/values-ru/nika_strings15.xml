@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_sv_title">Голос уведомлений и часов</string>
+    <string name="nika_sv_summary">Своя громкость, синтезатор и голос</string>
+    <string name="nika_sv_notif">Уведомления</string>
+    <string name="nika_sv_clock">Говорящие часы</string>
+    <string name="nika_sv_engine">Синтезатор</string>
+    <string name="nika_sv_voice">Голос</string>
+    <string name="nika_sv_volume">Громкость</string>
+    <string name="nika_sv_default">По умолчанию</string>
+    <string name="nika_sv_loading">Загружаю голоса…</string>
+    <string name="nika_sv_novoices">Голоса не найдены</string>
+    <string name="nika_sv_note">Отдельно настрой озвучивание уведомлений и говорящих часов. Если ничего не менять, они говорят так же, как всё в Nika.</string>
+    <string name="nika_vc_lang_auto">Автоматически (как у телефона)</string>
+    <string name="nika_vc_mode_title">Как звонить</string>
+    <string name="nika_vc_mode_phone">Сразу через телефон, без вопроса</string>
+    <string name="nika_vc_mode_ask">Спрашивать каждый раз (система даст выбрать приложение)</string>
+    <string name="nika_vc_number_how">Номер</string>
+    <string name="nika_vc_number_type">Ввести номер</string>
+    <string name="nika_vc_number_contact">Выбрать из контактов</string>
+    <string name="nika_vc_label_callphone">Звонок: %1$s (сразу)</string>
+    <string name="nika_vc_no_contact">Не удалось прочитать контакт</string>
+    <string name="nika_vc_call_noperm">Нет разрешения на звонки: открываю набор номера</string>
+</resources>

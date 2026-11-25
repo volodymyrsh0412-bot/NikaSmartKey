@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_whats_new_title">Co nowego</string>
+    <string name="nika_whats_new_summary">Zmiany w tej wersji</string>
+    <string name="nika_whats_new_message">Nika — czytnik ekranu dla Androida.\n\nNowości w tej wersji:\n\u2022 Nowe pozycje: „Pomoc i opinie” (grupa na Telegramie, napisz do twórcy, poradnik) i „Aktualizacje” (automatyczne sprawdzanie, sprawdź teraz).\n\u2022 Stoper i timer mogą podawać czas co 1–60 sekund, także na zablokowanym ekranie (ustawienia zegara).\n\u2022 Klawisze głośności mają osobne akcje na zablokowanym ekranie.\n\u2022 W kluczach tłumacza Grok (xAI) i Groq (Llama) mają teraz różne nazwy.</string>
+    <string name="nika_feedback_title">Wyślij opinię</string>
+    <string name="nika_feedback_summary">Napisz do twórcy na Telegramie: zgłoś problem lub zaproponuj pomysł</string>
+    <string name="nika_feedback_subject">Opinia o Nice (kompilacja %1$d)</string>
+    <string name="nika_feedback_body">\n\n---\nUrządzenie: %1$s %2$s\nAndroid: %3$s\nKompilacja: %4$d</string>
+    <string name="nika_feedback_copied">Nie znaleziono aplikacji pocztowej. Adres %1$s został skopiowany.</string>
+</resources>

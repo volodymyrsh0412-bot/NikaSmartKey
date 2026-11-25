@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="action_copy_command">Копіювати команду</string>
+  <string name="action_move_down">Перемістити вниз</string>
+  <string name="action_move_up">Перемістити вгору</string>
+  <string name="battery_optimization_notification_text">На цьому телефоні режим економії заряду може зупинити Nika після вимкнення екрана, і вона замовкне до перезапуску. Торкніться, щоб відкрити оптимізацію батареї, виберіть «Усі додатки», знайдіть Nika й виберіть «Не оптимізувати».</string>
+  <string name="battery_optimization_notification_title">Оптимізація батареї може зупинити Nika</string>
+  <string name="cannot_clear_feedback">Не вдалося очистити текст</string>
+  <string name="category_collapsed">Згорнуто</string>
+  <string name="category_expanded">Розгорнуто</string>
+  <string name="command_copied">Команду скопійовано</string>
+  <string name="detailed_image_description_fallback_result_with_reason"><xliff:g id="fallback_result" example="Text in image: Hello world!!">%1$s</xliff:g>. Не вдалося отримати докладніший опис зображення: <xliff:g id="reason" example="Gemini is busy right now. Try again in a moment.">%2$s</xliff:g></string>
+  <string name="dialog_message_detailed_ai_description">Вибрані зображення надсилаються до Gemini API від Google для опису. Якщо ввімкнено ШІ на пристрої, зображення описуються на цьому телефоні й нікуди не надсилаються.\n\nЯкщо ви користуєтеся безкоштовним ключем API, Google може зберігати отримані дані, використовувати їх для вдосконалення своїх продуктів і залучати людей до їх перегляду. Генеративний ШІ є експериментальним, тому може помилятися. Діють <xliff:g id="Gemini API terms" example="Gemini API Additional Terms of Service">%1$s</xliff:g>.</string>
+  <string name="dialog_message_detailed_ai_promotion">Докладні описи зображень створює генеративний ШІ. Вибрані зображення надсилаються до Gemini API від Google для опису. Якщо ввімкнено ШІ на пристрої, зображення описуються на цьому телефоні й нікуди не надсилаються.\n\nЯкщо ви користуєтеся безкоштовним ключем API, Google може зберігати отримані дані, використовувати їх для вдосконалення своїх продуктів і залучати людей до їх перегляду. Генеративний ШІ є експериментальним, тому може помилятися. Докладні описи зображень можна вимкнути будь-коли в налаштуваннях Nika.\n\nДіють <xliff:g id="Gemini API terms" example="Gemini API Additional Terms of Service">%1$s</xliff:g>.</string>
+  <string name="dialog_message_screen_overview_promotion">Знімок екрана надсилається до Gemini API від Google для опису, це займає кілька секунд. Якщо ввімкнено ШІ на пристрої, екран описується на цьому телефоні й нікуди не надсилається.\n\nЯкщо ви користуєтеся безкоштовним ключем API, Google може зберігати отримані дані, використовувати їх для вдосконалення своїх продуктів і залучати людей до їх перегляду. Генеративний ШІ є експериментальним, тому може помилятися. Діють <xliff:g id="Gemini API terms" example="Gemini API Additional Terms of Service">%1$s</xliff:g>.</string>
+  <string name="dialog_title_audio_output_device">Виберіть, де відтворювати звук Nika</string>
+  <string name="emoji_repeat_count_2">2 або більше</string>
+  <string name="emoji_repeat_count_3">3 або більше</string>
+  <string name="emoji_repeat_count_4">4 або більше</string>
+  <string name="emoji_repeat_count_5">5 або більше</string>
+  <string name="emoji_repeat_count_6">6 або більше</string>
+  <string name="emoji_repeat_count_off">Вимкнено</string>
+  <string name="emoji_speech_engine">Читає синтезатор мовлення</string>
+  <string name="emoji_speech_names">Читає Nika</string>
+  <string name="emoji_speech_none">Нічого</string>
+  <string name="emoji_speech_state">Емодзі: <xliff:g example="Read by Nika" id="state">%1$s</xliff:g></string>
+  <string name="gemini_error_api_key">Gemini не прийняв ключ API. Перевірте ключ у налаштуваннях автоматичних описів.</string>
+  <string name="gemini_error_busy">Gemini зараз зайнятий. Спробуйте за хвилину.</string>
+  <string name="gemini_error_quota">Ліміт використання вашого ключа Gemini API вичерпано. Спробуйте пізніше.</string>
+  <string name="gemini_error_timeout">Gemini відповідав надто довго. Спробуйте ще раз.</string>
+  <string name="gemini_error_with_code">Gemini не зміг відповісти, помилка <xliff:g id="http_status" example="400">%1$d</xliff:g>.</string>
+  <string name="gemini_error_with_details">Gemini не зміг відповісти, помилка <xliff:g id="http_status" example="400">%1$d</xliff:g>: <xliff:g id="details" example="User location is not supported for the API use.">%2$s</xliff:g></string>
+  <string name="item_detail_name">Назва</string>
+  <string name="item_detail_state">Стан</string>
+  <string name="item_detail_type">Тип</string>
+  <string name="item_details_order_footer">Nika озвучує відомості про елемент у цьому порядку. Щоб змінити його, торкніться відомості та утримуйте, потім перетягніть угору або вниз. Коли Nika ввімкнена, двічі торкніться й утримуйте, а потім перетягніть. Також можна скористатися діями «Перемістити вгору» і «Перемістити вниз».</string>
+  <string name="keycombo_menu_other_append_last_spoken_phrase">Додати останню озвучену фразу до буфера обміну</string>
+  <string name="media_action_fast_forward">Перемотати вперед</string>
+  <string name="media_action_next">Наступний трек</string>
+  <string name="media_action_play_pause">Відтворити/пауза</string>
+  <string name="media_action_previous">Попередній трек</string>
+  <string name="media_action_rewind">Перемотати назад</string>
+  <string name="media_action_stop">Стоп</string>
+  <string name="no_voice_profiles">Немає голосових профілів</string>
+  <string name="notification_list_clear_all">Очистити все</string>
+  <string name="notification_list_dismiss">Закрити</string>
+  <string name="notification_list_empty">Немає сповіщень</string>
+  <string name="notification_list_grant_access">Увімкнути доступ до сповіщень</string>
+  <string name="notification_list_next">Далі</string>
+  <string name="notification_list_no_access">Доступ до сповіщень вимкнено</string>
+  <string name="notification_list_pause">Пауза</string>
+  <string name="notification_list_paused">Призупинено</string>
+  <string name="notification_list_play">Відтворити</string>
+  <string name="notification_list_playing">Відтворюється</string>
+  <string name="notification_list_previous">Назад</string>
+  <string name="notification_list_quick_settings">Швидкі налаштування</string>
+  <string name="notification_list_send">Надіслати</string>
+  <string name="notification_list_title">Сповіщення</string>
+  <string name="notification_part_app">Назва додатка</string>
+  <string name="notification_part_playback">Відтворюється чи на паузі</string>
+  <string name="notification_part_text">Текст</string>
+  <string name="notification_part_time">Час</string>
+  <string name="notification_part_title">Заголовок</string>
+  <string name="permission_braille_display_description">Дозволяє додатку запитати право бути брайлівським дисплеєм для Nika. Якщо ви дозволите це в Nika, додаток зможе читати все, що є на екрані, і керувати пристроєм. Спершу Nika запитає вас.</string>
+  <string name="permission_braille_display_label">запитувати право бути брайлівським дисплеєм для Nika</string>
+  <string name="permission_speak_description">Дозволяє додатку запитати право озвучувати текст голосом Nika. Перш ніж додаток зможе говорити, Nika запитає вас.</string>
+  <string name="permission_speak_label">говорити через Nika</string>
+  <string name="phonetic_letters_mode_after_letter_delay">Після літери, із затримкою, як-от «х, Харків»</string>
+  <string name="phonetic_letters_mode_after_letter_no_delay">Після літери, без затримки, як-от «х Харків»</string>
+  <string name="phonetic_letters_mode_instead_of_letter">Замість літери, як-от «Харків»</string>
+  <string name="phonetic_letters_mode_off">Вимкнено</string>
+  <string name="pref_interrupt_typing_entry_always">Завжди</string>
+  <string name="pref_interrupt_typing_entry_edit_fields">У полях введення</string>
+  <string name="pref_interrupt_typing_entry_keyboard_echo">Під час відлуння клавіатури</string>
+  <string name="pref_node_desc_order_entry_name_state_role_pos">Назва, стан, тип</string>
+  <string name="pref_node_desc_order_entry_role_state_name_pos">Тип, стан, назва</string>
+  <string name="pref_node_desc_order_entry_state_role_name_pos">Стан, тип, назва</string>
+  <string name="pref_reduce_window_delay_summary">Nika швидше читає нові екрани, коли анімацію вимкнено. Це вимикає анімацію на всьому телефоні.</string>
+  <string name="pref_table_column_headers_entry_after">Після даних клітинки</string>
+  <string name="pref_table_column_headers_entry_before">Перед даними клітинки</string>
+  <string name="pref_table_column_headers_entry_off">Не читати</string>
+  <string name="pref_table_column_headers_title">Читати заголовки стовпців</string>
+  <string name="pref_table_headers_category_title">Читання таблиць</string>
+  <string name="pref_table_speak_row_column_numbers_summary">Озвучувати номери рядка й стовпця для клітинок таблиці</string>
+  <string name="pref_table_speak_row_column_numbers_title">Озвучувати номери рядків і стовпців</string>
+  <string name="shortcut_media_fast_forward">Перемотати вперед</string>
+  <string name="shortcut_media_next">Наступний трек</string>
+  <string name="shortcut_media_previous">Попередній трек</string>
+  <string name="shortcut_media_rewind">Перемотати назад</string>
+  <string name="shortcut_media_stop">Зупинити медіа</string>
+  <string name="shortcut_next_voice_profile">Наступний голосовий профіль</string>
+  <string name="shortcut_previous_voice_profile">Попередній голосовий профіль</string>
+  <string name="shortcut_reserved_for_vibration_watch">Зарезервовано для Vibration Watch у додаткових налаштуваннях</string>
+  <string name="shortcut_scroll_to_bottom">Прокрутити донизу</string>
+  <string name="shortcut_scroll_to_top">Прокрутити догори</string>
+  <string name="shortcut_system_notifications">Панель сповіщень системи</string>
+  <string name="shortcut_voice_profiles">Вибрати голосовий профіль</string>
+  <string name="speech_control_allow">Дозволити</string>
+  <string name="speech_control_apps_category">Додатки</string>
+  <string name="speech_control_ask_text">Він зможе озвучувати текст голосом Nika. Це можна змінити в додаткових налаштуваннях.</string>
+  <string name="speech_control_ask_title">Дозволити додатку <xliff:g id="app" example="Tasker">%1$s</xliff:g> говорити через Nika?</string>
+  <string name="speech_control_deny">Не дозволяти</string>
+  <string name="speech_control_no_apps">Жоден додаток ще не запитував дозвіл говорити.</string>
+  <string name="speech_engine_unavailable_with_profile">Синтезатор мовлення недоступний, поки використовується голосовий профіль</string>
+  <string name="spoken_language_unavailable_with_profile">Мова озвучення недоступна, поки використовується голосовий профіль</string>
+  <string name="summary_append_last_spoken_phrase">Додає останню фразу, яку сказала Nika, до скопійованого тексту з нового рядка, щоб можна було скопіювати кілька фраз разом</string>
+  <string name="summary_media_controls">Керування відтворенням медіа</string>
+  <string name="summary_pref_announce_ringer_mode">Повідомляти, коли дзвінок переведено на вібрацію або беззвучний режим</string>
+  <string name="summary_pref_direct_click">Подвійний дотик торкається елемента у фокусі на екрані, як палець, а не просить додаток активувати його. Допомагає з кнопками, які ігнорують подвійний дотик. Текстові поля й повзунки активуються як зазвичай.</string>
+  <string name="summary_pref_low_latency_audio">Відтворювати звуки й мовлення Nika найшвидшим аудіошляхом телефона, щоб ви чули їх раніше. Вимкніть, якщо мовлення чи звуки уриваються або звучать неправильно.</string>
+  <string name="summary_pref_mute_speech_while_recording">Поки додаток записує звук без підключених навушників, Nika говорить лише у відповідь на ваші жести, клавіші та введення тексту й мовчить, наприклад, про сповіщення, щоб вони не потрапили в запис.</string>
+  <string name="summary_pref_preserve_web_reading_control">Залишатися на вибраному елементі керування читанням під час навігації веб-вмістом. Дії все одно можна вибрати вручну.</string>
+  <string name="summary_pref_reserve_vibration_watch_gestures">Nika не оброблятиме дотики двома пальцями (одинарний і подвійний), щоб їх могла використовувати Samsung Vibration Watch. Увімкніть Vibration Watch у налаштуваннях доступності вашого годинника.</string>
+  <string name="summary_pref_restore_focus_on_back">Повертатися до останнього елемента у фокусі, коли ви повертаєтеся на екран.</string>
+  <string name="summary_pref_screen_announcements">Виберіть, що Nika говорить, коли екран вимикається чи вмикається і коли телефон розблоковано</string>
+  <string name="summary_pref_scroll_to_restore_previous_focus">Прокручувати до останнього елемента у фокусі, коли ви повертаєтеся на екран.</string>
+  <string name="summary_pref_speak_in_phrases">Для синтезаторів мовлення, які повільно зупиняються, як-от Gryphon, щоб довгий текст зупинявся одразу після змахування. Багато синтезаторів роблять довшу паузу між реченнями, надісланими окремо, тож вимкніть це, якщо ваш зупиняється швидко.</string>
+  <string name="summary_pref_speak_nav_bar_buttons">Із активацією підняттям пальця на панелі навігації озвучувати кнопку, яку натискає дотик, наприклад «Назад» або «Додому».</string>
+  <string name="summary_pref_speak_notifications">Зачитувати нові сповіщення вголос, коли вони надходять. Вхідні виклики озвучуються завжди.</string>
+  <string name="summary_pref_speak_volume_changes">Озвучувати нову гучність після натискання клавіш гучності</string>
+  <string name="summary_pref_speakerphone_away_from_ear">Під час виклику перемикає на гучномовець, коли ви віддаляєте телефон від вуха, і назад на динамік, коли підносите його знову.</string>
+  <string name="summary_pref_speakerphone_needs_permission">Потрібен дозвіл, який Android не надає програмам читання з екрана. Щоб надати його, виконайте цю команду через adb або Shizuku, а потім поверніться на цей екран: %1$s</string>
+  <string name="summary_pref_speech_control">Додатки, яким ви дозволите, можуть озвучувати текст голосом Nika. Поки пристрій заблоковано, нічого не озвучується.</string>
+  <string name="summary_pref_suppress_extra_screen_on_speech">Коли вмикається екран блокування, озвучувати лише вибрані пункти.</string>
+  <string name="summary_pref_swipe_before_lift">Переходити до наступного чи попереднього елемента одразу, як палець починає змахування, а не коли його піднято. Якщо змахування перетворюється на інший жест, наприклад вправо, а потім вниз, ви можете ненадовго почути наступний елемент, перш ніж Nika повернеться назад.</string>
+  <string name="summary_pref_tts_engine_default">Системний за замовчуванням</string>
+  <string name="summary_pref_use_accessibility_stream">Мовлення й звуки використовують гучність спеціальних можливостей, тож їх можна налаштувати окремо від медіа. Коли вимкнено, вони використовують гучність медіа.</string>
+  <string name="summary_pref_volume_keys_adjust_sliders">Коли повзунок у фокусі, клавіші гучності змінюють його значення замість гучності</string>
+  <string name="summary_pref_wrap_around">Змахування за останній елемент переходить до першого, а за перший — до останнього. Коли вимкнено, наприкінці звучить сигнал.</string>
+  <string name="summary_selector_audio_output_device">Змінити, де говорить Nika: динамік телефона чи навушники</string>
+  <string name="summary_selector_links_controls_web_only">Обмежити налаштування «Посилання» й «Елементи керування» веб-вмістом</string>
+  <string name="summary_selector_menu_emoji">Змінити спосіб читання емодзі</string>
+  <string name="summary_selector_switch_tts_engine">Перемикатися між установленими синтезаторами мовлення</string>
+  <string name="summary_selector_vertical_navigation">Переходити до елемента нижче чи вище, оминаючи інші елементи рядка</string>
+  <string name="summary_selector_voice_profile">Перемикатися між збереженими голосовими профілями</string>
+  <string name="summary_support_change_brightness">Збільшувати або зменшувати яскравість екрана, навіть коли екран приховано</string>
+  <string name="summary_support_change_lift_to_activate">Змінити, де підняття пальця активує елемент</string>
+  <string name="summary_support_change_media_volume">Збільшувати або зменшувати гучність медіа</string>
+  <string name="summary_support_tablet_held_up_faces_away">Для брайлівської клавіатури на планшеті або розкладеному телефоні</string>
+  <string name="summary_support_wrap_around">Увімкнути чи вимкнути перехід від останнього елемента до першого</string>
+  <string name="tablet_held_up_faces_away_off">Піднятий планшет екраном від себе: вимкнено</string>
+  <string name="tablet_held_up_faces_away_on">Піднятий планшет екраном від себе: увімкнено</string>
+  <string name="talkback_exit_watermark_text_no_menu_gesture">Nika ввімкнена. Утримуйте 2 пальці на екрані 5 секунд, щоб вимкнути. Щоб прибрати це повідомлення, вимкніть «Налаштування Nika» &gt; «Додаткові налаштування» &gt; «Показувати інструкції з вимкнення Nika».</string>
+  <string name="template_battery_level">Заряд батареї <xliff:g id="battery_level" example="73">%1$s</xliff:g> відсотків</string>
+  <string name="template_battery_level_unknown">Рівень заряду невідомий</string>
+  <string name="template_item_details_order_dropped">Відпущено: <xliff:g id="detail" example="Name">%1$s</xliff:g>. <xliff:g id="position" example="Position 2 of 3">%2$s</xliff:g></string>
+  <string name="template_item_details_order_picked_up">Підхоплено: <xliff:g id="detail" example="Name">%1$s</xliff:g>. <xliff:g id="position" example="Position 1 of 3">%2$s</xliff:g></string>
+  <string name="template_lift_to_activate_changed">Активація підняттям пальця: <xliff:g id="mode">%1$s</xliff:g></string>
+  <string name="template_list_position">Позиція <xliff:g id="position" example="2">%1$d</xliff:g> з <xliff:g id="count" example="3">%2$d</xliff:g></string>
+  <string name="template_setting_limit"><xliff:g id="limit" example="Minimum">%1$s</xliff:g>, <xliff:g id="value" example="0.15 seconds">%2$s</xliff:g></string>
+  <string name="title_append_last_spoken_phrase">Додати останню озвучену фразу до буфера обміну</string>
+  <string name="title_clear_selection">Скасувати виділення</string>
+  <string name="title_edittext_clear">Очистити текст</string>
+  <string name="title_pref_add_voice_profile">Додати голосовий профіль</string>
+  <string name="title_pref_announce_ringer_mode">Режим дзвінка</string>
+  <string name="title_pref_announce_time">Час</string>
+  <string name="title_pref_audio_output_device">Пристрій виведення звуку</string>
+  <string name="title_pref_brightness">Яскравість</string>
+  <string name="title_pref_category_apps">Додатки</string>
+  <string name="title_pref_category_feedback">Зворотний зв’язок</string>
+  <string name="title_pref_category_more">Більше</string>
+  <string name="title_pref_category_typing_and_braille">Введення тексту та шрифт Брайля</string>
+  <string name="title_pref_delete_voice_profile">Видалити голосовий профіль</string>
+  <string name="title_pref_direct_click">Прямий дотик-клік</string>
+  <string name="title_pref_emoji_repeat_count">Рахувати емодзі, що повторюються</string>
+  <string name="title_pref_emoji_speech">Емодзі</string>
+  <string name="title_pref_first_item_interrupts_window_name">Озвучувати перший елемент, не чекаючи назви вікна</string>
+  <string name="title_pref_focus_new_windows">Переміщувати фокус у нові вікна</string>
+  <string name="title_pref_interrupt_enter">Переривати мовлення при натисканні Enter</string>
+  <string name="title_pref_interrupt_typing">Переривати мовлення під час введення тексту</string>
+  <string name="title_pref_lift_to_activate">Активація підняттям пальця</string>
+  <string name="title_pref_low_latency_audio">Звук із малою затримкою</string>
+  <string name="title_pref_media_controls">Керування медіа</string>
+  <string name="title_pref_media_volume">Гучність медіа</string>
+  <string name="title_pref_multi_tap_timeout">Час між дотиками одним пальцем</string>
+  <string name="title_pref_mute_speech_while_recording">Тиша під час запису</string>
+  <string name="title_pref_navigation">Навігація</string>
+  <string name="title_pref_notification_list">Використовувати список сповіщень Nika</string>
+  <string name="title_pref_notification_parts">Відомості про сповіщення</string>
+  <string name="title_pref_phonetic_letters_mode">Озвучувати літери фонетично</string>
+  <string name="title_pref_preserve_web_reading_control">Зберігати вибраний елемент керування читанням на веб-сторінках</string>
+  <string name="title_pref_reserve_vibration_watch_gestures">Зарезервувати жести для Vibration Watch</string>
+  <string name="title_pref_restore_focus_on_back">Відновлювати фокус при поверненні</string>
+  <string name="title_pref_rotor_step_degrees">Поворот ротора за один крок</string>
+  <string name="title_pref_say_device_unlocked">Говорити «Пристрій розблоковано»</string>
+  <string name="title_pref_say_screen_off">Говорити «Екран вимкнено»</string>
+  <string name="title_pref_screen_announcements">Увімкнення та вимкнення екрана</string>
+  <string name="title_pref_scroll_to_restore_previous_focus">Прокручувати, щоб відновити попередній фокус</string>
+  <string name="title_pref_selector_links_controls_web_only">«Посилання» й «Елементи керування» лише у веб-вмісті</string>
+  <string name="title_pref_shortcut_2finger_rotate_clockwise">Повернути двома пальцями за годинниковою стрілкою</string>
+  <string name="title_pref_shortcut_2finger_rotate_counterclockwise">Повернути двома пальцями проти годинникової стрілки</string>
+  <string name="title_pref_shortcut_3finger_4tap">Чотири дотики трьома пальцями</string>
+  <string name="title_pref_shortcut_down_and_left_then_hold">Змахнути вниз, потім вліво й утримувати</string>
+  <string name="title_pref_shortcut_down_and_right_then_hold">Змахнути вниз, потім вправо й утримувати</string>
+  <string name="title_pref_shortcut_down_and_up_then_hold">Змахнути вниз, потім вгору й утримувати</string>
+  <string name="title_pref_shortcut_down_then_hold">Змахнути вниз і утримувати</string>
+  <string name="title_pref_shortcut_left_and_down_then_hold">Змахнути вліво, потім вниз і утримувати</string>
+  <string name="title_pref_shortcut_left_and_right_then_hold">Змахнути вліво, потім вправо й утримувати</string>
+  <string name="title_pref_shortcut_left_and_up_then_hold">Змахнути вліво, потім вгору й утримувати</string>
+  <string name="title_pref_shortcut_left_then_hold">Змахнути вліво й утримувати</string>
+  <string name="title_pref_shortcut_right_and_down_then_hold">Змахнути вправо, потім вниз і утримувати</string>
+  <string name="title_pref_shortcut_right_and_left_then_hold">Змахнути вправо, потім вліво й утримувати</string>
+  <string name="title_pref_shortcut_right_and_up_then_hold">Змахнути вправо, потім вгору й утримувати</string>
+  <string name="title_pref_shortcut_right_then_hold">Змахнути вправо й утримувати</string>
+  <string name="title_pref_shortcut_up_and_down_then_hold">Змахнути вгору, потім вниз і утримувати</string>
+  <string name="title_pref_shortcut_up_and_left_then_hold">Змахнути вгору, потім вліво й утримувати</string>
+  <string name="title_pref_shortcut_up_and_right_then_hold">Змахнути вгору, потім вправо й утримувати</string>
+  <string name="title_pref_shortcut_up_then_hold">Змахнути вгору й утримувати</string>
+  <string name="title_pref_speak_in_phrases">Надсилати довгий текст по одному реченню</string>
+  <string name="title_pref_speak_items_before_scroll">Озвучувати елементи до того, як вони з’являться на екрані</string>
+  <string name="title_pref_speak_nav_bar_buttons">Озвучувати кнопки панелі навігації</string>
+  <string name="title_pref_speak_notifications">Озвучувати сповіщення</string>
+  <string name="title_pref_speak_volume_changes">Озвучувати зміни гучності</string>
+  <string name="title_pref_speakerphone_away_from_ear">Гучномовець, коли телефон далеко від вуха</string>
+  <string name="title_pref_speech_control">Дозволити іншим додаткам говорити</string>
+  <string name="title_pref_speech_pitch">Висота голосу</string>
+  <string name="title_pref_suppress_extra_screen_on_speech">Озвучувати лише наведені вище пункти</string>
+  <string name="title_pref_swipe_before_lift">Переходити, ще не піднявши палець</string>
+  <string name="title_pref_swipe_hold_timeout">Час утримування після змахування</string>
+  <string name="title_pref_switch_dialects">Автоматично перемикати діалект</string>
+  <string name="title_pref_switch_languages">Автоматично перемикати мову</string>
+  <string name="title_pref_system_tts_settings">Системні налаштування синтезу мовлення</string>
+  <string name="title_pref_touch_activation">Дотик і активація</string>
+  <string name="title_pref_touch_stops_speech">Зупиняти мовлення при дотику до екрана</string>
+  <string name="title_pref_tts_engine">Синтезатор мовлення</string>
+  <string name="title_pref_use_accessibility_stream">Використовувати гучність спеціальних можливостей</string>
+  <string name="title_pref_voice_profile_in_use">Використовуваний голосовий профіль</string>
+  <string name="title_pref_voice_profile_language">Мова</string>
+  <string name="title_pref_voice_profile_name">Назва</string>
+  <string name="title_pref_voice_profile_voice">Голос</string>
+  <string name="title_pref_voice_profiles">Голосові профілі</string>
+  <string name="title_pref_volume_keys_adjust_sliders">Клавіші гучності керують повзунками</string>
+  <string name="title_pref_wrap_around">Перехід по колу</string>
+  <string name="title_screen_announcements_screen_off">Коли екран вимикається</string>
+  <string name="title_screen_announcements_screen_on">Коли екран вмикається</string>
+  <string name="title_screen_announcements_unlock">Коли телефон розблоковано</string>
+  <string name="title_selector_switch_tts_engine">Синтезатор мовлення</string>
+  <string name="title_selector_tablet_held_up_faces_away">Піднятий планшет екраном від себе</string>
+  <string name="title_selector_vertical_navigation">Вертикальна навігація</string>
+  <string name="title_selector_voice_profile">Голосовий профіль</string>
+  <string name="value_audio_output_device_bluetooth_default">Пристрій Bluetooth для звуку</string>
+  <string name="value_audio_output_device_bluetooth_or_wired">Підключений пристрій Bluetooth або дротовий</string>
+  <string name="value_audio_output_device_default">Системний за замовчуванням</string>
+  <string name="value_audio_output_device_disconnected">від’єднано</string>
+  <string name="value_audio_output_device_speaker">Динамік телефона</string>
+  <string name="value_audio_output_device_usb_device">USB-пристрій для звуку</string>
+  <string name="value_audio_output_device_usb_headset">USB-гарнітура</string>
+  <string name="value_audio_output_device_wired_headphones">Дротові навушники</string>
+  <string name="value_audio_output_device_wired_headset">Дротова гарнітура</string>
+  <string name="value_charger_connected">Зарядний пристрій підключено</string>
+  <string name="value_focus_delay_200ms_default">0,2 секунди (за замовчуванням)</string>
+  <string name="value_focus_delay_300ms">0,3 секунди</string>
+  <string name="value_lift_to_activate_disabled">Вимкнено</string>
+  <string name="value_lift_to_activate_entire_screen">Увесь екран</string>
+  <string name="value_lift_to_activate_navigation_bar">Лише на панелі навігації</string>
+  <string name="value_multi_tap_timeout_100ms">0,1 секунди</string>
+  <string name="value_multi_tap_timeout_150ms">0,15 секунди</string>
+  <string name="value_multi_tap_timeout_200ms">0,2 секунди</string>
+  <string name="value_multi_tap_timeout_250ms">0,25 секунди (за замовчуванням)</string>
+  <string name="value_rotor_step_15">15 градусів</string>
+  <string name="value_rotor_step_20">20 градусів</string>
+  <string name="value_rotor_step_30">30 градусів (за замовчуванням)</string>
+  <string name="value_rotor_step_45">45 градусів</string>
+  <string name="value_rotor_step_60">60 градусів</string>
+  <string name="value_swipe_hold_timeout_125ms">0,125 секунди</string>
+  <string name="value_swipe_hold_timeout_75ms">0,075 секунди</string>
+  <string name="value_type_confirmation_lift_to_type_except_action_key">Утримуйте палець, щоб вибрати будь-яку клавішу, потім підніміть його. Двічі торкніться для Enter, «Готово» або «Надіслати».</string>
+  <string name="voice_profile_default">Nika за замовчуванням</string>
+  <string name="voice_profile_delete">Видалити</string>
+  <string name="voice_profile_delete_confirm">Видалити <xliff:g id="name" example="Reading">%1$s</xliff:g>?</string>
+  <string name="voice_profile_deleted">Видалено: <xliff:g id="name" example="Reading">%1$s</xliff:g></string>
+  <string name="voice_profile_engine_default">За замовчуванням</string>
+  <string name="voice_profile_in_use">Використовується: <xliff:g id="name" example="Reading">%1$s</xliff:g></string>
+  <string name="voice_profile_loading">Завантаження</string>
+  <string name="voice_profile_menu_item_in_use"><xliff:g id="name" example="Reading">%1$s</xliff:g>, використовується</string>
+  <string name="voice_profile_move_down">Перемістити вниз</string>
+  <string name="voice_profile_move_up">Перемістити вгору</string>
+  <string name="voice_profile_moved_above">Переміщено вище за <xliff:g id="name" example="Reading">%1$s</xliff:g></string>
+  <string name="voice_profile_moved_below">Переміщено нижче за <xliff:g id="name" example="Reading">%1$s</xliff:g></string>
+  <string name="voice_profile_name_taken">Голосовий профіль із назвою <xliff:g id="name" example="Reading">%1$s</xliff:g> уже існує</string>
+  <string name="voice_profile_new_name">Голосовий профіль <xliff:g id="number" example="2">%1$d</xliff:g></string>
+  <string name="voice_profile_not_installed"><xliff:g id="name" example="Eloquence">%1$s</xliff:g>, не встановлено</string>
+  <string name="voice_profile_rename">Перейменувати</string>
+  <string name="voice_profile_voice_in_language"><xliff:g id="voice" example="en-us-x-tpf-local">%1$s</xliff:g>, <xliff:g id="language" example="English (United States)">%2$s</xliff:g></string>
+  <string name="wrap_around_off">Перехід по колу вимкнено</string>
+  <string name="wrap_around_on">Перехід по колу ввімкнено</string>
+  <string name="script_add_example">Додати приклад скрипта</string>
+  <string name="script_add_example_summary">Називає кожен додаток, на який ви перемикаєтеся. Скрипт для початку.</string>
+  <string name="script_author">Автор: <xliff:g id="author">%1$s</xliff:g></string>
+  <string name="script_binding_assign">Призначити</string>
+  <string name="script_binding_assign_title">Призначити <xliff:g id="binding">%1$s</xliff:g> для «<xliff:g id="command">%2$s</xliff:g>»?</string>
+  <string name="script_binding_bad_keys">Ці клавіші не можна використати. <xliff:g id="reason">%1$s</xliff:g></string>
+  <string name="script_binding_choose_gesture">Вибрати жест</string>
+  <string name="script_binding_control">Елементи керування читанням</string>
+  <string name="script_binding_gesture">Жест: <xliff:g id="gesture">%1$s</xliff:g></string>
+  <string name="script_binding_keys">Клавіші: <xliff:g id="keys">%1$s</xliff:g></string>
+  <string name="script_binding_menu">Меню Nika</string>
+  <string name="script_binding_none">Немає</string>
+  <string name="script_binding_perform">Виконайте жест або натисніть клавіші</string>
+  <string name="script_binding_perform_message">Виконайте жест або натисніть клавіші.</string>
+  <string name="script_binding_perform_summary">Призначити наступний жест або клавіші, натиснуті з модифікатором Nika</string>
+  <string name="script_binding_restore">Відновити типові значення</string>
+  <string name="script_binding_restored">Типові значення відновлено</string>
+  <string name="script_binding_turn_off">Вимкнути</string>
+  <string name="script_binding_turn_on">Увімкнути</string>
+  <string name="script_binding_type_keys">Ввести клавіші</string>
+  <string name="script_binding_type_keys_summary">Наприклад, backtalk+shift+n або backtalk+t, s</string>
+  <string name="script_button_off">Спершу ввімкніть скрипт</string>
+  <string name="script_clear_storage">Очистити збережені дані</string>
+  <string name="script_commands_category">Команди</string>
+  <string name="script_commands_summary">Жести й клавіші працюючого скрипта мають пріоритет над жестами й клавішами Nika. Вимкніть команду, щоб залишити команду Nika.</string>
+  <string name="script_compatibility_title">Сумісність</string>
+  <string name="script_dialog_title"><xliff:g id="script">%1$s</xliff:g>: <xliff:g id="title">%2$s</xliff:g></string>
+  <string name="script_enabled">Увімкнути</string>
+  <string name="script_homepage">Відкрити домашню сторінку</string>
+  <string name="script_homepage_confirm_title">Відкрити цю адресу?</string>
+  <string name="script_homepage_failed">Жоден додаток не може відкрити <xliff:g id="address">%1$s</xliff:g></string>
+  <string name="script_homepage_open">Відкрити</string>
+  <string name="script_import">Імпортувати скрипт</string>
+  <string name="script_import_cannot_open">Не вдалося відкрити файл.</string>
+  <string name="script_import_failed">Не вдалося імпортувати. <xliff:g id="reason">%1$s</xliff:g></string>
+  <string name="script_import_nothing">Немає файлу скрипта для встановлення.</string>
+  <string name="script_import_repository">Це посилання на весь репозиторій. Відкрийте потрібний скрипт і поділіться його посиланням.</string>
+  <string name="script_import_summary">Файл .js або .zip із main.js</string>
+  <string name="script_inspect_clip_label">Відомості про елемент</string>
+  <string name="script_inspect_copied">Скопійовано. <xliff:g id="details">%1$s</xliff:g></string>
+  <string name="script_inspect_no_id">Немає ідентифікатора, тож правила не можуть назвати елемент. Скопійовано. <xliff:g id="details">%1$s</xliff:g></string>
+  <string name="script_inspect_no_item">Жоден елемент не у фокусі</string>
+  <string name="script_install_adds">Додає:</string>
+  <string name="script_install_anyway">Усе одно встановити</string>
+  <string name="script_install_button">Встановити</string>
+  <string name="script_install_can">Може:</string>
+  <string name="script_install_command"><xliff:g id="title">%1$s</xliff:g>: <xliff:g id="bindings">%2$s</xliff:g></string>
+  <string name="script_install_label">Встановити скрипт Nika</string>
+  <string name="script_install_no_permissions">Дозволи не потрібні.</string>
+  <string name="script_install_permissions_note">Їх можна вимкнути пізніше.</string>
+  <string name="script_install_title">Встановити <xliff:g id="name">%1$s</xliff:g>?</string>
+  <string name="script_installed"><xliff:g id="name">%1$s</xliff:g> встановлено</string>
+  <string name="script_keys_backtalk_modifier">Модифікатор Nika</string>
+  <string name="script_keys_then"><xliff:g id="first">%1$s</xliff:g>, потім <xliff:g id="second">%2$s</xliff:g></string>
+  <string name="script_list_filter">Фільтр</string>
+  <string name="script_log">Журнал</string>
+  <string name="script_log_clear">Очистити журнал</string>
+  <string name="script_log_copied">Журнал скопійовано</string>
+  <string name="script_log_copy">Копіювати журнал</string>
+  <string name="script_log_empty">Журнал порожній</string>
+  <string name="script_log_entry"><xliff:g id="time">%1$s</xliff:g>, <xliff:g id="level">%2$s</xliff:g></string>
+  <string name="script_log_summary">Виведення й помилки від запуску Nika</string>
+  <string name="script_manage_category">Керування</string>
+  <string name="script_min_build">Потрібна збірка <xliff:g id="build" example="400">%1$d</xliff:g> або новіша</string>
+  <string name="script_move_down">Запускати пізніше</string>
+  <string name="script_move_up">Запускати раніше</string>
+  <string name="script_needs_build">Потрібна збірка Nika <xliff:g id="needed" example="400">%1$d</xliff:g> або новіша. Це збірка <xliff:g id="current" example="393">%2$d</xliff:g>, тож частина може не працювати.</string>
+  <string name="script_order_summary">Порядок для скриптів, які змінюють те саме мовлення. Скрипти додатків запускаються першими.</string>
+  <string name="script_permission_actions">Натискати, прокручувати, вводити текст і переміщувати фокус</string>
+  <string name="script_permission_clipboard">Читати й змінювати буфер обміну</string>
+  <string name="script_permission_dialogs">Показувати діалоги поверх будь-якого додатка</string>
+  <string name="script_permission_events">Бачити всю активність у кожному додатку, зокрема введення тексту</string>
+  <string name="script_permission_input">Додавати жести, клавіші, пункти меню та елементи керування читанням</string>
+  <string name="script_permission_network">Користуватися інтернетом</string>
+  <string name="script_permission_notifications">Читати й змінювати озвучувані сповіщення</string>
+  <string name="script_permission_passwords">Читати поля паролів</string>
+  <string name="script_permission_screen">Читати екран</string>
+  <string name="script_permission_sensitive"><xliff:g id="permission">%1$s</xliff:g>. Дозволяйте лише довіреним скриптам.</string>
+  <string name="script_permission_speech">Чути й змінювати мовлення Nika</string>
+  <string name="script_permission_system">Повертатися назад або на головний екран, відкривати сповіщення та додатки</string>
+  <string name="script_permissions_none">Немає</string>
+  <string name="script_permissions_summary">Вимкнення дозволу зупиняє частини, яким він потрібен.</string>
+  <string name="script_permissions_title">Дозволи</string>
+  <string name="script_remove">Видалити</string>
+  <string name="script_remove_message">Видаляє його код, дані й налаштування.</string>
+  <string name="script_remove_title">Видалити <xliff:g id="name">%1$s</xliff:g>?</string>
+  <string name="script_removed"><xliff:g id="name">%1$s</xliff:g> видалено</string>
+  <string name="script_runs_everywhere">Працює в усіх додатках</string>
+  <string name="script_runs_in">Працює в: <xliff:g id="apps">%1$s</xliff:g></string>
+  <string name="script_settings_category">Налаштування</string>
+  <string name="script_source_add">Додати джерело</string>
+  <string name="script_source_add_button">Додати</string>
+  <string name="script_source_downloading">Завантаження: <xliff:g id="name">%1$s</xliff:g></string>
+  <string name="script_source_empty">У цьому джерелі немає скриптів</string>
+  <string name="script_source_exists">Це джерело вже додано.</string>
+  <string name="script_source_failed">Не вдалося завантажити скрипти. <xliff:g id="reason">%1$s</xliff:g></string>
+  <string name="script_source_hint">github.com/власник/репозиторій</string>
+  <string name="script_source_invalid">Це не адреса репозиторію на GitHub, GitLab, Codeberg, Gitea або Bitbucket.</string>
+  <string name="script_source_loading">Завантаження</string>
+  <string name="script_source_remove">Видалити джерело</string>
+  <string name="script_source_remove_message">Скрипти, встановлені з нього, залишаться встановленими.</string>
+  <string name="script_source_remove_title">Видалити <xliff:g id="name">%1$s</xliff:g>?</string>
+  <string name="script_source_retry">Спробувати ще раз</string>
+  <string name="script_sources">Джерела скриптів</string>
+  <string name="script_sources_none">Джерела не додано</string>
+  <string name="script_state_incompatible">Може не працювати з цією версією Nika</string>
+  <string name="script_state_off">Вимкнено</string>
+  <string name="script_state_on">Увімкнено</string>
+  <string name="script_storage_cleared">Збережені дані очищено</string>
+  <string name="script_tree_clip_label">Дерево екрана</string>
+  <string name="script_tree_copied">Скопійовано елементів: <xliff:g id="count">%1$d</xliff:g></string>
+  <string name="script_tree_none">Немає вікна для копіювання</string>
+  <string name="script_turned_off"><xliff:g id="name">%1$s</xliff:g> вимкнено через повторні помилки. Дивіться його журнал у «Скриптах».</string>
+  <string name="script_unsupported">Для частин потрібна новіша Nika, тому їх пропущено: <xliff:g id="fields" example="liftToActivate, longPressAfter">%1$s</xliff:g></string>
+  <string name="script_update_anyway">Усе одно оновити</string>
+  <string name="script_update_button">Оновити</string>
+  <string name="script_update_new_permissions">Нові дозволи:</string>
+  <string name="script_update_other_author">Нову версію створив інший автор: <xliff:g id="author">%1$s</xliff:g>. Оновлюйте лише якщо довіряєте йому.</string>
+  <string name="script_update_replaces">Це замінює версію <xliff:g id="version">%1$s</xliff:g> від <xliff:g id="author">%2$s</xliff:g> і зберігає її дані й налаштування.</string>
+  <string name="script_update_title">Оновити <xliff:g id="name">%1$s</xliff:g> до <xliff:g id="version">%2$s</xliff:g>?</string>
+  <string name="script_updated"><xliff:g id="name">%1$s</xliff:g> оновлено до <xliff:g id="version">%2$s</xliff:g></string>
+  <string name="script_version">Версія <xliff:g id="version">%1$s</xliff:g></string>
+  <string name="scripts_all_off">Вимкнути всі скрипти</string>
+  <string name="scripts_all_off_summary">Скрипти залишаються встановленими й зберігають власні перемикачі. Жест «Увімкнути чи вимкнути всі скрипти» робить те саме.</string>
+  <string name="scripts_category_app">Скрипти додатків</string>
+  <string name="scripts_category_global">Глобальні плагіни</string>
+  <string name="scripts_none">Немає встановлених скриптів</string>
+  <string name="scripts_now_off">Скрипти вимкнено</string>
+  <string name="scripts_now_on">Скрипти ввімкнено</string>
+  <string name="scripts_unavailable">Скрипти недоступні на цьому пристрої</string>
+  <string name="shortcut_copy_screen_tree">Копіювати дерево екрана</string>
+  <string name="shortcut_inspect_item">Перевірити елемент у фокусі</string>
+  <string name="shortcut_toggle_scripts">Увімкнути чи вимкнути всі скрипти</string>
+  <string name="summary_copy_screen_tree_menu">Копіювати всі елементи на екрані як JSON для написання скриптів</string>
+  <string name="summary_inspect_item_menu">Озвучити й скопіювати відомості про елемент, на якому ви були, для написання скриптів</string>
+  <string name="summary_pref_scripts">Змінити роботу Nika в додатках</string>
+  <string name="title_pref_scripts">Скрипти</string>
+  <string name="new_theme_author_hint">Автор</string>
+  <string name="new_theme_control_sounds">Підтримує звуки елементів</string>
+  <string name="new_theme_create">Створити</string>
+  <string name="new_theme_description_hint">Опис</string>
+  <string name="new_theme_exists">Тема з такою назвою вже існує.</string>
+  <string name="new_theme_name_hint">Назва</string>
+  <string name="new_theme_needs_name">Введіть назву.</string>
+  <string name="new_theme_title">Нова тема звуків</string>
+  <string name="sound_theme_about">Про цю тему</string>
+  <string name="sound_theme_backtalk">Nika</string>
+  <string name="sound_theme_backtalk_description">Власні звуки й вібрації Nika та будь-які ваші звуки.</string>
+  <string name="sound_theme_by">Автор: <xliff:g id="author" example="Bryan Smart">%1$s</xliff:g></string>
+  <string name="sound_theme_control_sounds_off">Вимикає звуки й вібрації елементів.</string>
+  <string name="sound_theme_control_sounds_on">Вмикає звуки й вібрації елементів.</string>
+  <string name="sound_theme_customisation">Налаштування звуків</string>
+  <string name="sound_theme_export">Зберегти як файл теми</string>
+  <string name="sound_theme_export_failed">Nika не вдалося зберегти файл теми.</string>
+  <string name="sound_theme_in_use">Використовується</string>
+  <string name="sound_theme_install">Встановити</string>
+  <string name="sound_theme_install_and_use">Встановити й використовувати</string>
+  <string name="sound_theme_install_failed">Nika не вдалося встановити тему звуків. <xliff:g id="reason" example="HTTP 404">%1$s</xliff:g></string>
+  <string name="sound_theme_install_https_only">Посилання на теми звуків мають починатися з https.</string>
+  <string name="sound_theme_install_label">Встановити тему звуків</string>
+  <string name="sound_theme_install_not_a_theme">Це не тема звуків, яку може використовувати Nika: <xliff:g id="reason" example="it has no theme.json">%1$s</xliff:g>.</string>
+  <string name="sound_theme_install_nothing">Немає теми звуків для встановлення.</string>
+  <string name="sound_theme_install_reading">Читання теми звуків</string>
+  <string name="sound_theme_install_replaces">Це замінює встановлену тему з такою самою назвою.</string>
+  <string name="sound_theme_install_skipped">Пропущено:\n<xliff:g id="files" example="beep.wav: there is no sound called beep">%1$s</xliff:g></string>
+  <string name="sound_theme_install_title">Встановити <xliff:g id="theme" example="Unspoken">%1$s</xliff:g>?</string>
+  <string name="sound_theme_installed">Встановлено <xliff:g id="theme" example="Unspoken">%1$s</xliff:g>.</string>
+  <string name="sound_theme_installed_in_use">Встановлено <xliff:g id="theme" example="Unspoken">%1$s</xliff:g>. Тепер вона використовується.</string>
+  <string name="sound_theme_license">Ліцензія: <xliff:g id="license" example="GPL-2.0">%1$s</xliff:g></string>
+  <string name="sound_theme_link_hint">https://</string>
+  <string name="sound_theme_link_message">Введіть або вставте посилання на файл теми чи на репозиторій GitHub із темою.</string>
+  <string name="sound_theme_no_picker">На цьому пристрої немає додатка для вибору файлів.</string>
+  <string name="sound_theme_remove">Видалити</string>
+  <string name="sound_theme_remove_button">Видалити</string>
+  <string name="sound_theme_remove_confirm">Видалити тему <xliff:g id="theme" example="Unspoken">%1$s</xliff:g>?</string>
+  <string name="sound_theme_source_empty">У цьому джерелі немає тем звуків</string>
+  <string name="sound_theme_source_failed">Не вдалося завантажити теми звуків. <xliff:g id="reason" example="HTTP 404">%1$s</xliff:g></string>
+  <string name="sound_theme_source_remove_message">Теми звуків, встановлені з нього, залишаться встановленими.</string>
+  <string name="sound_theme_sources">Джерела тем звуків</string>
+  <string name="sound_themes_install_category">Встановити тему</string>
+  <string name="sound_themes_installed_category">Встановлені теми</string>
+  <string name="summary_pref_manage_sound_themes">Створюйте, встановлюйте, експортуйте й видаляйте теми звуків, змінюйте їхні налаштування та звуки.</string>
+  <string name="summary_pref_new_sound_theme">Створіть власну тему й виберіть її звуки, прослуховуючи кожен під час налаштування.</string>
+  <string name="summary_pref_sound_theme_install_file">Файл теми — це ZIP-файл. Його також можна відкрити в Nika або поділитися ним з іншого додатка.</string>
+  <string name="summary_pref_sound_theme_install_link">Посилання на файл теми або на репозиторій GitHub із темою. Також можна поділитися посиланням з Nika з браузера.</string>
+  <string name="summary_pref_sound_theme_install_source">Файли тем у репозиторії на GitHub, GitLab, Codeberg, Gitea або Bitbucket.</string>
+  <string name="summary_pref_theme_sounds">Замініть будь-який звук цієї теми власним звуковим файлом.</string>
+  <string name="theme_sound_action_set_none">Вимкнути звук</string>
+  <string name="theme_sound_braille_character">Брайлівська клавіатура: введення символу</string>
+  <string name="theme_sound_braille_delete">Брайлівська клавіатура: видалення</string>
+  <string name="theme_sound_braille_new_line">Брайлівська клавіатура: новий рядок</string>
+  <string name="theme_sound_braille_space">Брайлівська клавіатура: пробіл</string>
+  <string name="theme_sound_choose">Вибрати звуковий файл</string>
+  <string name="theme_sound_dialog_title"><xliff:g id="sound" example="Click">%1$s</xliff:g> (<xliff:g id="name" example="tick">%2$s</xliff:g>)</string>
+  <string name="theme_sound_failed">Nika не вдалося прочитати цей файл.</string>
+  <string name="theme_sound_none">Без звуку</string>
+  <string name="theme_sound_not_audio">Nika не може відтворити цей файл. Виберіть звук WAV, OGG, MP3 або FLAC.</string>
+  <string name="theme_sound_preview">Прослухати</string>
+  <string name="theme_sound_remove">Видалити звук</string>
+  <string name="theme_sound_summary_android_keyboard">Звук клавіатури Android</string>
+  <string name="theme_sound_summary_custom">Звук теми</string>
+  <string name="theme_sound_summary_default">Звук Nika</string>
+  <string name="theme_sound_summary_no_sound">Без звуку</string>
+  <string name="theme_sound_summary_none">Без звуку. Звучить звук фокуса.</string>
+  <string name="theme_sound_too_large">Файл завеликий. Звук може бути до 5 МБ.</string>
+  <string name="theme_sound_use_android_keyboard">Використовувати звук клавіатури Android</string>
+  <string name="theme_sound_use_default">Використовувати звук Nika</string>
+  <string name="theme_sounds_category">Звуки</string>
+  <string name="theme_sounds_reset_button">Видалити</string>
+  <string name="theme_sounds_reset_confirm">Видалити всі звуки цієї теми й використовувати власні звуки Nika?</string>
+  <string name="title_pref_actions_sound_timing">Звук доступності дій</string>
+  <string name="title_pref_manage_sound_themes">Керування темами звуків</string>
+  <string name="title_pref_new_sound_theme">Нова тема</string>
+  <string name="title_pref_sound_scheme">Схема звуків</string>
+  <string name="title_pref_sound_theme_install_file">З файлу</string>
+  <string name="title_pref_sound_theme_install_link">За посиланням</string>
+  <string name="title_pref_sound_theme_install_source">З джерела</string>
+  <string name="title_pref_sound_themes">Теми звуків</string>
+  <string name="title_pref_theme_sounds_of">Звуки теми <xliff:g id="theme" example="Unspoken">%1$s</xliff:g></string>
+  <string name="title_pref_theme_sounds_reset">Використовувати звуки Nika для всіх</string>
+  <string name="value_actions_sound_timing_focus">Коли елемент отримує фокус</string>
+  <string name="value_actions_sound_timing_hint">Коли починається підказка про дії</string>
+  <string name="individual_sound_control_button">Звук елемента: кнопка</string>
+  <string name="individual_sound_control_checkbox">Звук елемента: прапорець</string>
+  <string name="individual_sound_control_clock">Звук елемента: годинник</string>
+  <string name="individual_sound_control_combo_box">Звук елемента: випадний список</string>
+  <string name="individual_sound_control_edit_text">Звук елемента: поле введення</string>
+  <string name="individual_sound_control_image">Звук елемента: зображення</string>
+  <string name="individual_sound_control_link">Звук елемента: посилання</string>
+  <string name="individual_sound_control_list_item">Звук елемента: пункт списку</string>
+  <string name="individual_sound_control_menu_item">Звук елемента: пункт меню</string>
+  <string name="individual_sound_control_radio_button">Звук елемента: перемикач</string>
+  <string name="individual_sound_control_slider">Звук елемента: повзунок</string>
+  <string name="individual_sound_control_tab">Звук елемента: вкладка</string>
+  <string name="individual_sound_control_tree_item">Звук елемента: пункт дерева</string>
+  <string name="pref_control_sounds_3d_always">Завжди</string>
+  <string name="pref_control_sounds_3d_headphones">З навушниками</string>
+  <string name="pref_control_sounds_3d_never">Ніколи, лише ліворуч і праворуч</string>
+  <string name="summary_pref_control_sounds">Кожен вид елементів, як-от кнопки, прапорці, поля введення й пункти списків, отримує власні звук і вібрацію з теми замість звуку й вібрації фокуса, як це робить Unspoken для NVDA. Звук лунає з того місця, де елемент розташований на екрані, а Nika не називає тип елемента.</string>
+  <string name="summary_pref_control_sounds_speak_roles">Коли звучить звук елемента, усе одно називати його тип, наприклад «кнопка». Це стосується всіх тем звуків.</string>
+  <string name="title_pref_control_sounds">Звуки й вібрації елементів</string>
+  <string name="title_pref_control_sounds_3d">3D-звук</string>
+  <string name="title_pref_control_sounds_speak_roles">Усе одно називати тип елемента</string>
+  <string name="shortcut_announce_status">Озвучити стан</string>
+  <string name="status_airplane_mode">Режим польоту</string>
+  <string name="status_do_not_disturb">Не турбувати</string>
+  <string name="status_item_airplane_mode">Режим польоту</string>
+  <string name="status_item_airplane_mode_summary">Лише коли режим польоту ввімкнено</string>
+  <string name="status_item_battery">Батарея</string>
+  <string name="status_item_battery_summary">Рівень заряду, зарядка й режим економії заряду</string>
+  <string name="status_item_mobile">Мобільна мережа</string>
+  <string name="status_item_mobile_summary">Оператор, тип мережі та рівень сигналу</string>
+  <string name="status_item_ringer">Дзвінок і «Не турбувати»</string>
+  <string name="status_item_ringer_summary">Лише коли дзвінок не ввімкнено або ввімкнено режим «Не турбувати»</string>
+  <string name="status_item_time">Час</string>
+  <string name="status_item_time_summary">Поточний час</string>
+  <string name="status_item_wifi">Wi-Fi</string>
+  <string name="status_item_wifi_summary">Назва мережі та рівень сигналу</string>
+  <string name="status_mobile">Мобільна мережа</string>
+  <string name="status_mobile_no_service">Немає мобільного зв’язку</string>
+  <string name="status_ringer_silent">Без звуку</string>
+  <string name="status_ringer_vibrate">Вібрація</string>
+  <string name="status_wifi_not_connected">Wi-Fi не підключено</string>
+  <string name="status_wifi_off">Wi-Fi вимкнено</string>
+  <string name="template_status_bars"><xliff:g id="level" example="3">%1$d</xliff:g> з <xliff:g id="max_level" example="4">%2$d</xliff:g> поділок</string>
+  <string name="template_status_mobile"><xliff:g id="network" example="T-Mobile, 5G">%1$s</xliff:g>, <xliff:g id="bars" example="2 of 4 bars">%2$s</xliff:g></string>
+  <string name="template_status_wifi">Wi-Fi, <xliff:g id="bars" example="3 of 4 bars">%1$s</xliff:g></string>
+  <string name="template_status_wifi_named">Wi-Fi <xliff:g id="network_name" example="Home">%1$s</xliff:g>, <xliff:g id="bars" example="3 of 4 bars">%2$s</xliff:g></string>
+  <string name="title_pref_status_readout">Озвучення стану</string>
+  <string name="voice_commands_backtalk_setting">Налаштування Nika</string>
+  <string name="voice_commands_backtalk_settings">Налаштування Nika</string>
+  <string name="voice_commands_call_answering">Відповідаю на виклик</string>
+  <string name="voice_commands_call_calling">Телефоную: %1$s</string>
+  <string name="voice_commands_call_cancelled">Виклик скасовано</string>
+  <string name="voice_commands_call_choose">Знайдено контактів для «%2$s»: %1$d. %3$s Назвіть номер, щоб вибрати.</string>
+  <string name="voice_commands_call_choose_item">%1$d, %2$s.</string>
+  <string name="voice_commands_call_confirm">Телефоную: %1$s. Скажіть «yes», щоб підтвердити</string>
+  <string name="voice_commands_call_confirm_speaker">Телефоную на гучномовці: %1$s. Скажіть «yes», щоб підтвердити</string>
+  <string name="voice_commands_call_contact_not_found">Не вдалося знайти «%1$s» у ваших контактах</string>
+  <string name="voice_commands_call_declining">Виклик відхилено</string>
+  <string name="voice_commands_call_failed">Не вдалося завершити виклик</string>
+  <string name="voice_commands_call_hanging_up">Виклик завершено</string>
+  <string name="voice_commands_call_needs_newer_android">Завершення викликів голосом потребує Android 9 або новішої версії</string>
+  <string name="voice_commands_call_no_call">Немає виклику, який можна завершити</string>
+  <string name="voice_commands_call_permission_needed">Щоб телефонувати й відповідати на виклики голосом, Nika потрібен дозвіл. Дозвольте на наступних екранах, а потім повторіть команду.</string>
+  <string name="voice_commands_dnd_off">Режим «Не турбувати» вимкнено</string>
+  <string name="voice_commands_dnd_on">Режим «Не турбувати» ввімкнено</string>
+  <string name="voice_commands_dnd_permission_required">Надайте доступ до режиму «Не турбувати», щоб використовувати цю голосову команду</string>
+  <string name="voice_commands_element_not_found">Не вдалося знайти «%1$s» на екрані</string>
+  <string name="voice_commands_found">Знайдено: %1$s</string>
+  <string name="voice_commands_help_call">Call [contact] or Call [phone number]</string>
+  <string name="voice_commands_help_call_control">Answer the call, Decline, or Hang up</string>
+  <string name="voice_commands_help_call_control_description">Також «pick up the call», «reject the call» і «end call». Ці команди англійською. Під час першого використання Nika запитує дозволи на телефон і контакти</string>
+  <string name="voice_commands_help_call_description">Команди англійською. Nika повторює, кому подзвонить, а ви кажете «yes» для підтвердження. Додайте «on speaker», щоб увімкнути гучномовець. Якщо збігається кілька контактів, виберіть за номером</string>
+  <string name="voice_commands_help_dnd">Turn on Do Not Disturb</string>
+  <string name="voice_commands_help_dnd_description">Команди англійською. Вмикає або вимикає режим «Не турбувати». Під час першого використання Nika запитує доступ до політики сповіщень</string>
+  <string name="voice_commands_muted">Звук вимкнено</string>
+  <string name="voice_commands_open_backtalk_settings">Відкрити налаштування Nika</string>
+  <string name="voice_commands_opening_backtalk_settings">Відкриваю налаштування Nika</string>
+  <string name="voice_commands_opening_settings">Відкриваю налаштування</string>
+  <string name="voice_commands_unmuted">Звук увімкнено</string>
+  <string name="voice_commands_volume_set">Гучність: %1$d відсотків</string>
+  <string name="backtalk_paused">Nika призупинено</string>
+  <string name="backtalk_resumed">Роботу Nika відновлено</string>
+  <string name="dialog_button_pause_backtalk">Призупинити</string>
+  <string name="dialog_message_pause_backtalk">Поки Nika призупинена, вона не говорить і не реагує на жести, а екран працює так, ніби програму читання з екрана не ввімкнено.</string>
+  <string name="dialog_title_pause_backtalk">Призупинити Nika?</string>
+  <string name="keycombo_menu_global_pause_backtalk">Призупинити або відновити Nika</string>
+  <string name="message_resume_key_combo">Також можна натиснути <xliff:g id="key_combo" example="Alt + P">%1$s</xliff:g>.</string>
+  <string name="message_resume_keyguard">Щоб відновити, торкніться сповіщення «Nika призупинено», швидко тричі натисніть кнопку зменшення гучності або заблокуйте й розбудіть телефон, щоб з’явився екран блокування.</string>
+  <string name="message_resume_manual">Щоб відновити, торкніться сповіщення «Nika призупинено» або швидко тричі натисніть кнопку зменшення гучності.</string>
+  <string name="message_resume_screen_on">Щоб відновити, торкніться сповіщення «Nika призупинено», швидко тричі натисніть кнопку зменшення гучності або вимкніть і знову ввімкніть екран.</string>
+  <string name="notification_channel_backtalk_paused">Nika призупинено</string>
+  <string name="notification_message_backtalk_paused">Торкніться, щоб відновити</string>
+  <string name="notification_title_backtalk_paused">Nika призупинено</string>
+  <string name="summary_pause_backtalk">Вимкнути мовлення, жести й дослідження дотиком, доки ви не відновите Nika</string>
+  <string name="title_pause_backtalk">Призупинити Nika</string>
+  <string name="title_pref_resume_backtalk">Відновлення Nika</string>
+  <string name="value_resume_keyguard">Коли показано екран блокування</string>
+  <string name="value_resume_manual">Лише зі сповіщення або комбінації клавіш</string>
+  <string name="value_resume_screen_on">Коли вмикається екран</string>
+  <string name="summary_pref_auto_update_check">Перевіряти раз на день і показувати сповіщення, коли доступна нова збірка</string>
+  <string name="summary_pref_check_for_updates">Збірка <xliff:g id="build" example="96">%1$d</xliff:g></string>
+  <string name="title_pref_auto_update_check">Автоматично перевіряти оновлення</string>
+  <string name="title_pref_check_for_updates">Перевірити оновлення</string>
+  <string name="update_allow_install">Дозвольте Nika встановлювати додатки, а потім повторіть оновлення</string>
+  <string name="update_check_failed">Не вдалося перевірити оновлення</string>
+  <string name="update_checking">Перевірка оновлень</string>
+  <string name="update_dialog_install">Встановити</string>
+  <string name="update_dialog_title">Доступна збірка Nika <xliff:g id="build" example="97">%1$d</xliff:g></string>
+  <string name="update_downloading">Завантаження оновлення</string>
+  <string name="update_install_canceled">Оновлення скасовано</string>
+  <string name="update_install_failed">Не вдалося встановити оновлення</string>
+  <string name="update_notification_text">Збірка <xliff:g id="build" example="97">%1$d</xliff:g>. Торкніться, щоб встановити.</string>
+  <string name="update_notification_title">Доступне оновлення Nika</string>
+  <string name="update_up_to_date">У вас остання версія Nika</string>
+  <string name="update_wifi_download_failed">Не вдалося завантажити оновлення через Wi-Fi</string>
+  <string name="individual_sound_actions_available">Доступні дії</string>
+  <string name="individual_sound_direct_touch_enter">Прямий дотик увімкнено</string>
+  <string name="individual_sound_direct_touch_exit">Прямий дотик вимкнено</string>
+  <string name="individual_sound_keyboard_hide">Клавіатуру сховано</string>
+  <string name="individual_sound_keyboard_show">Клавіатуру показано</string>
+  <string name="individual_sound_rotor_next">Наступний параметр</string>
+  <string name="individual_sound_rotor_previous">Попередній параметр</string>
+  <string name="individual_sound_screen_on">Екран увімкнено</string>
+  <string name="individual_sound_wrap_back">Перехід до кінця</string>
+  <string name="individual_sound_wrap_forward">Перехід на початок</string>
+  <string name="individual_vibration_braille_character">Брайлівська клавіатура: введення символу</string>
+  <string name="individual_vibration_braille_gesture">Брайлівська клавіатура: інші жести</string>
+  <string name="individual_vibration_braille_hold">Брайлівська клавіатура: утримування пальців</string>
+  <string name="individual_vibration_braille_new_line">Брайлівська клавіатура: новий рядок або видалення слова</string>
+  <string name="individual_vibration_braille_nothing_to_delete">Брайлівська клавіатура: нічого видаляти</string>
+  <string name="individual_vibration_braille_space">Брайлівська клавіатура: пробіл або видалення</string>
+  <string name="manage_models_delete">Видалити</string>
+  <string name="manage_models_delete_message">Це звільнить %1$s. Пізніше модель можна завантажити знову.</string>
+  <string name="manage_models_delete_title">Видалити %1$s?</string>
+  <string name="manage_models_deleted">%1$s видалено</string>
+  <string name="manage_models_empty">Моделі не завантажено.</string>
+  <string name="manage_models_storage_used">Моделі займають %1$s пам’яті.</string>
+  <string name="manage_models_unfinished">%1$s, незавершене завантаження</string>
+  <string name="on_device_ai_announce_done">Модель завантажено</string>
+  <string name="on_device_ai_announce_progress">Завантаження, %1$d відсотків</string>
+  <string name="on_device_ai_cancel">Скасувати</string>
+  <string name="on_device_ai_choose_model">Виберіть модель</string>
+  <string name="on_device_ai_choose_timeout">Ліміт часу для відповідей</string>
+  <string name="on_device_ai_error_corrupt">Файл не збігається з очікуваною моделлю й був видалений. Спробуйте ще раз.</string>
+  <string name="on_device_ai_error_http">Сервер завантаження не прийняв запит. Спробуйте пізніше або імпортуйте файл.</string>
+  <string name="on_device_ai_error_low_space">Недостатньо вільної пам’яті для цієї моделі.</string>
+  <string name="on_device_ai_error_network">Завантаження зупинилося. Перевірте з’єднання й спробуйте ще раз. Воно продовжиться з місця зупинки.</string>
+  <string name="on_device_ai_error_storage">Не вдалося зберегти файл.</string>
+  <string name="on_device_ai_error_time_limit">Android призупинив завантаження після кількох годин у фоні. Торкніться, щоб продовжити з місця зупинки.</string>
+  <string name="on_device_ai_import_done">Модель встановлено</string>
+  <string name="on_device_ai_import_failed">Цей файл не є підтримуваним файлом моделі Gemma 4.</string>
+  <string name="on_device_ai_metered_download">Завантажити</string>
+  <string name="on_device_ai_metered_message">Модель займає кілька гігабайтів. Краще використовувати Wi-Fi.</string>
+  <string name="on_device_ai_metered_title">Завантажити через мобільний інтернет?</string>
+  <string name="on_device_ai_model_entry">%1$s, %2$s%3$s. %4$s %5$s</string>
+  <string name="on_device_ai_model_summary">%1$s, %2$s</string>
+  <string name="on_device_ai_model_too_big">На цьому телефоні недостатньо пам’яті для цієї моделі.</string>
+  <string name="on_device_ai_not_enough_memory">Недостатньо вільної пам’яті для %1$s. Закрийте деякі додатки або виберіть меншу модель у налаштуваннях ШІ на пристрої.</string>
+  <string name="on_device_ai_notification_channel">Завантаження ШІ на пристрої</string>
+  <string name="on_device_ai_notification_done">Модель завантажено. Увімкніть ШІ на пристрої в налаштуваннях.</string>
+  <string name="on_device_ai_notification_downloading">Завантаження моделі, %1$d%%</string>
+  <string name="on_device_ai_notification_failed">Завантаження не вдалося. Відкрийте налаштування, щоб спробувати знову.</string>
+  <string name="on_device_ai_notification_paused">Android призупинив завантаження. Відкрийте налаштування, щоб продовжити.</string>
+  <string name="on_device_ai_progress_sizes">%1$s із %2$s</string>
+  <string name="on_device_ai_progress_with_time">%1$s, залишилося %2$s</string>
+  <string name="on_device_ai_stopped">%1$s зупинено, імовірно, через нестачу пам’яті на телефоні. Виберіть меншу модель у налаштуваннях ШІ на пристрої.</string>
+  <string name="on_device_ai_tag_downloaded">завантажено</string>
+  <string name="on_device_ai_tag_experimental">експериментальна</string>
+  <string name="on_device_ai_tag_needs_memory">Потрібно приблизно %1$d ГБ пам’яті.</string>
+  <string name="on_device_ai_tag_not_enough_memory">На цьому телефоні недостатньо пам’яті.</string>
+  <string name="pref_on_device_ai_download">Завантажити модель (%1$s)</string>
+  <string name="pref_on_device_ai_download_summary">Завантажується один раз із Hugging Face. Після цього нічого не надсилається мережею.</string>
+  <string name="pref_on_device_ai_downloading">Завантаження, %1$d%%</string>
+  <string name="pref_on_device_ai_downloading_summary">%1$s. Торкніться, щоб зупинити. Якщо запустити знову, воно продовжиться з цього місця.</string>
+  <string name="pref_on_device_ai_enable">Використовувати ШІ на пристрої</string>
+  <string name="pref_on_device_ai_enable_needs_model">Спершу завантажте або імпортуйте модель.</string>
+  <string name="pref_on_device_ai_enable_summary">Зображення й знімки екрана описуються на цьому телефоні й ніколи не надсилаються до Google. Це повільніше, ніж у хмарі, і витрачає більше заряду.</string>
+  <string name="pref_on_device_ai_gpu">Використовувати GPU</string>
+  <string name="pref_on_device_ai_gpu_summary">Може бути швидше й потребувати менше пам’яті. Якщо відповіді не працюють, вимкніть.</string>
+  <string name="pref_on_device_ai_import">Використати файл моделі зі сховища</string>
+  <string name="pref_on_device_ai_import_summary">Виберіть файл Gemma 4 litertlm, який ви вже завантажили.</string>
+  <string name="pref_on_device_ai_importing">Перевірка файлу моделі</string>
+  <string name="pref_on_device_ai_manage">Керування моделями</string>
+  <string name="pref_on_device_ai_manage_none">Моделі не завантажено</string>
+  <string name="pref_on_device_ai_model">Модель</string>
+  <string name="pref_on_device_ai_not_enough_ram">Недоступно для цієї моделі. На цьому телефоні недостатньо пам’яті.</string>
+  <string name="pref_on_device_ai_short_prompts">Коротші описи екрана</string>
+  <string name="pref_on_device_ai_short_prompts_summary">Опис екрана запитує менше подробиць, тож відповідь надходить раніше. Вимкніть для повніших описів.</string>
+  <string name="pref_on_device_ai_timeout">Ліміт часу для відповідей</string>
+  <string name="pref_on_device_ai_timeout_summary">%1$s. Після цього часу Nika перестає чекати. Опис екрана триває довше, ніж опис зображення.</string>
+  <string name="pref_on_device_ai_unsupported_cpu">Недоступно. Цей телефон не має 64-бітного процесора ARM.</string>
+  <string name="summary_pref_on_device_ai">Описувати зображення й екран за допомогою моделі на цьому телефоні, без ключа API</string>
+  <string name="summary_pref_on_device_ai_ignore_memory_limits">Дозволяє вибрати модель, якій потрібно більше пам’яті, ніж є на телефоні, і завантажує її без перевірки вільної пам’яті, щоб перевірити, що станеться, коли Android її зупинить.</string>
+  <string name="title_pref_manage_models">Керування моделями</string>
+  <string name="title_pref_on_device_ai">ШІ на пристрої</string>
+  <string name="title_pref_on_device_ai_ignore_memory_limits">Ігнорувати ліміти пам’яті ШІ на пристрої</string>
+  <string name="ai_service_address_hint">Адреса, наприклад https://openrouter.ai/api/v1</string>
+  <string name="ai_service_address_invalid">Адреса має починатися з https://. Нічого не збережено.</string>
+  <string name="ai_service_api_key_hint">Ключ API</string>
+  <string name="ai_service_dialog_message">Сервіс із чат-API, сумісним з OpenAI, і підтримкою зображень, як-от OpenRouter (https://openrouter.ai/api/v1), Groq (https://api.groq.com/openai/v1), Mistral (https://api.mistral.ai/v1), Ollama Cloud (https://ollama.com/v1) або Claude (https://api.anthropic.com/v1). Зображення й запитання надсилаються до нього. Щоб знову використовувати Gemini, очистьте адресу.</string>
+  <string name="ai_service_error_api_key">Сервіс ШІ не прийняв ключ API. Перевірте «Інший сервіс ШІ» в налаштуваннях автоматичних описів.</string>
+  <string name="ai_service_error_busy">Сервіс ШІ зараз зайнятий. Спробуйте за хвилину.</string>
+  <string name="ai_service_error_quota">Ліміт використання сервісу ШІ вичерпано. Спробуйте пізніше.</string>
+  <string name="ai_service_error_timeout">Сервіс ШІ відповідав надто довго. Спробуйте ще раз.</string>
+  <string name="ai_service_error_with_code">Сервіс ШІ не зміг відповісти, помилка <xliff:g id="http_status" example="404">%1$d</xliff:g>.</string>
+  <string name="ai_service_error_with_details">Сервіс ШІ не зміг відповісти, помилка <xliff:g id="http_status" example="404">%1$d</xliff:g>: <xliff:g id="details" example="The model does not exist.">%2$s</xliff:g></string>
+  <string name="ai_service_model_hint">Модель</string>
+  <string name="dialog_message_ai_service_consent">Зображення й знімки екрана надсилаються до <xliff:g id="host" example="openrouter.ai">%1$s</xliff:g> для опису, це займає кілька секунд. Діють власні умови та політика конфіденційності сервісу. Генеративний ШІ є експериментальним, тому може помилятися.</string>
+  <string name="gemini_api_key_dialog_message">Отримайте безкоштовний ключ API в Google AI Studio на сторінці aistudio.google.com/apikey і вставте його сюди. Щоб видалити ключ, очистьте поле й збережіть.\n\nЗображення й екрани, які ви описуєте, надсилаються до Google. На безкоштовному тарифі Google може використовувати їх для вдосконалення своїх продуктів.</string>
+  <string name="gemini_api_key_get">Отримати ключ</string>
+  <string name="gemini_api_key_hint">Ключ API</string>
+  <string name="gemini_api_key_save">Зберегти</string>
+  <string name="gemini_api_terms_link">Додаткові умови використання Gemini API</string>
+  <string name="gemini_model_dialog_message">Якщо Gemini постійно повідомляє, що зайнятий або що моделі не існує, введіть назву іншої моделі з Google AI Studio, наприклад gemini-3.5-flash. Очистьте поле й збережіть, щоб знову використовувати <xliff:g id="model" example="gemini-3.5-flash">%1$s</xliff:g>.</string>
+  <string name="image_qna_button_text_ai">Запитати ШІ</string>
+  <string name="image_qna_typing_button_text_ai">Ввести запитання для ШІ</string>
+  <string name="summary_pref_ai_service_not_set">Не задано. Використовується Gemini</string>
+  <string name="summary_pref_ai_service_set">Опис зображень і екрана використовує <xliff:g id="model" example="google/gemma-3-27b-it">%1$s</xliff:g></string>
+  <string name="summary_pref_gemini_api_key_built_in">Використовується ключ, вбудований у цей додаток</string>
+  <string name="summary_pref_gemini_api_key_not_set">Не задано. Без ключа опис зображення лише читає текст, а опис екрана потребує ШІ на пристрої</string>
+  <string name="summary_pref_gemini_api_key_other_service">Не використовується, поки задано «Інший сервіс ШІ»</string>
+  <string name="summary_pref_gemini_api_key_set">Задано. Опис зображення й екрана використовує Gemini</string>
+  <string name="title_pref_ai_service">Інший сервіс ШІ</string>
+  <string name="title_pref_gemini_api_key">Ключ Gemini API</string>
+  <string name="title_pref_gemini_model">Модель Gemini</string>
+  <string name="alternate_help">Або відвідайте https://support.google.com/accessibility/android/answer/6283677</string>
+  <string name="alternate_privacy_policy">Або відвідайте http://www.google.com/policies/privacy</string>
+  <string name="alternate_tos">Або відвідайте https://www.google.com/mobile/toscountry</string>
+  <string name="brightness_adaptive_on">Вимкніть адаптивну яскравість, щоб змінити яскравість.</string>
+  <string name="brightness_needs_permission">Дозвольте змінювати системні налаштування, щоб змінювати яскравість.</string>
+  <string name="direct_touch_action_typing_off">Вимкнути прямий набір</string>
+  <string name="direct_touch_action_typing_on">Увімкнути прямий набір</string>
+  <string name="direct_touch_apps_category">Додатки</string>
+  <string name="direct_touch_off">Прямий дотик вимкнено</string>
+  <string name="direct_touch_on">Прямий дотик увімкнено</string>
+  <string name="direct_touch_tile_label">Прямий дотик</string>
+  <string name="direct_touch_typing_summary_on">Прямий набір увімкнено</string>
+  <string name="hint_radial_menu">Торкніться середини екрана й проведіть до пункту, потім підніміть палець, щоб вибрати його. Підніміть палець посередині, щоб закрити.</string>
+  <string name="migration_moved_text">Торкніться, щоб видалити старий додаток.</string>
+  <string name="migration_moved_title">Nika переїхала в новий додаток</string>
+  <string name="pref_direct_touch_haptics">Вібрувати при зміні прямого дотику</string>
+  <string name="pref_direct_touch_master">Прямий дотик</string>
+  <string name="pref_direct_touch_master_summary">Передає дотики безпосередньо вибраним нижче додаткам і повертає їх Nika для діалогів, текстових полів, клавіатури та системних екранів.</string>
+  <string name="pref_direct_touch_speech">Озвучувати зміну прямого дотику</string>
+  <string name="qr_code_content_description">QR-код для сканування</string>
+  <string name="radial_menu_cancel">Скасувати</string>
+  <string name="radial_menu_closed">Меню закрито</string>
+  <string name="scan_the_qr_code">Скануйте QR-код</string>
+  <string name="settings_backup_export">Експортувати налаштування</string>
+  <string name="settings_backup_export_done">Налаштування експортовано</string>
+  <string name="settings_backup_export_failed">Не вдалося експортувати налаштування</string>
+  <string name="settings_backup_export_summary">Зберегти всі ваші налаштування у файл.</string>
+  <string name="settings_backup_import">Імпортувати налаштування</string>
+  <string name="settings_backup_import_done">Налаштування імпортовано</string>
+  <string name="settings_backup_import_failed">Не вдалося прочитати цей файл</string>
+  <string name="settings_backup_import_restart">Деякі з імпортованих налаштувань набудуть чинності після вимкнення й повторного ввімкнення Nika.</string>
+  <string name="settings_backup_import_summary">Замінити ваші налаштування налаштуваннями з експортованого файлу. Налаштування, пов’язані з цим телефоном, як-от спарені брайлівські дисплеї й ваш ключ Gemini API, залишаються без змін.</string>
+  <string name="settings_backup_title">Резервне копіювання та відновлення</string>
+  <string name="summary_pref_radial_menu">Показувати меню Nika колом посередині екрана. Проведіть до пункту й підніміть палець, щоб вибрати його.</string>
+  <string name="template_brightness_changed">Яскравість <xliff:g id="percent">%1$d</xliff:g> відсотків.</string>
+  <string name="template_media_volume_change_decrease">Гучність медіа зменшено до <xliff:g id="percent">%1$d</xliff:g> відсотків.</string>
+  <string name="template_media_volume_change_increase">Гучність медіа збільшено до <xliff:g id="percent">%1$d</xliff:g> відсотків.</string>
+  <string name="template_radial_menu_submenu">Меню «<xliff:g id="title" example="Navigation">%1$s</xliff:g>»</string>
+  <string name="title_pref_direct_touch">Прямий дотик</string>
+  <string name="title_pref_open_app_info">Відомості про додаток</string>
+  <string name="title_pref_radial_menu">Колове меню</string>
+  <string name="update_move_dialog_message">Nika переходить на новий ідентифікатор додатка, щоб її можна було встановити на більшій кількості телефонів. Встановіть нову Nika, ваші налаштування перейдуть разом з нею. Потім увімкніть її, і ця вимкнеться сама.</string>
+  <string name="update_move_installing">Nika переходить на новий ідентифікатор додатка. Встановіть нову Nika, ваші налаштування перейдуть разом з нею.</string>
+  <string name="update_move_notification_text">Встановіть нову Nika, ваші налаштування перейдуть разом з нею. Торкніться, щоб встановити.</string>
+  <string name="update_move_title">Nika переїздить у новий додаток</string>
+  <string name="update_move_turn_on">Увімкніть нову Nika, і стара вимкнеться сама.</string>
+  <string name="update_wrong_package">Завантажений файл не є оновленням Nika, тому його не встановлено</string>
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:fragment="com.google.android.accessibility.talkback.preference.base.WhatsNewFragment"
+      android:key="@string/pref_whats_new_key"
+      android:title="@string/title_pref_whats_new"
+      android:summary="@string/summary_pref_whats_new" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="@string/pref_survey_setting_entry_point_key"
+      android:title="@string/survey_setting_title" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_audio_key"
+      android:title="@string/nika_cat_settings_title">
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.TextToSpeechSettingsFragment"
+        android:key="@string/pref_tts_settings_key"
+        android:title="@string/tts_preferences_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.VerbosityPrefFragment"
+        android:key="@string/pref_verbosity_key"
+        android:title="@string/pref_verbosity_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.AutomaticDescriptionsFragment"
+        android:key="@string/pref_auto_image_captioning_key"
+        android:summary="@string/summary_pref_auto_image_captioning"
+        android:title="@string/title_pref_auto_image_captioning"/>
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.SoundAndVibrationFragment"
+        android:key="@string/pref_sound_and_vibration_key"
+        android:title="@string/title_pref_sound_and_vibration" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.FocusIndicatorPrefFragment"
+        android:key="@string/pref_category_manage_focus_indicator_key"
+        android:title="@string/title_pref_category_manage_focus_indicator" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_controls_key"
+      android:title="@string/title_pref_category_controls">
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.TalkBackGestureShortcutPreferenceFragment"
+        android:key="@string/pref_category_manage_gestures_key"
+        android:title="@string/title_pref_category_manage_gestures" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.ContextMenuFragment"
+        android:key="@string/pref_category_manage_context_menu_key"
+        android:title="@string/title_pref_category_context_menu" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.SelectorMenuFragment"
+        android:key="@string/pref_category_manage_selector_menu_key"
+        android:title="@string/title_pref_category_selector_menu" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.TouchActivationFragment"
+        android:key="@string/pref_touch_activation_key"
+        android:title="@string/title_pref_touch_activation" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.NavigationPrefFragment"
+        android:key="@string/pref_navigation_settings_key"
+        android:title="@string/title_pref_navigation" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.status.StatusReadoutFragment"
+        android:key="@string/pref_status_readout_key"
+        android:title="@string/title_pref_status_readout" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:key="@string/pref_category_manage_keyboard_shortcut_key"
+        android:title="@string/title_pref_manage_keyboard_shortcuts"
+        android:fragment="com.google.android.accessibility.talkback.preference.base.TalkBackKeyboardShortcutPreferenceFragment" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.GeminiSettingsFragment"
+        android:key="@string/pref_gemini_settings_key"
+        android:title="@string/title_pref_gemini_settings" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_typing_key"
+      android:title="@string/title_pref_category_typing_and_braille"
+      app:allowDividerAbove="true" >
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.OnScreenKeyboardFragment"
+        android:key="@string/pref_on_screen_keyboard_key"
+        android:title="@string/title_pref_on_screen_keyboard" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:key="@string/pref_physical_keyboard_key"
+        android:title="@string/title_pref_physical_keyboard" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:key="@string/pref_brailleime_key"
+        android:title="@string/title_pref_brailleime">
+      <intent
+          android:targetPackage="@string/app_id"
+          android:targetClass="com.google.android.accessibility.brailleime.settings.BrailleImePreferencesActivity" />
+    </com.google.android.accessibility.material.preference.AccessibilitySuitePreference>
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:key="@string/pref_brailledisplay_key"
+        android:title="@string/title_pref_brailledisplay">
+      <intent
+          android:targetPackage="@string/app_id"
+          android:targetClass="com.google.android.accessibility.braille.brailledisplay.settings.BrailleDisplaySettingsActivity" />
+    </com.google.android.accessibility.material.preference.AccessibilitySuitePreference>
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_apps_key"
+      android:title="@string/title_pref_category_apps">
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.AiSettingsFragment"
+        android:key="pref_nika_ai"
+        android:summary="@string/nika_ai_summary"
+        android:title="@string/nika_ai_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.MacrosFragment"
+        android:key="pref_nika_macros"
+        android:summary="@string/nika_mac_summary"
+        android:title="@string/nika_mac_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.DiagnosticsFragment"
+        android:key="pref_nika_diag"
+        android:summary="@string/nika_diag_summary"
+        android:title="@string/nika_diag_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.ClockSettingsFragment"
+        android:key="pref_nika_clock"
+        android:summary="@string/nika_clock_summary"
+        android:title="@string/nika_clock_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.TranslatorSettingsFragment"
+        android:key="pref_nika_translator"
+        android:summary="@string/nika_tr_summary"
+        android:title="@string/nika_tr_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.KeepAliveFragment"
+        android:key="pref_nika_keepalive"
+        android:summary="@string/nika_ka_menu_summary"
+        android:title="@string/nika_ka_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.VoiceCommandsFragment"
+        android:key="pref_nika_voicecmds"
+        android:summary="@string/nika_vc_menu_summary"
+        android:title="@string/nika_vc_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.NikaSideVoiceFragment"
+        android:key="pref_nika_side_voice"
+        android:summary="@string/nika_sv_summary"
+        android:title="@string/nika_sv_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:key="@string/pref_scripts_key"
+        android:title="@string/title_pref_scripts"
+        android:summary="@string/summary_pref_scripts"
+        android:fragment="com.google.android.accessibility.talkback.scripting.ScriptsFragment" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:key="@string/pref_manage_labels_key"
+        android:title="@string/title_pref_manage_labels" >
+      <intent
+          android:targetPackage="@string/app_id"
+          android:targetClass="com.google.android.accessibility.talkback.labeling.LabelManagerSummaryActivity" />
+    </com.google.android.accessibility.material.preference.AccessibilitySuitePreference>
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.speechcontrol.SpeechControlFragment"
+        android:key="pref_speech_control_screen"
+        android:title="@string/title_pref_speech_control" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_advanced_key"
+      android:title="@string/title_pref_category_more">
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.AdvancedSettingFragment"
+        android:key="@string/pref_advanced_settings_key"
+        android:title="@string/title_pref_advanced_settings" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.backup.BackupRestoreFragment"
+        android:key="@string/pref_backup_restore_key"
+        android:title="@string/settings_backup_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.HelpFeedbackFragment"
+        android:key="pref_nika_help_feedback"
+        android:summary="@string/nika_hf_summary"
+        android:title="@string/nika_hf_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.UpdatesFragment"
+        android:key="pref_nika_updates"
+        android:summary="@string/nika_up_summary"
+        android:title="@string/nika_up_title" />
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="voice_commands_backtalk_setting">Ustawienie Nika</string>
+  <string name="voice_commands_backtalk_settings">Ustawienia Nika</string>
+  <string name="voice_commands_dnd_off">Wyłączono tryb Nie przeszkadzać</string>
+  <string name="voice_commands_dnd_on">Włączono tryb Nie przeszkadzać</string>
+  <string name="voice_commands_dnd_permission_required">Przyznaj dostęp do trybu Nie przeszkadzać, aby użyć tej komendy głosowej</string>
+  <string name="voice_commands_element_not_found">Nie znaleziono „%1$s” na ekranie</string>
+  <string name="voice_commands_found">Znaleziono: %1$s</string>
+  <string name="voice_commands_help_dnd">Turn on Do Not Disturb</string>
+  <string name="voice_commands_help_dnd_description">Komendy po angielsku. Włącza lub wyłącza tryb Nie przeszkadzać. Przy pierwszym użyciu Nika prosi o dostęp do zasad powiadomień</string>
+  <string name="voice_commands_muted">Wyciszono</string>
+  <string name="voice_commands_open_backtalk_settings">Otwórz ustawienia Nika</string>
+  <string name="voice_commands_opening_backtalk_settings">Otwieram ustawienia Nika</string>
+  <string name="voice_commands_opening_settings">Otwieram Ustawienia</string>
+  <string name="voice_commands_unmuted">Wyłączono wyciszenie</string>
+  <string name="voice_commands_volume_set">Głośność: %1$d procent</string>
+</resources>

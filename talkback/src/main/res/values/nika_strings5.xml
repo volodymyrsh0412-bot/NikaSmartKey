@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_tr_title">Translator</string>
+    <string name="nika_tr_summary">Translate text with the model on the phone or an online service</string>
+    <string name="nika_tr_cat_general">Translation</string>
+    <string name="nika_tr_cat_keys">Online services: keys and models</string>
+    <string name="nika_tr_mode_title">How to translate</string>
+    <string name="nika_tr_lang_title">Translate into</string>
+    <string name="nika_tr_provider_title">Online service</string>
+    <string name="nika_tr_copy_title">Copy the translation to the clipboard</string>
+    <string name="nika_tr_copy_summary">The translation is always spoken. The actions for gestures are in the gesture action list, the section Translator.</string>
+    <string name="nika_tr_category">Translator</string>
+    <string name="nika_act_tr_last">Translate the last spoken phrase</string>
+    <string name="nika_act_tr_focus">Translate the focused item (or the selected text)</string>
+    <string name="nika_act_tr_clipboard">Translate the clipboard</string>
+    <string name="nika_act_tr_screen">Translate the whole screen</string>
+    <string name="nika_tr_nothing">There is no text to translate</string>
+    <string name="nika_tr_clipboard_empty">The clipboard is empty or cannot be read</string>
+    <string name="nika_tr_working">Translating</string>
+    <string name="nika_tr_failed">Could not translate</string>
+    <string name="nika_tr_no_network">No connection</string>
+    <string name="nika_tr_no_local">There is no model on the phone. Download one in the on-device AI settings</string>
+    <string name="nika_tr_no_key">The key of the online service is not set</string>
+    <string name="nika_tr_claude_key_title">Key: Claude</string>
+    <string name="nika_tr_claude_model_title">Model: Claude</string>
+    <string name="nika_tr_gemini_key_title">Key: Gemini</string>
+    <string name="nika_tr_gemini_model_title">Model: Gemini</string>
+    <string name="nika_tr_openai_key_title">Key: GPT</string>
+    <string name="nika_tr_openai_model_title">Model: GPT</string>
+    <string name="nika_tr_grok_key_title">Key: xAI Grok (Elon Musk)</string>
+    <string name="nika_tr_grok_model_title">Model: xAI Grok (Elon Musk)</string>
+    <string name="nika_tr_deepseek_key_title">Key: DeepSeek</string>
+    <string name="nika_tr_deepseek_model_title">Model: DeepSeek</string>
+    <string name="nika_tr_mistral_key_title">Key: Mistral</string>
+    <string name="nika_tr_mistral_model_title">Model: Mistral</string>
+    <string name="nika_tr_groq_key_title">Key: Groq Llama</string>
+    <string name="nika_tr_groq_model_title">Model: Groq Llama</string>
+    <string name="nika_tr_openrouter_key_title">Key: OpenRouter</string>
+    <string name="nika_tr_openrouter_model_title">Model: OpenRouter</string>
+    <string name="nika_tr_custom_key_title">Key: Own service (OpenAI compatible)</string>
+    <string name="nika_tr_custom_model_title">Model: Own service (OpenAI compatible)</string>
+    <string name="nika_tr_vivo_key_title">Key: Vivo (NVDACN)</string>
+    <string name="nika_tr_vivo_model_title">Model: Vivo (NVDACN)</string>
+    <string name="nika_tr_custom_base_title">Own service: API address (without /chat/completions)</string>
+    <string name="nika_tr_nvdacn_user_title">NVDACN: login</string>
+    <string name="nika_tr_nvdacn_pass_title">NVDACN: password</string>
+    <string-array name="nika_tr_mode_entries">
+        <item>Automatically: online, or on the phone without a key or a connection</item>
+        <item>On the phone only</item>
+        <item>Online only</item>
+    </string-array>
+    <string-array name="nika_tr_lang_entries">
+        <item>Ukrainian</item>
+        <item>English</item>
+        <item>Russian</item>
+        <item>Belarusian</item>
+        <item>Polish</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Italian</item>
+        <item>Portuguese</item>
+        <item>Czech</item>
+        <item>Slovak</item>
+        <item>Turkish</item>
+        <item>Arabic</item>
+        <item>Chinese</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+    </string-array>
+    <string-array name="nika_tr_provider_entries">
+        <item>Claude</item>
+        <item>Gemini</item>
+        <item>GPT</item>
+        <item>xAI Grok (Elon Musk)</item>
+        <item>DeepSeek</item>
+        <item>Mistral</item>
+        <item>Groq Llama</item>
+        <item>OpenRouter</item>
+        <item>Own service (OpenAI compatible)</item>
+        <item>Vivo (NVDACN)</item>
+    </string-array>
+    <string name="nika_tr_prefix_title">Before translating</string>
+    <string-array name="nika_tr_prefix_entries">
+        <item>Say the word</item>
+        <item>Play a sound</item>
+        <item>Nothing</item>
+    </string-array>
+    <string name="nika_radial_gap_title">Gap between menu items</string>
+    <string-array name="nika_radial_gap_entries">
+        <item>Original (default)</item>
+        <item>3°</item>
+        <item>5°</item>
+        <item>10°</item>
+        <item>15°</item>
+        <item>20°</item>
+        <item>30°</item>
+    </string-array>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nika_clock_interval_entries">
+        <item>5 хв</item>
+        <item>10 хв</item>
+        <item>15 хв</item>
+        <item>20 хв</item>
+        <item>30 хв</item>
+        <item>1 гадз</item>
+    </string-array>
+    <string-array name="nika_clock_timer_entries">
+        <item>1 хв</item>
+        <item>2 хв</item>
+        <item>3 хв</item>
+        <item>5 хв</item>
+        <item>10 хв</item>
+        <item>15 хв</item>
+        <item>20 хв</item>
+        <item>30 хв</item>
+        <item>45 хв</item>
+        <item>60 хв</item>
+        <item>90 хв</item>
+        <item>120 хв</item>
+    </string-array>
+</resources>

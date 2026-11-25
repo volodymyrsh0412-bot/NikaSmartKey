@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spoken when direct touch turns on: touches now go straight to the app in front. [CHAR LIMIT=40] -->
+    <string name="direct_touch_on">Direct touch on</string>
+    <!-- Spoken when direct touch turns off: touches go back to the screen reader. [CHAR LIMIT=40] -->
+    <string name="direct_touch_off">Direct touch off</string>
+
+    <!-- Label of the quick settings tile that pauses and resumes direct touch. [CHAR LIMIT=20] -->
+    <string name="direct_touch_tile_label">Direct touch</string>
+
+    <!-- Title of the direct touch settings screen. [CHAR LIMIT=40] -->
+    <string name="title_pref_direct_touch">Direct touch</string>
+    <!-- Direct touch settings: master switch title. [CHAR LIMIT=40] -->
+    <string name="pref_direct_touch_master">Direct touch</string>
+    <!-- Direct touch settings: master switch summary. [CHAR LIMIT=NONE] -->
+    <string name="pref_direct_touch_master_summary">Pass touches straight to the apps you choose below, and give them back to Nika for dialogs, text fields, the keyboard and system screens.</string>
+    <!-- Direct touch settings: switch that makes Nika speak when direct touch changes. [CHAR LIMIT=60] -->
+    <string name="pref_direct_touch_speech">Speak when direct touch changes</string>
+    <!-- Direct touch settings: switch that makes the phone vibrate when direct touch changes. [CHAR LIMIT=60] -->
+    <string name="pref_direct_touch_haptics">Vibrate when direct touch changes</string>
+    <!-- Direct touch settings: heading of the list of apps. [CHAR LIMIT=30] -->
+    <string name="direct_touch_apps_category">Apps</string>
+    <!-- Direct touch settings: accessibility action that turns direct typing on for an app. [CHAR LIMIT=40] -->
+    <string name="direct_touch_action_typing_on">Turn on direct typing</string>
+    <!-- Direct touch settings: accessibility action that turns direct typing off for an app. [CHAR LIMIT=40] -->
+    <string name="direct_touch_action_typing_off">Turn off direct typing</string>
+    <!-- Direct touch settings: summary of an app that has direct typing on. [CHAR LIMIT=40] -->
+    <string name="direct_touch_typing_summary_on">Direct typing on</string>
+</resources>

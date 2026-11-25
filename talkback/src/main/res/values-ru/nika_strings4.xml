@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="nika_clock_title">Часы, таймер и секундомер</string>
+    <string name="nika_clock_summary">Говорящие часы с тихими часами, таймер обратного отсчёта, секундомер</string>
+    <string name="nika_clock_cat_clock">Говорящие часы</string>
+    <string name="nika_clock_cat_timer">Таймер</string>
+    <string name="nika_clock_enabled_title">Говорить время по расписанию</string>
+    <string name="nika_clock_enabled_summary">Работает и когда экран выключен. Время можно также сказать сразу жестом: действия жестов «Часы, таймер и секундомер».</string>
+    <string name="nika_clock_interval_title">Как часто говорить</string>
+    <string name="nika_clock_quiet_title">Тихие часы (не говорить)</string>
+    <string name="nika_clock_quiet_from_title">Тихие часы: с</string>
+    <string name="nika_clock_quiet_to_title">Тихие часы: до</string>
+    <string name="nika_clock_battery_title">Озвучивать заряд аккумулятора</string>
+    <string name="nika_clock_timer_minutes_title">Длительность таймера</string>
+    <string name="nika_clock_midnight">Полночь</string>
+    <string name="nika_clock_battery">Заряд %1$d%%</string>
+    <string name="nika_clock_charging">заряжается</string>
+    <string name="nika_sw_paused">Секундомер на паузе</string>
+    <string name="nika_sw_started">Секундомер запущен</string>
+    <string name="nika_sw_resumed">Секундомер продолжен</string>
+    <string name="nika_sw_zero">Секундомер на нуле</string>
+    <string name="nika_sw_reset_done">Секундомер сброшен</string>
+    <string name="nika_timer_stopped">Таймер остановлен</string>
+    <string name="nika_timer_started">Таймер запущен на %1$s</string>
+    <string name="nika_timer_idle">Таймер не запущен</string>
+    <string name="nika_timer_left">Осталось: %1$s</string>
+    <string name="nika_timer_done">Таймер завершён</string>
+    <string name="nika_act_clock_say">Сказать время и заряд</string>
+    <string name="nika_act_sw_toggle">Секундомер: старт или пауза</string>
+    <string name="nika_act_sw_say">Секундомер: сказать время</string>
+    <string name="nika_act_sw_reset">Секундомер: сбросить</string>
+    <string name="nika_act_timer_toggle">Таймер: старт или остановка</string>
+    <string name="nika_act_timer_say">Таймер: сколько осталось</string>
+    <string name="nika_clock_category">Часы, таймер и секундомер</string>
+    <string name="nika_dur_h">%1$d ч</string>
+    <string name="nika_dur_m">%1$d мин</string>
+    <string name="nika_dur_s">%1$d с</string>
+    <plurals name="nika_clock_hours">
+        <item quantity="one">%d час</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
+        <item quantity="other">%d часа</item>
+    </plurals>
+    <string name="nika_vcat_order">Порядок и время</string>
+    <string name="nika_vcat_keys">Клавиатура и форматирование</string>
+    <string name="nika_vcat_screen">Экран, уведомления и громкость</string>
+    <string name="nika_vcat_symbols">Символы, эмодзи и идентификаторы</string>
+    <string name="nika_vcat_progress">Индикаторы прогресса</string>
+    <string name="nika_progress_mode_title">Озвучивание индикаторов прогресса</string>
+    <string name="nika_progress_percent_title">Говорить значение в процентах</string>
+    <string name="nika_progress_percent_summary">Вместо текста приложения, например «50 процентов». Звук повышается вместе с прогрессом.</string>
+    <string name="nika_progress_step_title">Озвучивать каждые</string>
+    <string name="nika_progress_percent_fmt">%1$d%%</string>
+    <string-array name="nika_progress_mode_entries">
+        <item>Голос и звук</item>
+        <item>Только голос</item>
+        <item>Только звук</item>
+        <item>Не озвучивать</item>
+    </string-array>
+    <string name="nika_clock_perm_title">Разрешение на будильники и напоминания</string>
+    <string name="nika_clock_perm_summary">Открывает экран системы. Разрешите будильники и напоминания, чтобы часы, таймер и секундомер говорили вовремя.</string>
+</resources>

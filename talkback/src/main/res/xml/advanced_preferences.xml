@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_controls_key">
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteListPreference
+        android:defaultValue="@string/pref_resume_backtalk_default"
+        android:dialogTitle="@string/title_pref_resume_backtalk"
+        android:entries="@array/pref_resume_backtalk_entries"
+        android:entryValues="@array/pref_resume_backtalk_values"
+        android:key="@string/pref_resume_backtalk_key"
+        android:summary="%s"
+        android:title="@string/title_pref_resume_backtalk"/>
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:defaultValue="@bool/pref_show_exit_watermark_default"
+        android:key="@string/pref_show_exit_watermark_key"
+        android:summary="@string/summary_pref_show_exit_watermark"
+        android:title="@string/title_pref_show_exit_watermark"/>
+    <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+        android:defaultValue="@bool/pref_notification_list_default"
+        android:key="@string/pref_notification_list_key"
+        android:title="@string/title_pref_notification_list"/>
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.notificationlist.NotificationPartsFragment"
+        android:key="@string/pref_notification_parts_key"
+        android:title="@string/title_pref_notification_parts"/>
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
+      android:key="@string/pref_category_others_key">
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.DeveloperPrefFragment"
+        android:key="@string/pref_category_developer_key"
+        android:title="@string/title_pref_category_developer_settings"
+        app:allowDividerAbove="true"/>
+  </com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory>
+</PreferenceScreen>

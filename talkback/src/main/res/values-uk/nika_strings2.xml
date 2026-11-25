@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_whats_new_page_title">Nika \u2014 скрінрідер для Android</string>
+    <string name="nika_whats_new_page_text">Що нового:\n\u2022 Нові пункти: «Довідка та відгуки» (група Telegram, написати розробнику, посібник) і «Оновлення» (автоперевірка, перевірити зараз).\n\u2022 Секундомір і таймер можуть озвучувати час кожні 1–60 секунд, також на заблокованому екрані (налаштування годинника).\n\u2022 Для кнопок гучності є окремі дії на заблокованому екрані.\n\u2022 У ключах перекладача Grok (xAI) і Groq (Llama) тепер називаються по-різному.</string>
+    <string name="nika_update_available">Є оновлення: збірка %1$d</string>
+    <string name="nika_update_tap">Натисніть, щоб завантажити й встановити</string>
+    <string name="nika_telegram_title">Nika в Telegram</string>
+    <string name="nika_telegram_summary">Група Nika в Telegram: спілкування, питання, ідеї</string>
+    <string name="nika_keys_title">Для кнопкових смартфонів</string>
+    <string name="nika_keys_summary">Дії для клавіш гучності, цифр, стрілок та інших клавіш</string>
+    <string name="nika_keys_enabled_title">Дії клавіш</string>
+    <string name="nika_keys_enabled_summary">Вмикає або вимикає всі дії клавіш нижче Кнопки гучності не залежать від цього перемикача.</string>
+    <string name="nika_keys_arrows_title">Стрілки без додаткової клавіші</string>
+    <string name="nika_keys_arrows_summary">Коли вимкнено, працюють тільки комбінації з Alt та іншими клавішами</string>
+    <string name="nika_keys_skip_edit_title">У полях введення не перехоплювати клавіші</string>
+    <string name="nika_keys_skip_edit_summary">Клавіші гучності працюють завжди. У полі введення стрілки рухають курсор, а цифри друкуються</string>
+    <string name="nika_keys_hold_title">Тривалість утримання</string>
+    <string name="nika_keys_multi_title">Пауза між натисканнями (подвійне й потрійне)</string>
+    <string name="nika_press_tap1">Одинарне натискання</string>
+    <string name="nika_press_hold">Утримання</string>
+    <string name="nika_press_tap2">Подвійне натискання</string>
+    <string name="nika_press_tap3">Потрійне натискання</string>
+    <string name="nika_key_vol_up">Гучність вгору</string>
+    <string name="nika_key_vol_down">Гучність вниз</string>
+    <string name="nika_key_d0">Цифра 0</string>
+    <string name="nika_key_d1">Цифра 1</string>
+    <string name="nika_key_d2">Цифра 2</string>
+    <string name="nika_key_d3">Цифра 3</string>
+    <string name="nika_key_d4">Цифра 4</string>
+    <string name="nika_key_d5">Цифра 5</string>
+    <string name="nika_key_d6">Цифра 6</string>
+    <string name="nika_key_d7">Цифра 7</string>
+    <string name="nika_key_d8">Цифра 8</string>
+    <string name="nika_key_d9">Цифра 9</string>
+    <string name="nika_key_star">Зірочка</string>
+    <string name="nika_key_pound">Решітка</string>
+    <string name="nika_key_up">Стрілка вгору</string>
+    <string name="nika_key_down">Стрілка вниз</string>
+    <string name="nika_key_left">Стрілка вліво</string>
+    <string name="nika_key_right">Стрілка вправо</string>
+    <string name="nika_key_c1">Довільна клавіша 1</string>
+    <string name="nika_key_c2">Довільна клавіша 2</string>
+    <string name="nika_key_c3">Довільна клавіша 3</string>
+    <string name="nika_key_c4">Довільна клавіша 4</string>
+    <string name="nika_keys_pick_title">Вибрати клавішу</string>
+    <string name="nika_keys_pick_none">Не вибрано</string>
+    <string name="nika_keys_capture_title">Натисніть клавішу</string>
+    <string name="nika_keys_capture_message">Натисніть клавішу, яку хочете призначити. Назад скасовує.</string>
+    <string name="nika_keys_capture_clear">Очистити</string>
+    <string-array name="nika_keys_hold_entries">
+        <item>300 мс</item>
+        <item>400 мс</item>
+        <item>500 мс</item>
+        <item>700 мс</item>
+        <item>1000 мс</item>
+        <item>1500 мс</item>
+        <item>2000 мс</item>
+    </string-array>
+    <string-array name="nika_keys_multi_entries">
+        <item>200 мс</item>
+        <item>300 мс</item>
+        <item>350 мс</item>
+        <item>500 мс</item>
+        <item>700 мс</item>
+        <item>1000 мс</item>
+    </string-array>
+</resources>

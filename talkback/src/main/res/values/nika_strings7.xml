@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_ai_title">Artificial intelligence</string>
+    <string name="nika_ai_summary">Nika AI agent</string>
+    <string name="nika_ai_agent_title">Nika AI (agent)</string>
+    <string name="nika_ai_agent_summary">Tasks by voice and text, service keys, gestures</string>
+    <string name="nika_mac_title">Macros</string>
+    <string name="nika_mac_summary">Your own sets of steps for gestures and keys</string>
+    <string name="nika_mac_add">Add a macro</string>
+    <string name="nika_mac_name_hint">Macro name</string>
+    <string name="nika_mac_empty">No macros yet</string>
+    <string name="nika_mac_steps">Steps: %1$d</string>
+    <string name="nika_mac_rename">Name: %1$s</string>
+    <string name="nika_mac_record_on">Recording steps is on (press to turn off)</string>
+    <string name="nika_mac_record_off">Recording steps is off (press to turn on)</string>
+    <string name="nika_mac_record_summary">While recording is on, the gesture action \"Macro: record the focused button\" adds a press step to this macro. Move the focus to a button in the app you need and run that action.</string>
+    <string name="nika_mac_add_step">Add a step</string>
+    <string name="nika_mac_delete_macro">Delete the macro</string>
+    <string name="nika_mac_delete">Delete</string>
+    <string name="nika_mac_t_wait">Pause (seconds)</string>
+    <string name="nika_mac_t_say">Say a phrase</string>
+    <string name="nika_mac_t_type">Type text in the field</string>
+    <string name="nika_mac_t_app">Open an app</string>
+    <string name="nika_mac_t_clicktext">Press a button by name</string>
+    <string name="nika_mac_t_global">System button</string>
+    <string name="nika_mac_g_back">Back</string>
+    <string name="nika_mac_g_home">Home</string>
+    <string name="nika_mac_g_recents">Recents</string>
+    <string name="nika_mac_g_notifications">Notifications</string>
+    <string name="nika_mac_d_click">Press: %1$s</string>
+    <string name="nika_mac_d_clicktext">Press the button named: %1$s</string>
+    <string name="nika_mac_d_wait">Pause, seconds: %1$s</string>
+    <string name="nika_mac_d_say">Say: %1$s</string>
+    <string name="nika_mac_d_type">Type: %1$s</string>
+    <string name="nika_mac_d_app">Open: %1$s</string>
+    <string name="nika_mac_d_global">System button: %1$s</string>
+    <string name="nika_mac_not_found">Macro stopped: the button was not found</string>
+    <string name="nika_act_mac_rec">Macro: record the focused button</string>
+    <string name="nika_act_mac_stop">Macro: stop recording</string>
+    <string name="nika_mac_recorded">Recorded: %1$s</string>
+    <string name="nika_mac_rec_off">Recording is off. Turn it on in the macro settings.</string>
+    <string name="nika_mac_rec_nofocus">No button has the focus</string>
+    <string name="nika_mac_rec_stopped">Recording stopped</string>
+    <string name="nika_mac_category">Macros</string>
+    <string name="nika_mac_prefix">Macro: %1$s</string>
+    <string name="nika_act_mac_rec_hold">Macro: record the focused button to hold</string>
+    <string name="nika_mac_d_hold">Hold the button: %1$s</string>
+    <string name="nika_mac_d_release_still">Release in place</string>
+    <string name="nika_mac_d_release_move">Release after moving %1$s by %2$d mm</string>
+    <string name="nika_mac_dir_up">up</string>
+    <string name="nika_mac_dir_down">down</string>
+    <string name="nika_mac_dir_left">left</string>
+    <string name="nika_mac_dir_right">right</string>
+    <string name="nika_mac_dir_none">in place</string>
+    <string name="nika_mac_t_hold">Hold a button by name</string>
+    <string name="nika_mac_t_release">Release (direction and distance)</string>
+    <string name="nika_mac_distance_hint">Distance in millimetres (up to 40, that is 4 cm)</string>
+    <string name="nika_mac_no_held">Nothing is being held</string>
+    <string name="nika_agent_enabled">Agent is on</string>
+    <string name="nika_agent_settings">Settings</string>
+    <string name="nika_agent_perm_title">Permissions</string>
+    <string name="nika_agent_perm_note">If you do not grant them, Nika agent may not work correctly</string>
+    <string name="nika_agent_cmd_title">Commands</string>
+    <string name="nika_feedback_choose_title">How do you want to write?</string>
+    <string name="nika_feedback_by_email">By e-mail</string>
+    <string name="nika_feedback_by_telegram">In Telegram (@Volodymyr0412sh)</string>
+    <string name="nika_motion_title">Shake and back tap</string>
+    <string name="nika_motion_summary">Phone shake and taps on the back: one or two shakes, three taps</string>
+    <string name="nika_motion_shake1">One shake</string>
+    <string name="nika_motion_shake2">Two shakes</string>
+    <string name="nika_motion_back3">Three taps on the back (experimental)</string>
+    <string name="nika_motion_shakel">Long shake</string>
+    <string name="nika_motion_back1">One tap on the back (experimental)</string>
+    <string name="nika_motion_back2">Two taps on the back (experimental)</string>
+    <string name="nika_motion_sens_title">Sensitivity</string>
+    <string-array name="nika_motion_sens_entries">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="nika_motion_sens_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="nika_mac_too_long">Macro stopped: too many steps</string>
+    <string name="nika_mac_wait_timeout">Macro stopped: the wait ran out</string>
+    <string name="nika_mac_t_if">If…</string>
+    <string name="nika_mac_t_elseif">Else if…</string>
+    <string name="nika_mac_t_else">Else</string>
+    <string name="nika_mac_t_endif">End of \"If\"</string>
+    <string name="nika_mac_t_repeat">Repeat (number of times)</string>
+    <string name="nika_mac_t_repeatwhile">Repeat while…</string>
+    <string name="nika_mac_t_endrepeat">End of repeat</string>
+    <string name="nika_mac_t_break">Exit the loop</string>
+    <string name="nika_mac_t_stop">Stop the macro</string>
+    <string name="nika_mac_t_waituntil">Wait until…</string>
+    <string name="nika_mac_d_if">If: %1$s</string>
+    <string name="nika_mac_d_elseif">Else if: %1$s</string>
+    <string name="nika_mac_d_repeat">Repeat, times: %1$d</string>
+    <string name="nika_mac_d_repeatwhile">Repeat while: %1$s</string>
+    <string name="nika_mac_d_waituntil">Wait until: %1$s (up to %2$d s)</string>
+    <string name="nika_mac_c_title">Condition</string>
+    <string name="nika_mac_c_see">I see a button or text</string>
+    <string name="nika_mac_c_notsee">I do not see a button or text</string>
+    <string name="nika_mac_c_app">App is open</string>
+    <string name="nika_mac_c_notapp">Another app is open</string>
+    <string name="nika_mac_c_see_d">see \"%1$s\"</string>
+    <string name="nika_mac_c_notsee_d">do not see \"%1$s\"</string>
+    <string name="nika_mac_c_app_d">app %1$s is open</string>
+    <string name="nika_mac_c_notapp_d">app %1$s is not open</string>
+    <string name="nika_mac_wait_seconds">How many seconds to wait</string>
+    <string name="nika_mac_run_now">Run now</string>
+    <string name="nika_mac_run_now_summary">The macro starts in 3 seconds: go to the screen you need</string>
+    <string name="nika_mac_export">Export to a file</string>
+    <string name="nika_mac_export_all">Export all to a file</string>
+    <string name="nika_mac_import">Import from a file</string>
+    <string name="nika_mac_exported">Saved to the file</string>
+    <string name="nika_mac_imported">Macros added: %1$d</string>
+    <string name="nika_mac_file_error">Could not read or write the file</string>
+    <string name="nika_notif_template">Speech template</string>
+    <string name="nika_notif_template_help">Free text with these marks: {app} app, {category} type, {title} title, {text} text, {time} time. For example: {app}: {title}. {text}</string>
+    <string name="nika_notif_template_reset">Reset</string>
+    <string name="nika_notif_template_none">Normal speech (by the items chosen above)</string>
+    <string name="nika_notif_muted">Do not read notifications of apps</string>
+    <string name="nika_notif_muted_count">Apps switched off: %1$d</string>
+    <string name="nika_notif_history">Notification history</string>
+    <string name="nika_notif_history_empty">The history is empty</string>
+    <string name="nika_notif_history_clear">Clear the history</string>
+    <string name="nika_notif_noemoji">Skip emoji</string>
+    <string name="nika_notif_maxwords">Limit the length</string>
+    <string name="nika_notif_history_on">Keep a notification history</string>
+    <string-array name="nika_notif_maxwords_entries">
+        <item>No limit</item>
+        <item>10 words</item>
+        <item>20 words</item>
+        <item>40 words</item>
+    </string-array>
+    <string-array name="nika_notif_maxwords_values" translatable="false">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </string-array>
+    <string name="nika_prof_title">Gesture profiles</string>
+    <string name="nika_prof_save">Save the current gestures as a profile</string>
+    <string name="nika_prof_save_summary">Remembers the actions of all gestures, gestures for apps, side gestures and shakes</string>
+    <string name="nika_prof_empty">No profiles yet</string>
+    <string name="nika_prof_apply">Apply</string>
+    <string name="nika_prof_update">Update from the current gestures</string>
+    <string name="nika_prof_applied">Profile %1$s applied</string>
+    <string name="nika_prof_updated">Profile updated</string>
+    <string name="nika_prof_name_hint">Profile name</string>
+    <string name="nika_prof_summary">Save your gestures under a name and switch between sets</string>
+</resources>

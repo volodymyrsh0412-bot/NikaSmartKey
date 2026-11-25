@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_expanded">Expanded</string>
+    <string name="nika_vc_collapsed">Collapsed</string>
+    <string name="nika_vc_power_warn">Works on some phones only</string>
+    <string name="nika_vc_clear">Clear</string>
+</resources>

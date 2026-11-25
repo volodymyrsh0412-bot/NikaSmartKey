@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_notif_delete_one">Выдаліць гэта</string>
+    <string name="nika_bk_pick_title">Што аднавіць</string>
+    <string name="nika_bk_restore">Аднавіць</string>
+    <string name="nika_bk_g_main">Асноўныя налады</string>
+    <string name="nika_bk_g_gestures">Жэсты і клавішы</string>
+    <string name="nika_bk_g_macros">Макрасы</string>
+    <string name="nika_bk_g_speech">Маўленне і галасы</string>
+    <string name="nika_bk_g_notif">Апавяшчэнні</string>
+    <string name="nika_bk_g_themes">Тэмы гукаў (файлы)</string>
+    <string name="nika_bk_g_scripts">Скрыпты (файлы)</string>
+    <string name="nika_val_keyboard_echo">Рэха клавіятуры</string>
+    <string name="nika_val_punctuation">Пунктуацыя</string>
+    <string name="nika_val_emoji">Эмодзі</string>
+    <string name="nika_val_say">%1$s: %2$s</string>
+    <string name="nika_act_setting_next">Хуткая налада: наступная</string>
+    <string name="nika_act_setting_prev">Хуткая налада: папярэдняя</string>
+    <string name="nika_act_value_next">Хуткая налада: наступнае значэнне</string>
+    <string name="nika_act_value_prev">Хуткая налада: папярэдняе значэнне</string>
+    <string name="nika_act_slider_up">Паўзунок у фокусе: павялічыць</string>
+    <string name="nika_act_slider_down">Паўзунок у фокусе: паменшыць</string>
+    <string name="nika_act_cursor_right">Поле ўводу: курсор управа</string>
+    <string name="nika_act_cursor_left">Поле ўводу: курсор улева</string>
+    <string name="nika_vol_hide_panel">Не паказваць панэль гучнасці</string>
+    <string name="nika_vol_hide_panel_summary">Для клавішы гучнасці без уласнага дзеяння: гучнасць змяняецца, але панэль не паказваецца</string>
+</resources>

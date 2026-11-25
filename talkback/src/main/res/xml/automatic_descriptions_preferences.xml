@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="@string/pref_category_automatic_description_summary_key"
+      android:summary="@string/title_pref_category_automatic_description_summary"
+      android:selectable="false" />
+
+  <com.google.android.accessibility.material.preference.AccessibilitySuiteSwitchPreference
+      android:defaultValue="@bool/pref_detailed_image_description_default"
+      android:key="@string/pref_detailed_image_description_key"
+      android:title="@string/title_pref_detailed_image_description" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="@string/pref_image_description_key"
+      android:title="@string/title_pref_image_description" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="@string/pref_icon_detection_key"
+      android:title="@string/title_pref_icon_detection" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="@string/pref_text_recognition_key"
+      android:title="@string/title_pref_text_recognition" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="pref_gemini_api_key"
+      android:title="@string/title_pref_gemini_api_key" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="pref_gemini_model"
+      android:title="@string/title_pref_gemini_model" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:key="pref_ai_service"
+      android:title="@string/title_pref_ai_service" />
+  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+      android:fragment="com.google.android.accessibility.talkback.actor.gemini.local.OnDeviceAiFragment"
+      android:key="@string/pref_on_device_ai_key"
+      android:summary="@string/summary_pref_on_device_ai"
+      android:title="@string/title_pref_on_device_ai" />
+
+</PreferenceScreen>

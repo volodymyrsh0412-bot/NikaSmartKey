@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_expanded">развёрнуто</string>
+    <string name="nika_vc_collapsed">свёрнуто</string>
+    <string name="nika_vc_power_warn">Работает не на всех смартфонах</string>
+    <string name="nika_vc_clear">Очистить</string>
+</resources>
