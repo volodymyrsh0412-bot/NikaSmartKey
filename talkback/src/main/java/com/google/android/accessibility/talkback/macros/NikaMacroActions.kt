@@ -52,7 +52,11 @@ object NikaMacroActions {
     )
 
   @JvmField
-  val CALLS: List<Fixed> = listOf(Fixed(NikaCallActions.ACTION, R.string.nika_act_call))
+  val CALLS: List<Fixed> = listOf(
+      Fixed(NikaCallActions.ACTION, R.string.nika_act_call),
+      Fixed(NikaCallActions.DECLINE, R.string.nika_act_call_decline),
+      Fixed(NikaCallActions.QUICK, R.string.nika_act_call_quick),
+    )
 
   private val handler = Handler(Looper.getMainLooper())
   private var runToken = 0
@@ -90,6 +94,7 @@ object NikaMacroActions {
         }
         value == HELP -> NikaHelpMode.toggle(service)
         value == NikaCallActions.ACTION -> NikaCallActions.perform(service)
+        value == NikaCallActions.DECLINE || value == NikaCallActions.QUICK -> NikaCallActions.run(service, value)
         NikaVoiceCmds.isCmdAction(value) -> NikaVoiceCmds.performCmd(service, value)
         value.startsWith(PREFIX) -> start(service, value.removePrefix(PREFIX))
         else -> return false

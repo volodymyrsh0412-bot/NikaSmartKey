@@ -30,6 +30,8 @@ import com.google.android.accessibility.utils.NikaDiag
  */
 object NikaCallActions {
   const val ACTION = "nika_call_answer"
+  const val DECLINE = "nika_call_decline"
+  const val QUICK = "nika_call_quick"
 
   private val ANSWER =
     setOf(
@@ -45,12 +47,29 @@ object NikaCallActions {
     )
 
   @JvmStatic
-  fun perform(service: TalkBackService) {
+  fun perform(service: TalkBackService) = run(service, ACTION)
+
+  @JvmStatic
+  fun run(service: TalkBackService, mode: String) {
     try {
-      // A call of the phone itself: the usual action of this gesture does it (answers or ends).
-      if (!phoneCall(service)) {
+      val phone = phoneCall(service)
+      if (mode == QUICK) {
+        if (!viberSwipe(service, 0f, -1f)) NikaDiag.log("call", "quick replies: no Viber call on the screen")
+        return
+      }
+      if (mode == DECLINE) {
+        if (press(service, END)) return
+        if (viberEnd(service)) return
+        if (viberSwipe(service, -1f, 0f)) return
+        if (!phone) {
+          NikaDiag.log("call", "no messenger call found")
+          dump(service)
+          return
+        }
+      } else if (!phone) {
         if (press(service, ANSWER)) return
-        if (viberSwipe(service)) return
+        if (viberEnd(service)) return
+        if (viberSwipe(service, 1f, 0f)) return
         if (reveal(service)) return
         if (press(service, END)) return
         NikaDiag.log("call", "no messenger call found")
@@ -107,37 +126,9 @@ object NikaCallActions {
   }
 
   /**
-   * The Viber call screen on the lock screen has no buttons for a screen reader. The user answers it with
-   * a double tap and a drag to the right, the second touch stays down (checked in the script for SandFly).
-   * The variants are tried one after another until the call is no longer incoming.
+   * The Viber call screen on the lock screen has no buttons for a screen reader. Two fingers side by side
+   * swipe from the round button: to the right answers, to the left declines, up opens the quick replies.
    */
-  private class Slide(
-    val focus: Boolean,
-    val ms: Long,
-    val hold: Long,
-    val wiggle: Float,
-    val holdEnd: Boolean,
-    val frac: Float,
-    val two: Boolean = false,
-    val gap: Float = 0f,
-    val along: Boolean = false,
-  )
-
-  private val SLIDES =
-    listOf(
-      // Two fingers side by side swipe to the right from the round button: the way the user does it.
-      Slide(false, 450, 0, 0f, false, 0.25f, two = true, gap = 120f),
-      Slide(false, 300, 0, 0f, false, 0.25f, two = true, gap = 80f),
-      Slide(false, 450, 0, 0f, false, 0.25f, two = true, gap = 120f, along = true),
-      Slide(false, 700, 0, 0f, false, 0.3f, two = true, gap = 160f),
-      Slide(false, 1300, 650, 8f, false, 0.22f),
-      Slide(false, 1600, 700, 8f, true, 0.22f),
-      Slide(false, 6000, 0, 0f, false, 0.22f),
-      Slide(true, 1300, 650, 8f, false, 0.22f),
-      Slide(false, 2000, 900, 6f, false, 0.35f),
-    )
-  private var slideRun = 0
-
   private fun viberWindowRoot(service: TalkBackService): AccessibilityNodeInfo? {
     for (w in service.windows) {
       val root = w.root ?: continue
@@ -146,86 +137,56 @@ object NikaCallActions {
     return null
   }
 
-  private fun viberSwipe(service: TalkBackService): Boolean {
+  private fun viberSwipe(service: TalkBackService, dx: Float, dy: Float): Boolean {
     val root = viberWindowRoot(service) ?: return false
-    slideRun += 1
-    NikaDiag.log("call", "viber: slide variants start")
-    trySlide(service, 0, slideRun)
-    return true
-  }
-
-  private fun trySlide(service: TalkBackService, step: Int, run: Int) {
-    if (run != slideRun) return
-    val root = viberWindowRoot(service)
-    if (root == null) {
-      NikaDiag.log("call", "viber: the call is no longer incoming, variant " + step)
-      return
-    }
-    if (step >= SLIDES.size) {
-      NikaDiag.log("call", "viber: all variants did not work")
-      return
-    }
-    val s = SLIDES[step]
     val b = Rect()
     root.getBoundsInScreen(b)
     val w = b.width().toFloat()
+    val h = b.height().toFloat()
     val cx = b.left + w * 0.5f
-    val cy = b.top + b.height() * 0.605f
-    val tx = minOf(cx + w * s.frac, b.left + w * 0.9f)
-    val lead = if (s.focus) 600L else 0L
-    val builder = GestureDescription.Builder()
-    if (s.two) {
-      val ox = if (s.along) s.gap else 0f
-      val oy = if (s.along) 0f else s.gap / 2
-      val a = Path()
-      a.moveTo(cx - ox, cy - oy)
-      a.lineTo(tx - ox, cy - oy)
-      val c = Path()
-      c.moveTo(cx, cy + oy)
-      c.lineTo(tx, cy + oy)
-      builder.addStroke(GestureDescription.StrokeDescription(a, 0L, s.ms))
-      builder.addStroke(GestureDescription.StrokeDescription(c, 0L, s.ms))
-      val okTwo = service.dispatchGesture(builder.build(), null, null)
-      NikaDiag.log("call", "viber: variant " + step + " two fingers, gap " + s.gap + (if (s.along) " along" else "") + ", " + s.ms + " ms: " + okTwo)
-      handler.postDelayed({ trySlide(service, step + 1, run) }, s.ms + 1500L)
-      return
-    }
-    if (s.focus) builder.addStroke(GestureDescription.StrokeDescription(dot(cx, cy), 0L, 40L))
-    builder.addStroke(GestureDescription.StrokeDescription(dot(cx, cy), lead, 40L))
-    builder.addStroke(GestureDescription.StrokeDescription(dragPath(cx, cy, tx, cy, s), lead + 140L, s.ms))
-    val ok = service.dispatchGesture(builder.build(), null, null)
-    NikaDiag.log("call", "viber: variant " + step + " from " + cx + "," + cy + " to " + tx + ": " + ok)
-    handler.postDelayed({ trySlide(service, step + 1, run) }, lead + 140L + s.ms + 1500L)
+    val cy = b.top + h * 0.605f
+    val tx = (cx + dx * w * 0.25f).coerceIn(b.left + w * 0.05f, b.left + w * 0.95f)
+    val ty = (cy + dy * h * 0.25f).coerceIn(b.top + h * 0.05f, b.top + h * 0.95f)
+    // The two fingers stand one above the other for a sideways swipe, side by side for a vertical one.
+    val ox = if (dx == 0f) 60f else 0f
+    val oy = if (dx == 0f) 0f else 60f
+    val a = Path()
+    a.moveTo(cx - ox, cy - oy)
+    a.lineTo(tx - ox, ty - oy)
+    val c = Path()
+    c.moveTo(cx + ox, cy + oy)
+    c.lineTo(tx + ox, ty + oy)
+    val g = GestureDescription.Builder()
+    g.addStroke(GestureDescription.StrokeDescription(a, 0L, 450L))
+    g.addStroke(GestureDescription.StrokeDescription(c, 0L, 450L))
+    val ok = service.dispatchGesture(g.build(), null, null)
+    NikaDiag.log("call", "viber: two fingers " + dx + "," + dy + ": " + ok)
+    return true
   }
 
-  private fun dot(x: Float, y: Float): Path {
-    val p = Path()
-    p.moveTo(x, y)
-    return p
+  private fun findById(node: AccessibilityNodeInfo, id: String, depth: Int): AccessibilityNodeInfo? {
+    if (depth > 40) return null
+    val name = node.viewIdResourceName
+    if (name != null && name.endsWith("/" + id)) return node
+    for (i in 0 until node.childCount) {
+      val child = node.getChild(i) ?: continue
+      val r = findById(child, id, depth + 1)
+      if (r != null) return r
+    }
+    return null
   }
 
-  /** A drag with a hold: the hold is a movement to and fro, a standing finger would not take time. */
-  private fun dragPath(x1: Float, y1: Float, x2: Float, y2: Float, s: Slide): Path {
-    val steps = 24
-    val moveMs = maxOf(s.ms - s.hold, 100L).toFloat()
-    val dist = Math.sqrt(((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)).toDouble()).toFloat()
-    val swings =
-      if (s.hold > 0 && s.wiggle > 0f) Math.max(1, Math.ceil((dist * s.hold / moveMs / (2 * s.wiggle)).toDouble()).toInt()) else 0
-    val p = Path()
-    p.moveTo(x1, y1)
-    if (swings > 0 && !s.holdEnd) {
-      for (i in 1..swings) p.lineTo(x1, y1 + (if (i % 2 == 1) s.wiggle else -s.wiggle))
-      p.lineTo(x1, y1)
+  /** The red button of the Viber call has no name, it is found by its identifier. */
+  private fun viberEnd(service: TalkBackService): Boolean {
+    for (w in service.windows) {
+      val root = w.root ?: continue
+      if (root.packageName?.toString() != "com.viber.voip") continue
+      if (findById(root, "speakerPhone", 0) == null) continue
+      val end = findById(root, "leaveConference", 0) ?: continue
+      NikaDiag.log("call", "viber: end button by identifier")
+      return click(service, end)
     }
-    for (i in 0..steps) {
-      val t = i.toFloat() / steps
-      p.lineTo(x1 + (x2 - x1) * t, y1 + (y2 - y1) * t)
-    }
-    if (swings > 0 && s.holdEnd) {
-      for (i in 1..swings) p.lineTo(x2, y2 + (if (i % 2 == 1) s.wiggle else -s.wiggle))
-      p.lineTo(x2, y2)
-    }
-    return p
+    return false
   }
 
   private val CALL_APPS = setOf("com.whatsapp", "com.whatsapp.w4b", "org.telegram.messenger", "com.viber.voip", "com.facebook.orca", "com.skype.raider")
@@ -283,7 +244,7 @@ object NikaCallActions {
 
   private fun find(node: AccessibilityNodeInfo, names: Set<String>, depth: Int): AccessibilityNodeInfo? {
     if (depth > 40) return null
-    if (node.isVisibleToUser && names.contains(label(node))) return node
+    if (names.contains(label(node)) && (node.isVisibleToUser || node.isClickable)) return node
     for (i in 0 until node.childCount) {
       val child = node.getChild(i) ?: continue
       val r = find(child, names, depth + 1)

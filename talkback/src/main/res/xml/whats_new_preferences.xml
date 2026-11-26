@@ -7,6 +7,6 @@
   <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
       android:key="whats_new_version"
       android:title="@string/nika_whats_new_page_title"
-      android:summary="@string/nika_whats_new_page_text"
+      android:summary="@string/nika_sk_new_text"
       android:selectable="false" />
 </PreferenceScreen>

@@ -2,4 +2,6 @@
 <resources>
     <string name="nika_act_call">Ответить или завершить вызов</string>
     <string name="nika_call_category">Звонки</string>
+    <string name="nika_act_call_decline">Отклонить вызов</string>
+    <string name="nika_act_call_quick">Быстрые ответы на вызов</string>
 </resources>

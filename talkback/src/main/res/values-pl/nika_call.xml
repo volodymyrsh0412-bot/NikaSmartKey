@@ -2,4 +2,6 @@
 <resources>
     <string name="nika_act_call">Odbierz lub zakończ połączenie</string>
     <string name="nika_call_category">Połączenia</string>
+    <string name="nika_act_call_decline">Odrzuć połączenie</string>
+    <string name="nika_act_call_quick">Szybkie odpowiedzi na połączenie</string>
 </resources>
