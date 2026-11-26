@@ -47,52 +47,37 @@ object NikaCallActions {
   @JvmStatic
   fun perform(service: TalkBackService) {
     try {
-      if (phoneCall(service)) return
-      if (press(service, ANSWER)) return
-      if (viberSwipe(service)) return
-      if (reveal(service)) return
-      if (press(service, END)) return
-      NikaDiag.log("call", "no call button found")
-      dump(service)
+      // A call of the phone itself: the usual action of this gesture does it (answers or ends).
+      if (!phoneCall(service)) {
+        if (press(service, ANSWER)) return
+        if (viberSwipe(service)) return
+        if (reveal(service)) return
+        if (press(service, END)) return
+        NikaDiag.log("call", "no messenger call found")
+        dump(service)
+      }
     } catch (e: Throwable) {
       NikaDiag.log("call", "failed: $e")
     }
-    // No call: the usual action of the two-finger double tap, play or pause.
+    // Everything else: the standard action of the two-finger double tap (media or voice input, calls).
     try {
-      val audio = service.getSystemService(android.media.AudioManager::class.java)
-      audio?.dispatchMediaKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE))
-      audio?.dispatchMediaKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE))
+      service.performNikaKeyAction("MEDIA_CONTROL_OR_VOICE_INPUT")
     } catch (e: RuntimeException) {
       // skip
     }
   }
 
-
-  /**
-   * A call of the phone itself (not of a messenger): the headset button answers a ringing call and
-   * ends a call in progress, like the media key of the two-finger tap did before.
-   */
+  /** The call screen of the phone: its own application is on the screen, or a call is in progress. */
   private fun phoneCall(service: TalkBackService): Boolean {
-    val audio = service.getSystemService(android.media.AudioManager::class.java) ?: return false
-    val mode = audio.mode
-    val ringing = mode == android.media.AudioManager.MODE_RINGTONE
-    val talking = mode == android.media.AudioManager.MODE_IN_CALL
-    if (!ringing && !talking) return false
-    if (ringing) {
-      var dialer = false
-      for (w in service.windows) {
-        val pkg = w.root?.packageName?.toString() ?: continue
-        if (pkg.contains("incallui") || pkg.contains("dialer") || pkg == "com.android.phone" || pkg.contains("telecom")) {
-          dialer = true
-          break
-        }
+    val audio = service.getSystemService(android.media.AudioManager::class.java)
+    if (audio != null && audio.mode == android.media.AudioManager.MODE_IN_CALL) return true
+    for (w in service.windows) {
+      val pkg = w.root?.packageName?.toString() ?: continue
+      if (pkg.contains("incallui") || pkg.contains("dialer") || pkg == "com.android.phone" || pkg.contains("telecom")) {
+        return true
       }
-      if (!dialer) return false
     }
-    NikaDiag.log("call", "phone call: " + (if (ringing) "answer" else "end") + " by the headset button")
-    audio.dispatchMediaKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_HEADSETHOOK))
-    audio.dispatchMediaKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_HEADSETHOOK))
-    return true
+    return false
   }
 
   private fun press(service: TalkBackService, names: Set<String>): Boolean {
@@ -121,26 +106,103 @@ object NikaCallActions {
     return false
   }
 
-  /** The Viber call screen has no buttons for a screen reader: the round button is swiped to the right. */
-  private fun viberSwipe(service: TalkBackService): Boolean {
+  /**
+   * The Viber call screen on the lock screen has no buttons for a screen reader. The user answers it with
+   * a double tap and a drag to the right, the second touch stays down (checked in the script for SandFly).
+   * The variants are tried one after another until the call is no longer incoming.
+   */
+  private class Slide(
+    val focus: Boolean,
+    val ms: Long,
+    val hold: Long,
+    val wiggle: Float,
+    val holdEnd: Boolean,
+    val frac: Float,
+  )
+
+  private val SLIDES =
+    listOf(
+      Slide(false, 1300, 650, 8f, false, 0.22f),
+      Slide(false, 1600, 700, 8f, true, 0.22f),
+      Slide(false, 6000, 0, 0f, false, 0.22f),
+      Slide(true, 1300, 650, 8f, false, 0.22f),
+      Slide(false, 2000, 900, 6f, false, 0.35f),
+    )
+  private var slideRun = 0
+
+  private fun viberWindowRoot(service: TalkBackService): AccessibilityNodeInfo? {
     for (w in service.windows) {
       val root = w.root ?: continue
-      if (root.packageName?.toString() != "com.viber.voip") continue
-      if (!hasPhrase(root, 0)) continue
-      val b = Rect()
-      root.getBoundsInScreen(b)
-      val cx = b.left + b.width() * 0.5f
-      val cy = b.top + b.height() * 0.605f
-      val path = Path()
-      path.moveTo(cx, cy)
-      path.lineTo(b.left + b.width() * 0.88f, cy)
-      NikaDiag.log("call", "viber swipe from " + cx + "," + cy)
-      val stroke = GestureDescription.StrokeDescription(path, 0L, 350L)
-      return service.dispatchGesture(GestureDescription.Builder().addStroke(stroke).build(), null, null)
+      if (root.packageName?.toString() == "com.viber.voip" && hasPhrase(root, 0)) return root
     }
-    return false
+    return null
   }
 
+  private fun viberSwipe(service: TalkBackService): Boolean {
+    val root = viberWindowRoot(service) ?: return false
+    slideRun += 1
+    NikaDiag.log("call", "viber: slide variants start")
+    trySlide(service, 0, slideRun)
+    return true
+  }
+
+  private fun trySlide(service: TalkBackService, step: Int, run: Int) {
+    if (run != slideRun) return
+    val root = viberWindowRoot(service)
+    if (root == null) {
+      NikaDiag.log("call", "viber: the call is no longer incoming, variant " + step)
+      return
+    }
+    if (step >= SLIDES.size) {
+      NikaDiag.log("call", "viber: all variants did not work")
+      return
+    }
+    val s = SLIDES[step]
+    val b = Rect()
+    root.getBoundsInScreen(b)
+    val w = b.width().toFloat()
+    val cx = b.left + w * 0.5f
+    val cy = b.top + b.height() * 0.605f
+    val tx = minOf(cx + w * s.frac, b.left + w * 0.9f)
+    val lead = if (s.focus) 600L else 0L
+    val builder = GestureDescription.Builder()
+    if (s.focus) builder.addStroke(GestureDescription.StrokeDescription(dot(cx, cy), 0L, 40L))
+    builder.addStroke(GestureDescription.StrokeDescription(dot(cx, cy), lead, 40L))
+    builder.addStroke(GestureDescription.StrokeDescription(dragPath(cx, cy, tx, cy, s), lead + 140L, s.ms))
+    val ok = service.dispatchGesture(builder.build(), null, null)
+    NikaDiag.log("call", "viber: variant " + step + " from " + cx + "," + cy + " to " + tx + ": " + ok)
+    handler.postDelayed({ trySlide(service, step + 1, run) }, lead + 140L + s.ms + 1500L)
+  }
+
+  private fun dot(x: Float, y: Float): Path {
+    val p = Path()
+    p.moveTo(x, y)
+    return p
+  }
+
+  /** A drag with a hold: the hold is a movement to and fro, a standing finger would not take time. */
+  private fun dragPath(x1: Float, y1: Float, x2: Float, y2: Float, s: Slide): Path {
+    val steps = 24
+    val moveMs = maxOf(s.ms - s.hold, 100L).toFloat()
+    val dist = Math.sqrt(((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)).toDouble()).toFloat()
+    val swings =
+      if (s.hold > 0 && s.wiggle > 0f) Math.max(1, Math.ceil((dist * s.hold / moveMs / (2 * s.wiggle)).toDouble()).toInt()) else 0
+    val p = Path()
+    p.moveTo(x1, y1)
+    if (swings > 0 && !s.holdEnd) {
+      for (i in 1..swings) p.lineTo(x1, y1 + (if (i % 2 == 1) s.wiggle else -s.wiggle))
+      p.lineTo(x1, y1)
+    }
+    for (i in 0..steps) {
+      val t = i.toFloat() / steps
+      p.lineTo(x1 + (x2 - x1) * t, y1 + (y2 - y1) * t)
+    }
+    if (swings > 0 && s.holdEnd) {
+      for (i in 1..swings) p.lineTo(x2, y2 + (if (i % 2 == 1) s.wiggle else -s.wiggle))
+      p.lineTo(x2, y2)
+    }
+    return p
+  }
 
   private val CALL_APPS = setOf("com.whatsapp", "com.whatsapp.w4b", "org.telegram.messenger", "com.viber.voip", "com.facebook.orca", "com.skype.raider")
   private val CALLING =
