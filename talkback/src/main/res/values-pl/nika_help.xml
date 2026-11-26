@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_help">Tryb pomocy: naciśnij klawisze, aby usłyszeć przypisanie</string>
+    <string name="nika_help_on">Tryb pomocy włączony. Naciskaj klawisz lub dwa klawisze razem, a powiem, co jest przypisane. Aby wyjść, naciśnij razem oba klawisze głośności.</string>
+    <string name="nika_help_off">Tryb pomocy wyłączony.</string>
+    <string name="nika_help_unassigned">%1$s: nic nie przypisano.</string>
+    <string name="nika_help_tap1">Jedno naciśnięcie: %1$s</string>
+    <string name="nika_help_hold">Przytrzymanie: %1$s</string>
+    <string name="nika_help_tap2">Dwa naciśnięcia: %1$s</string>
+    <string name="nika_help_tap3">Trzy naciśnięcia: %1$s</string>
+    <string name="nika_help_combo">Razem: %1$s.</string>
+    <string name="nika_help_and">i</string>
+    <string name="nika_help_key_vol_up">głośność w górę</string>
+    <string name="nika_help_key_vol_down">głośność w dół</string>
+    <string name="nika_help_key_star">gwiazdka</string>
+    <string name="nika_help_key_pound">krzyżyk</string>
+</resources>

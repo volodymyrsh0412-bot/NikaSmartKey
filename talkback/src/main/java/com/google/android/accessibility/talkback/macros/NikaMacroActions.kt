@@ -38,6 +38,7 @@ object NikaMacroActions {
   const val REC_CLICK = "nika_macro_rec_click"
   const val REC_STOP = "nika_macro_rec_stop"
   const val REC_HOLD = "nika_macro_rec_hold"
+  const val HELP = "nika_help_mode"
 
   class Fixed(val value: String, @StringRes val labelRes: Int)
 
@@ -47,6 +48,7 @@ object NikaMacroActions {
       Fixed(REC_CLICK, R.string.nika_act_mac_rec),
       Fixed(REC_HOLD, R.string.nika_act_mac_rec_hold),
       Fixed(REC_STOP, R.string.nika_act_mac_stop),
+      Fixed(HELP, R.string.nika_act_help),
     )
 
   private val handler = Handler(Looper.getMainLooper())
@@ -83,6 +85,7 @@ object NikaMacroActions {
           NikaMacros.setRecording(service, "")
           say(service, service.getString(R.string.nika_mac_rec_stopped))
         }
+        value == HELP -> NikaHelpMode.toggle(service)
         NikaVoiceCmds.isCmdAction(value) -> NikaVoiceCmds.performCmd(service, value)
         value.startsWith(PREFIX) -> start(service, value.removePrefix(PREFIX))
         else -> return false

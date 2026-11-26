@@ -1442,6 +1442,6 @@ Nika सेटिंग्जमध्ये Nika मेनू आणि तु�
   <string name="talkback_keep_on_button">सुरू ठेवा</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">बंद करा</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">तुमची स्क्रीन बंद असताना नोटिफिकेशन ऐकण्यासाठी, Nika व्हर्बाेसिटी सेटिंग्जमध्ये \"स्क्रीन बंद असताना नोटिफिकेशन बोला\" सुरू करा</string>
 </resources>

@@ -1439,6 +1439,6 @@ Atbildē nesniedziet informāciju par formatējumu.</string>
   <string name="talkback_keep_on_button">Atstāt ieslēgtu</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Aizvērt</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Lai dzirdētu paziņojumus, kad ekrāns ir izslēgts, Nika detalizētības iestatījumos ieslēdziet opciju “Izrunāt paziņojumus, kad ekrāns ir izslēgts”.</string>
 </resources>

@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">계속 사용</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">닫기</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">화면이 꺼져 있을 때 알림을 들으려면 Nika 상세 설정에서 \'화면이 꺼져 있을 때 알림 읽어주기\'를 사용 설정하세요.</string>
 </resources>

@@ -1439,6 +1439,6 @@ Không dùng bất kỳ định dạng đánh dấu nào trong câu trả lời.
   <string name="talkback_keep_on_button">Tiếp tục bật</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Đóng</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Để nghe thông báo khi màn hình tắt, hãy bật chế độ \"Đọc thông báo khi màn hình tắt\" trong phần cài đặt độ chi tiết trên Nika</string>
 </resources>

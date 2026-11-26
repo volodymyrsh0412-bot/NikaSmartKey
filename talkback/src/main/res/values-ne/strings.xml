@@ -1440,6 +1440,6 @@
   <string name="talkback_keep_on_button">अन राखिरहनुहोस्</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">बन्द गर्नुहोस्</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">स्क्रिन अफ हुँदा नोटिफिकेसनहरू सुन्न पढेर सुनाइने जानकारीको मात्रासम्बन्धी Nika को सेटिङमा गई \"स्क्रिन अफ हुँदा नोटिफिकेसनहरू सुनाउनुहोस्\" अन गर्नुहोस्</string>
 </resources>

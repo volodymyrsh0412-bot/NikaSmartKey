@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">ચાલુ રાખો</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">બંધ કરો</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">જ્યારે તમારી સ્ક્રીન બંધ હોય ત્યારે નોટિફિકેશન સાંભળવા માટે, Nika શબ્દબહુલતા સેટિંગમાં \"સ્ક્રીન બંધ હોય ત્યારે નોટિફિકેશન બોલો\" ચાલુ કરો</string>
 </resources>

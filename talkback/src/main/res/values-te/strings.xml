@@ -1431,6 +1431,6 @@
   <string name="talkback_keep_on_button">ఆన్‌లోనే ఉంచండి</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">మూసివేయండి</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">మీ స్క్రీన్ ఆఫ్‌లో ఉన్నప్పుడు నోటిఫికేషన్‌లను వినడానికి, Nika ఎంత క్లుప్తంగా ఉండాలి అనే సెట్టింగ్‌లలో \"స్క్రీన్ ఆఫ్‌లో ఉన్నప్పుడు నోటిఫికేషన్‌లను తెలియజేయండి\"ని ఆన్ చేయండి.</string>
 </resources>

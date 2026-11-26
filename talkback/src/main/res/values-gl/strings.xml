@@ -1438,6 +1438,6 @@ Non empregues ningún tipo de marcado na resposta.</string>
   <string name="talkback_keep_on_button">Deixar activada</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Pechar</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Para escoitar as notificacións cando teñas a pantalla apagada, vai á configuración de verbosidade de Nika e activa a opción Ler notificacións coa pantalla apagada</string>
 </resources>

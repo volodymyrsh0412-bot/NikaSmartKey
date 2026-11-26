@@ -1439,6 +1439,6 @@ Använd ingen formatering i svaret.</string>
   <string name="talkback_keep_on_button">Håll funktionen aktiverad</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Stäng</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Om du vill höra aviseringar när skärmen är avstängd aktiverar du Läs upp aviseringar när skärmen är avstängd i Nika-inställningarna för detaljnivå</string>
 </resources>

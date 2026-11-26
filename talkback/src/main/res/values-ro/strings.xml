@@ -1439,6 +1439,6 @@ Nu folosi marcaje de formatare în răspuns.</string>
   <string name="talkback_keep_on_button">Menține activat</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Închide</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Pentru a auzi notificări când ecranul este inactiv, activează opțiunea Se rostesc notificările cu ecran inactiv în setările de informații rostite Nika</string>
 </resources>

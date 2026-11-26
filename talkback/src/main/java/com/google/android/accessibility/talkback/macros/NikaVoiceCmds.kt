@@ -415,7 +415,7 @@ object NikaVoiceCmds {
   const val POWER_DOUBLE = "double"
   const val POWER_TRIPLE = "triple"
 
-  fun power(context: Context): String = prefs(context).getString(PREF_POWER, POWER_OFF) ?: POWER_OFF
+  fun power(context: Context): String = POWER_OFF
 
   fun userName(context: Context): String = (prefs(context).getString(PREF_NAME, "") ?: "").trim()
 

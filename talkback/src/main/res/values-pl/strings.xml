@@ -1441,6 +1441,6 @@ Nie używaj w odpowiedzi formatowania Markdown.</string>
   <string name="talkback_keep_on_button">Nie wyłączaj</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Zamknij</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Aby odsłuchiwać powiadomienia przy wyłączonym ekranie, w ustawieniach szczegółowości Niki włącz opcję „Odczytuj powiadomienia przy wyłączonym ekranie”</string>
 </resources>

@@ -3,7 +3,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
 
     <!--The human-readable name of this service. Do not translate. -->
-    <string name="talkback_title" translatable="false">Nika</string>
+    <string name="talkback_title" translatable="false">Nika SmartKey</string>
 
     <!--
       Source: A brief description of TalkBack.
@@ -4496,7 +4496,7 @@ Do not use any markdown in your response."</string>
   <!-- Label for close. [CHAR_LIMIT=NONE] -->
   <string name="close_string">Close</string>
   <!-- TalkBack label. [CHAR_LIMIT=NONE]-->
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
 
   <!-- Tip notification content for lock screen notifications. [CHAR_LIMIT=NONE] -->
   <string name="notifictions_in_lock_screen_notification_content">To hear notifications when your screen is off, turn on \"Speak notifications when screen is off\" in Nika verbosity settings</string>

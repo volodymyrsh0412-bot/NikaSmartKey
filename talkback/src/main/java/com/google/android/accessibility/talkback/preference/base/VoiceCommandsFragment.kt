@@ -70,20 +70,6 @@ class VoiceCommandsFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) 
       rebuild()
     }
     if (openSettings) {
-      val power = NikaVoiceCmds.power(ctx)
-      row(
-        group,
-        getString(R.string.nika_vc_power),
-        getString(
-          when (power) {
-            NikaVoiceCmds.POWER_DOUBLE -> R.string.nika_vc_power_double
-            NikaVoiceCmds.POWER_TRIPLE -> R.string.nika_vc_power_triple
-            else -> R.string.nika_vc_power_off
-          }
-        ) + ". " + getString(R.string.nika_vc_power_warn),
-      ) {
-        choosePower()
-      }
       row(group, getString(R.string.nika_vc_name), NikaVoiceCmds.userName(ctx).ifEmpty { getString(R.string.nika_vc_name_empty) }) {
         askText(R.string.nika_vc_name, NikaVoiceCmds.userName(ctx)) { text ->
           pref().edit().putString(NikaVoiceCmds.PREF_NAME, text.trim()).apply()

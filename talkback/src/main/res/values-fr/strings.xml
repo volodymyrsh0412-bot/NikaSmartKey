@@ -1439,6 +1439,6 @@ N\'utilisez aucune notation dans votre réponse.</string>
   <string name="talkback_keep_on_button">Laisser activé</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Fermer</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Pour entendre les notifications quand l\'écran est éteint, activez \"Énoncer les notifications quand l\'écran est éteint\" dans les paramètres de niveau de détail de Nika</string>
 </resources>

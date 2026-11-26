@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">ഓണാക്കി നിർത്തുക</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">അടയ്ക്കുക</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">നിങ്ങളുടെ സ്‌ക്രീൻ ഓഫായിരിക്കുമ്പോൾ അറിയിപ്പുകൾ കേൾക്കാൻ, Nika വെർബോസിറ്റി ക്രമീകരണത്തിൽ \"സ്‌ക്രീൻ ഓഫായിരിക്കുമ്പോൾ അറിയിപ്പുകൾ പറയുക\" എന്നത് ഓണാക്കുക</string>
 </resources>

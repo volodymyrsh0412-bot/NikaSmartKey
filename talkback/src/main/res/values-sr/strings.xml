@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">Не искључуј</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Затвори</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Да бисте чули обавештења када је екран искључен, у Nika подешавањима опширности говора укључите Говори обавештења када је екран искључен</string>
 </resources>

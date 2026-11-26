@@ -1437,6 +1437,6 @@
   <string name="talkback_keep_on_button">保持開啟</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">關閉</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">如要在螢幕關閉時收聽通知，請在 Nika 詳細程度設定開啟「於螢幕關閉時讀出通知」設定。</string>
 </resources>

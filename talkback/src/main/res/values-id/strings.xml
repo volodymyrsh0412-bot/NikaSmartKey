@@ -1439,6 +1439,6 @@ Jangan gunakan markdown dalam respons Anda.</string>
   <string name="talkback_keep_on_button">Tetap aktifkan</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Tutup</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Untuk mendengar notifikasi saat layar nonaktif, aktifkan \"Ucapkan notifikasi saat layar nonaktif\" di setelan panjang respons Nika</string>
 </resources>

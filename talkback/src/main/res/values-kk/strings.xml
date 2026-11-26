@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">Қосулы қалдыру</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Жабу</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Экран өшірулі кезде хабарландыруларды есту үшін Nika сөз мөлшері параметрлеріндегі \"Экран өшірулі кезде хабарландыруларды дыбыстау\" параметрін қосыңыз</string>
 </resources>

@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">ဖွင့်ထားရန်</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">ပိတ်ရန်</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">စခရင်ပိတ်ထားချိန်၌ အကြောင်းကြားချက်များ ကြားရရန်အတွက် ‘Nika အကျယ်ချဲ့ရှင်းပြခြင်း ဆက်တင်များ’ တွင် “စခရင်ပိတ်ထားချိန်၌ အကြောင်းကြားချက်များ ပြောရန်” ကို ဖွင့်ပါ</string>
 </resources>

@@ -1439,6 +1439,6 @@ No utilitzis Markdown a la resposta.</string>
   <string name="talkback_keep_on_button">Mantén activat</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Tanca</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Per escoltar les notificacions quan la pantalla està desactivada, activa \"Enuncia les notificacions amb pantalla apagada\" a la configuració de la verbositat de Nika</string>
 </resources>

@@ -1439,6 +1439,6 @@ No uses Markdown en tu respuesta.</string>
   <string name="talkback_keep_on_button">Mantener activada</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Cerrar</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Para oír las notificaciones cuando la pantalla esté apagada, activa la opción \"Decir notificaciones con pantalla apagada\" en los ajustes de verbosidad de Nika</string>
 </resources>

@@ -1439,6 +1439,6 @@ Moenie enige Markdown in jou antwoord gebruik nie.</string>
   <string name="talkback_keep_on_button">Hou aan</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Maak toe</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">As jy kennisgewings wil hoor wanneer jou skerm af is, moet jy “Sê kennisgewings hardop wanneer skerm af is” in Nika se instellings vir breedsprakigheid aanskakel.</string>
 </resources>

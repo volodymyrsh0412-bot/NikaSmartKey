@@ -1439,6 +1439,6 @@ Brug ikke markdown i dit svar.</string>
   <string name="talkback_keep_on_button">Deaktiver ikke</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Luk</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Hvis du vil høre notifikationer, når skærmen er slukket, skal du aktivere \"Læs notifikationer op ved slukket skærm\" i indstillingerne for Nika-detaljering</string>
 </resources>

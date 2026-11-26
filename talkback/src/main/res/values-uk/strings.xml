@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">Не вимикати</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Закрити</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Щоб прослуховувати сповіщення з вимкненим екраном, увімкніть параметр \"Читати сповіщення, коли екран вимкнено\" в налаштуваннях деталізації Nika</string>
 </resources>

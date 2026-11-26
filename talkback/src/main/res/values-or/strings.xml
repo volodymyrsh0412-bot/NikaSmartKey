@@ -1438,6 +1438,6 @@
   <string name="talkback_keep_on_button">ଚାଲୁ ରଖନ୍ତୁ</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">ବନ୍ଦ କରନ୍ତୁ</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">ଆପଣଙ୍କ ସ୍କ୍ରିନ ବନ୍ଦ ଥିବା ସମୟରେ ବିଜ୍ଞପ୍ତି ଶୁଣିବା ପାଇଁ Nika ଶବ୍ଦ ବହୁଳତା ସେଟିଂସରେ \"ସ୍କ୍ରିନ ବନ୍ଦ ଥିବା ସମୟରେ ବିଜ୍ଞପ୍ତି କୁହନ୍ତୁ\"କୁ ଚାଲୁ କରନ୍ତୁ</string>
 </resources>

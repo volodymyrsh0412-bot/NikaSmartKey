@@ -102,11 +102,6 @@
       android:key="@string/pref_category_apps_key"
       android:title="@string/title_pref_category_apps">
     <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
-        android:fragment="com.google.android.accessibility.talkback.preference.base.AiSettingsFragment"
-        android:key="pref_nika_ai"
-        android:summary="@string/nika_ai_summary"
-        android:title="@string/nika_ai_title" />
-    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
         android:fragment="com.google.android.accessibility.talkback.preference.base.MacrosFragment"
         android:key="pref_nika_macros"
         android:summary="@string/nika_mac_summary"

@@ -8,7 +8,7 @@ apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 def testBuild = project.hasProperty('testBuild')
 
 ext {
-    talkbackApplicationId = testBuild ? "ua.nika.app.test" : "ua.nika.app"
+    talkbackApplicationId = testBuild ? "ua.nika.smartkey.test" : "ua.nika.smartkey"
 }
 
 android {

@@ -1438,6 +1438,6 @@
   <string name="talkback_keep_on_button">לא, התחרטתי</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">סגירה</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">‏כדי לשמוע התראות כשהמסך כבוי, צריך להפעיל את ההגדרה \"הקראת התראות כשהמסך כבוי\" בהגדרות של דרגת המלל של Nika</string>
 </resources>

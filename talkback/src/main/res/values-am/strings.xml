@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">እንደበራ አቆይ</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">ዝጋ</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">ማያ ገፅዎ እንደጠፋ ማሳውቂያዎችን ለመስማት Nika ብዙ ቃላት ቅንብሮች ውስጥ «ማያ ገፅ ሲጠፋ ማሳውቂያዎችን ተናገር» የሚለውን ያብሩ</string>
 </resources>

@@ -1439,6 +1439,6 @@ Yanıtınızda Markdown kullanmayın.</string>
   <string name="talkback_keep_on_button">Açık tut</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Kapat</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Ekranınız kapalıyken bildirimleri duymak için Nika ayrıntı düzeyi ayarlarında \"Ekran kapalıyken bildirimleri söyle\" ayarını açın</string>
 </resources>

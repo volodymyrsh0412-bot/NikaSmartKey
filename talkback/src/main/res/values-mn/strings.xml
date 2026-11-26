@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">Асаалттай байлгах</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Хаах</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Та дэлгэцээ унтраалттай үед мэдэгдэл сонсохын тулд Nika-н нуршсан дэлгэрэнгүй байдлын тохиргооноос \"Дэлгэц унтраалттай үед мэдэгдэл унших\"-ыг асаана уу</string>
 </resources>

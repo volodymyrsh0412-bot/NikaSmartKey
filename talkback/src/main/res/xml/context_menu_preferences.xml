@@ -14,11 +14,6 @@
         android:summary="%s"
         android:entries="@array/nika_radial_gap_entries"
         android:entryValues="@array/nika_radial_gap_values" />
-    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
-        android:fragment="com.google.android.accessibility.talkback.preference.base.MenuOrderFragment"
-        android:key="pref_nika_menu_order"
-        android:summary="@string/nika_mo_summary"
-        android:title="@string/nika_mo_title" />
     <com.google.android.accessibility.material.preference.AccessibilitySuitePreferenceCategory
         android:key="@string/pref_show_context_menu_contextual_actions_category_key"
         android:title="@string/context_menu_category_contextual_actions">

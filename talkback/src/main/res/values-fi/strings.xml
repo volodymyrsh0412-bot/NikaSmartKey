@@ -1439,6 +1439,6 @@ Tämän jälkeen vastauksessa voi kuvailla navigointipalkkien ja näkyvien paini
   <string name="talkback_keep_on_button">Pidä päällä</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Sulje</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Jos haluat kuulla ilmoitukset, kun näyttö on pois päältä, laita \"Sano ilmoitukset näyttö sammutettuna\" päälle Nikain puheen määräasetuksista</string>
 </resources>

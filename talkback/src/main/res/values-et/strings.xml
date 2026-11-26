@@ -1439,6 +1439,6 @@ Pärast seda saab vastuses kirjeldada navigeerimisribade ja silmapaistvate nuppu
   <string name="talkback_keep_on_button">Hoia sisselülitatuna</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Sule</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Märguannete kuulmiseks siis, kui ekraan on välja lülitatud, lülitage Nikai paljusõnalisuse seadetes sisse valik „Loe märguanded ette, kui ekraan on välja lülitatud”.</string>
 </resources>

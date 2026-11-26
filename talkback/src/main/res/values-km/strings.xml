@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">បន្តបើក</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">បិទ</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">ដើម្បីស្ដាប់ឮការជូនដំណឹង ពេលអេក្រង់របស់អ្នកបិទ សូមបើក \"អាន​ការជូនដំណឹង នៅពេល​អេក្រង់បិទ\" ក្នុងការកំណត់កម្រិតនិយាយ Nika</string>
 </resources>

@@ -1439,6 +1439,6 @@ Do not use any markdown in your response.</string>
   <string name="talkback_keep_on_button">Keep on</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Close</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">To hear notifications when your screen is off, turn on \'Speak notifications when screen is off\' in Nika verbosity settings</string>
 </resources>

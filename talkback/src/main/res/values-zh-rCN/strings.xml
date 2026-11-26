@@ -1573,7 +1573,7 @@
   <string name="talkback_keep_on_button">保持开启状态</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">关闭</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">如需在屏幕处于关闭状态时听到通知，请在 Nika 详细程度设置中开启“屏幕处于关闭状态时读出通知”</string>
   <!-- Title of an Advanced Settings switch. Allows scrolling to the remembered item when returning to a screen. [CHAR LIMIT=NONE] -->
   <string name="title_pref_scroll_to_restore_previous_focus">滚动以恢复先前的焦点</string>

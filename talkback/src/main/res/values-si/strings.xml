@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">ක්‍රියාත්මක කර තබන්න</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">වසන්න</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">ඔබේ තිරය ක්‍රියා විරහිත වූ විට දැනුම්දීම් ඇසීමට, Nika වාග්බාහුල්‍යය සැකසීම් තුළ \"තිරය ක්‍රියා විරහිත වූ විට දැනුම්දීම් කථා කරන්න\" ක්‍රියාත්මක කරන්න</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_help">Режим помощи: нажмите клавиши, чтобы услышать назначение</string>
+    <string name="nika_help_on">Режим помощи включён. Нажимайте клавишу или две клавиши вместе, и я скажу, что назначено. Чтобы выйти, нажмите вместе обе клавиши громкости.</string>
+    <string name="nika_help_off">Режим помощи выключен.</string>
+    <string name="nika_help_unassigned">%1$s: ничего не назначено.</string>
+    <string name="nika_help_tap1">Одно нажатие: %1$s</string>
+    <string name="nika_help_hold">Удержание: %1$s</string>
+    <string name="nika_help_tap2">Два нажатия: %1$s</string>
+    <string name="nika_help_tap3">Три нажатия: %1$s</string>
+    <string name="nika_help_combo">Вместе: %1$s.</string>
+    <string name="nika_help_and">и</string>
+    <string name="nika_help_key_vol_up">громкость плюс</string>
+    <string name="nika_help_key_vol_down">громкость минус</string>
+    <string name="nika_help_key_star">звёздочка</string>
+    <string name="nika_help_key_pound">решётка</string>
+</resources>

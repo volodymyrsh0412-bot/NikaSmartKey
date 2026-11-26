@@ -1439,6 +1439,6 @@ Mos përdor asnjë shënim formati në përgjigje.</string>
   <string name="talkback_keep_on_button">Mbaje aktiv</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Mbyll</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Për të dëgjuar njoftimet kur ekrani yt është i fikur, aktivizo \"Lexo me zë njoftimet me ekranin të fikur\" në cilësimet e detajimit zanor të Nika</string>
 </resources>

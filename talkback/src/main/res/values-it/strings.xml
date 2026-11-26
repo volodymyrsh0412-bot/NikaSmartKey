@@ -1439,6 +1439,6 @@ Non usare markdown nella risposta.</string>
   <string name="talkback_keep_on_button">Mantieni attiva</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Chiudi</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Per ascoltare le notifiche quando lo schermo è disattivato, attiva l\'opzione \"Leggi notifiche con schermo disattivato\" nelle impostazioni di Preferenze di lettura di Nika</string>
 </resources>

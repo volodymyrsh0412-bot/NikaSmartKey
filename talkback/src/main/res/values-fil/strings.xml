@@ -1439,6 +1439,6 @@ Huwag gumamit ng anumang markdown sa iyong sagot.</string>
   <string name="talkback_keep_on_button">Panatilihing naka-on</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Isara</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Para marinig ang mga notification kapag naka-off ang iyong screen, i-on ang \"Bigkasin ang mga notification kapag naka-off ang screen\" sa mga setting ng verbosity ng Nika</string>
 </resources>

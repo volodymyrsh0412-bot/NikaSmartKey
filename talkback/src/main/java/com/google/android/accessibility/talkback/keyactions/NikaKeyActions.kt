@@ -179,10 +179,109 @@ class NikaKeyActions(private val service: TalkBackService) {
     return if (locked.any { it != UNASSIGNED }) locked else normal
   }
 
+  private val helpPressed = HashSet<Int>()
+  private var helpSwallow = false
+
+  private fun helpCancelPending() {
+    for (s in states.values) {
+      s.holdTask?.let { handler.removeCallbacks(it) }
+      s.tapTask?.let { handler.removeCallbacks(it) }
+      s.holdTask = null
+      s.tapTask = null
+      s.down = false
+      s.held = false
+      s.taps = 0
+    }
+  }
+
+  /** What is assigned to a key, as a sentence. */
+  private fun helpText(code: Int, prefs: SharedPreferences): String {
+    val name = com.google.android.accessibility.talkback.macros.NikaHelpMode.keyName(service, code)
+    val slot = slotFor(prefs, code)
+    val isVolume = code == KeyEvent.KEYCODE_VOLUME_UP || code == KeyEvent.KEYCODE_VOLUME_DOWN
+    val actions = if (slot == null) null else actionsFor(prefs, slot, isVolume)
+    if (actions == null || actions.all { it == UNASSIGNED }) {
+      return service.getString(com.google.android.accessibility.talkback.R.string.nika_help_unassigned, name)
+    }
+    val ids =
+      intArrayOf(
+        com.google.android.accessibility.talkback.R.string.nika_help_tap1,
+        com.google.android.accessibility.talkback.R.string.nika_help_hold,
+        com.google.android.accessibility.talkback.R.string.nika_help_tap2,
+        com.google.android.accessibility.talkback.R.string.nika_help_tap3,
+      )
+    val parts = StringBuilder(name).append(". ")
+    for (i in 0..3) {
+      if (actions[i] != UNASSIGNED) {
+        parts
+          .append(
+            service.getString(
+              ids[i],
+              com.google.android.accessibility.talkback.macros.NikaHelpMode.actionLabel(service, actions[i]),
+            )
+          )
+          .append(". ")
+      }
+    }
+    return parts.toString().trim()
+  }
+
+  /** Help mode: while it is on a key is only described; the key with the help action ends it. */
+  private fun helpPreHandle(event: KeyEvent, prefs: SharedPreferences): Boolean {
+    try {
+      if (capturing) return false
+      val help = com.google.android.accessibility.talkback.macros.NikaHelpMode
+      val code = event.keyCode
+      val isVolume = code == KeyEvent.KEYCODE_VOLUME_UP || code == KeyEvent.KEYCODE_VOLUME_DOWN
+      if (event.action == KeyEvent.ACTION_UP) {
+        helpPressed.remove(code)
+        if (helpPressed.isEmpty()) {
+          val swallow = helpSwallow
+          helpSwallow = false
+          return help.on || swallow
+        }
+        return help.on || helpSwallow
+      }
+      if (event.action != KeyEvent.ACTION_DOWN) return help.on
+      if (event.repeatCount > 0) return help.on || helpSwallow
+      helpPressed.add(code)
+      if (!help.on) return false
+      val slotNow = slotFor(prefs, code)
+      if (
+        slotNow != null &&
+          actionsFor(prefs, slotNow, isVolume).any {
+            it == com.google.android.accessibility.talkback.macros.NikaMacroActions.HELP
+          }
+      ) {
+        // The key that switches the help mode on also switches it off.
+        helpCancelPending()
+        helpSwallow = true
+        help.toggle(service)
+        return true
+      }
+      help.touch(service)
+      val text = StringBuilder()
+      if (helpPressed.size > 1) {
+        val names = helpPressed.map { help.keyName(service, it) }
+        text.append(
+          service.getString(
+            com.google.android.accessibility.talkback.R.string.nika_help_combo,
+            names.joinToString(" " + service.getString(com.google.android.accessibility.talkback.R.string.nika_help_and) + " "),
+          )
+        ).append(" ")
+      }
+      text.append(helpText(code, prefs))
+      help.say(service, text.toString())
+      return true
+    } catch (e: Throwable) {
+      return false
+    }
+  }
   /** Returns true if the key event was used. */
   fun onKeyEvent(event: KeyEvent, inEditField: Boolean): Boolean {
     val prefs = SharedPreferencesUtils.getSharedPreferences(service)
     val note = StringBuilder()
+    if (helpPreHandle(event, prefs)) return true
     if (event.keyCode == KeyEvent.KEYCODE_VOLUME_UP || event.keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
       lastVolumeKey = android.os.SystemClock.uptimeMillis()
     }

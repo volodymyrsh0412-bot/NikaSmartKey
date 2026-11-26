@@ -17,21 +17,6 @@
       android:entries="@array/pref_gesture_set_entries"
       android:entryValues="@array/pref_gesture_set_values" />
   <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
-      android:fragment="com.google.android.accessibility.talkback.preference.base.IphSwipeFragment"
-      android:key="pref_nika_iph"
-      android:summary="@string/nika_iph_summary"
-      android:title="@string/nika_iph_title" />
-  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
-      android:fragment="com.google.android.accessibility.talkback.preference.base.SideSwipeFragment"
-      android:key="pref_nika_side"
-      android:summary="@string/nika_side_summary"
-      android:title="@string/nika_side_title" />
-  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
-      android:fragment="com.google.android.accessibility.talkback.preference.base.MotionGesturesFragment"
-      android:key="pref_nika_motion"
-      android:summary="@string/nika_motion_summary"
-      android:title="@string/nika_motion_title" />
-  <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
       android:fragment="com.google.android.accessibility.talkback.preference.base.GestureProfilesFragment"
       android:key="pref_nika_profiles"
       android:summary="@string/nika_prof_summary"

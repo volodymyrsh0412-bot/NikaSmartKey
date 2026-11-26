@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_help">Help mode: press keys to hear what is assigned</string>
+    <string name="nika_help_on">Help mode is on. Press a key or two keys together to hear what is assigned. Press both volume keys together to leave.</string>
+    <string name="nika_help_off">Help mode is off.</string>
+    <string name="nika_help_unassigned">%1$s: nothing is assigned.</string>
+    <string name="nika_help_tap1">One press: %1$s</string>
+    <string name="nika_help_hold">Hold: %1$s</string>
+    <string name="nika_help_tap2">Two presses: %1$s</string>
+    <string name="nika_help_tap3">Three presses: %1$s</string>
+    <string name="nika_help_combo">Together: %1$s.</string>
+    <string name="nika_help_and">and</string>
+    <string name="nika_help_key_vol_up">volume up</string>
+    <string name="nika_help_key_vol_down">volume down</string>
+    <string name="nika_help_key_star">star</string>
+    <string name="nika_help_key_pound">pound</string>
+</resources>

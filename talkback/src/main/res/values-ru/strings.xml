@@ -1439,7 +1439,7 @@
   <string name="talkback_keep_on_button">Не отключать</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Закрыть</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Чтобы слушать уведомления при выключенном экране, перейдите в настройки детализации Nika и включите параметр \"Озвучивать уведомления при отключённом экране\".</string>
   <string name="title_pref_tts_engine">Синтезатор речи</string>
   <string name="title_pref_system_tts_settings">Системные настройки синтеза речи</string>

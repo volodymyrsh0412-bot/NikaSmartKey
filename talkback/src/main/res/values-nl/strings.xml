@@ -1439,6 +1439,6 @@ Gebruik geen markdown in je reactie.</string>
   <string name="talkback_keep_on_button">Aan laten</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Sluiten</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Als je meldingen wilt horen als je scherm uitstaat, zet je Meldingen uitspreken als scherm uit is aan in de Nika-instellingen voor uitvoerigheid</string>
 </resources>

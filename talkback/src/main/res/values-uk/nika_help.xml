@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_help">Режим допомоги: натисніть клавіші, щоб почути призначення</string>
+    <string name="nika_help_on">Режим допомоги увімкнено. Натискайте клавішу або дві клавіші разом, і я скажу, що призначено. Щоб вийти, натисніть разом обидві клавіші гучності.</string>
+    <string name="nika_help_off">Режим допомоги вимкнено.</string>
+    <string name="nika_help_unassigned">%1$s: нічого не призначено.</string>
+    <string name="nika_help_tap1">Одне натискання: %1$s</string>
+    <string name="nika_help_hold">Утримання: %1$s</string>
+    <string name="nika_help_tap2">Два натискання: %1$s</string>
+    <string name="nika_help_tap3">Три натискання: %1$s</string>
+    <string name="nika_help_combo">Разом: %1$s.</string>
+    <string name="nika_help_and">і</string>
+    <string name="nika_help_key_vol_up">гучність плюс</string>
+    <string name="nika_help_key_vol_down">гучність мінус</string>
+    <string name="nika_help_key_star">зірочка</string>
+    <string name="nika_help_key_pound">решітка</string>
+</resources>

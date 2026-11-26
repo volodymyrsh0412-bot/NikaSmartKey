@@ -1439,6 +1439,6 @@ Nemojte koristiti formatiranje u odgovoru.</string>
   <string name="talkback_keep_on_button">Ostavi uključeno</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Zatvori</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Da čujete obavještenja dok je ekran isključen, uključite opciju \"Govori obavještenja kada je ekran isključen\" u postavkama opširnosti Nikaa</string>
 </resources>

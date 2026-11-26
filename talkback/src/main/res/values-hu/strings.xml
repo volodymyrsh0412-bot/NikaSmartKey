@@ -1438,6 +1438,6 @@ Ne használjon Markdown-formázást a válaszában.</string>
   <string name="talkback_keep_on_button">Nem</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Bezárás</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Ha szeretné meghallgatni az értesítéseket, amikor a képernyő ki van kapcsolva, kapcsolja be az „Értesítések felolvasása kikapcsolt képernyőnél” beállítást a Nika részletességi beállításaiban</string>
 </resources>

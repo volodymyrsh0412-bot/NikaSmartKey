@@ -1439,6 +1439,6 @@
   <string name="talkback_keep_on_button">অন ৰাখক</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">বন্ধ কৰক</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">আপোনাৰ স্ক্ৰীনখন অফ হৈ থকাৰ সময়ত জাননী শুনিবলৈ, Nikaৰ শব্দৰ বাহুল্যতাৰ ছেটিঙত \"স্ক্ৰীনখন অফ হৈ থকাৰ সময়ত জাননী পঢ়ক\" সুবিধাটো অন কৰক</string>
 </resources>

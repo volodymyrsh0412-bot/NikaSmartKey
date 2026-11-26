@@ -1439,6 +1439,6 @@ Cavabınızda heç bir işarələmədən istifadə etməyin.</string>
   <string name="talkback_keep_on_button">Aktiv qalsın</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Bağlayın</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Ekran sönülü olduqda bildirişləri eşitmək üçün Nika-in çox sözlülük ayarlarında \"Ekran sönülü olduqda bildirişləri səsləndir\" funksiyasını aktiv edin</string>
 </resources>

@@ -1439,6 +1439,6 @@ V odgovor ne vključi nobenih oznak.</string>
   <string name="talkback_keep_on_button">Pusti vklopljeno</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Zapri</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Če želite slišati obvestila, ko je zaslon izklopljen, vklopite možnost »Izgovarjanje obvestil pri izklopljenem zaslonu« v nastavitvah ravni podrobnosti funkcije Nika.</string>
 </resources>

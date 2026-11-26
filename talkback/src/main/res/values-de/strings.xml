@@ -1439,7 +1439,7 @@ Verwende in deiner Antwort kein Markdown.</string>
   <string name="talkback_keep_on_button">Aktiviert lassen</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Schließen</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Wenn du Benachrichtigungen hören möchtest, während dein Display ausgeschaltet ist, aktiviere in den Nika-Einstellungen für die Ausführlichkeit die Option „Benachrichtigungen vorlesen, wenn Bildschirm aus“</string>
   <string name="title_pref_touch_activation">Berührung und Interaktion</string>
   <string name="title_pref_category_typing_and_braille">Tippen und Braille</string>

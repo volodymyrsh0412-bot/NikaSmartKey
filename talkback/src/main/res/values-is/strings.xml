@@ -1439,6 +1439,6 @@ Ekki nota neitt Markdown í svarinu.</string>
   <string name="talkback_keep_on_button">Hafa kveikt</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Loka</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Til að heyra tilkynningar þegar slökkt er á skjánum skaltu kveikja á „Lesa tilkynningar ef slökkt er á skjánum“ í nákvæmnistillingum Nika</string>
 </resources>

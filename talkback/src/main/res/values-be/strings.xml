@@ -1437,6 +1437,6 @@
   <string name="talkback_keep_on_button">Не выключаць</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Закрыць</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Каб чуць апавяшчэнні пры выключаным экране, перайдзіце ў налады дэталізацыі Nika і ўключыце параметр \"Агучваць апавяшчэнні пры выключаным экране\"</string>
 </resources>

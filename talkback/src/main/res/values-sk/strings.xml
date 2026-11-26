@@ -1439,6 +1439,6 @@ V odpovedi nepoužívajte formát markdown.</string>
   <string name="talkback_keep_on_button">Nechať zapnuté</string>
   <string name="talkback_speech_bubble_label">@string/talkback_label</string>
   <string name="close_string">Zavrieť</string>
-  <string name="talkback_label">Nika</string>
+  <string name="talkback_label">Nika SmartKey</string>
   <string name="notifictions_in_lock_screen_notification_content">Ak chcete, aby sa predčítavali upozornenia, keď je obrazovka vypnutá, zapnite v nastaveniach podrobnosti aplikácie Nika možnosť Vyslovovať upozornenia pri vypnutej obrazovke</string>
 </resources>
