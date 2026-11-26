@@ -182,6 +182,7 @@ public final class GestureListPreference extends AccessibilitySuiteDialogPrefere
     addActionItemsToList(builder, createNikaClockCategory());
     addActionItemsToList(builder, createNikaMacroCategory());
     addActionItemsToList(builder, createNikaVoiceCmdCategory());
+    addActionItemsToList(builder, createNikaCallCategory());
     addActionItemsToList(builder, createNikaFocusCategory());
     addActionItemsToList(builder, createNikaTranslatorCategory());
     addActionItemsToList(builder, createSystemActions());
@@ -288,6 +289,18 @@ public final class GestureListPreference extends AccessibilitySuiteDialogPrefere
       builder.add(
           new ActionItem(
               resources.getString(action.getLabelRes()), action.getValue(), TYPE_ACTION_ITEM));
+    }
+    return builder.build();
+  }
+
+  private ImmutableList<ActionItem> createNikaCallCategory() {
+    ImmutableList.Builder<ActionItem> builder =
+        createActionListBuilder(R.string.nika_call_category, 0, 0);
+    Resources resources = getContext().getResources();
+    for (com.google.android.accessibility.talkback.macros.NikaMacroActions.Fixed fixed : com.google.android.accessibility.talkback.macros.NikaMacroActions.CALLS) {
+      builder.add(
+          new ActionItem(
+              resources.getString(fixed.getLabelRes()), fixed.getValue(), TYPE_ACTION_ITEM));
     }
     return builder.build();
   }

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="nika_act_call">Answer or end a call</string>
+    <string name="nika_call_category">Calls</string>
 </resources>
