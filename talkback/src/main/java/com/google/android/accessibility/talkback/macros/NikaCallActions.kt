@@ -118,10 +118,18 @@ object NikaCallActions {
     val wiggle: Float,
     val holdEnd: Boolean,
     val frac: Float,
+    val two: Boolean = false,
+    val gap: Float = 0f,
+    val along: Boolean = false,
   )
 
   private val SLIDES =
     listOf(
+      // Two fingers side by side swipe to the right from the round button: the way the user does it.
+      Slide(false, 450, 0, 0f, false, 0.25f, two = true, gap = 120f),
+      Slide(false, 300, 0, 0f, false, 0.25f, two = true, gap = 80f),
+      Slide(false, 450, 0, 0f, false, 0.25f, two = true, gap = 120f, along = true),
+      Slide(false, 700, 0, 0f, false, 0.3f, two = true, gap = 160f),
       Slide(false, 1300, 650, 8f, false, 0.22f),
       Slide(false, 1600, 700, 8f, true, 0.22f),
       Slide(false, 6000, 0, 0f, false, 0.22f),
@@ -166,6 +174,22 @@ object NikaCallActions {
     val tx = minOf(cx + w * s.frac, b.left + w * 0.9f)
     val lead = if (s.focus) 600L else 0L
     val builder = GestureDescription.Builder()
+    if (s.two) {
+      val ox = if (s.along) s.gap else 0f
+      val oy = if (s.along) 0f else s.gap / 2
+      val a = Path()
+      a.moveTo(cx - ox, cy - oy)
+      a.lineTo(tx - ox, cy - oy)
+      val c = Path()
+      c.moveTo(cx, cy + oy)
+      c.lineTo(tx, cy + oy)
+      builder.addStroke(GestureDescription.StrokeDescription(a, 0L, s.ms))
+      builder.addStroke(GestureDescription.StrokeDescription(c, 0L, s.ms))
+      val okTwo = service.dispatchGesture(builder.build(), null, null)
+      NikaDiag.log("call", "viber: variant " + step + " two fingers, gap " + s.gap + (if (s.along) " along" else "") + ", " + s.ms + " ms: " + okTwo)
+      handler.postDelayed({ trySlide(service, step + 1, run) }, s.ms + 1500L)
+      return
+    }
     if (s.focus) builder.addStroke(GestureDescription.StrokeDescription(dot(cx, cy), 0L, 40L))
     builder.addStroke(GestureDescription.StrokeDescription(dot(cx, cy), lead, 40L))
     builder.addStroke(GestureDescription.StrokeDescription(dragPath(cx, cy, tx, cy, s), lead + 140L, s.ms))
