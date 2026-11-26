@@ -420,7 +420,7 @@
   <string name="shortcut_title_menu_control">Меню и элементы управления</string>
   <string name="shortcut_title_text_editing">Редактирование текста</string>
   <string name="shortcut_title_special_features">Другое</string>
-  <string name="shortcut_unassigned">Нажмите, чтобы назначить</string>
+  <string name="shortcut_unassigned">Не назначено</string>
   <string name="shortcut_not_customizable">%1$s, изменить нельзя</string>
   <string name="shortcut_disabled_due_to_vibration_watch">Недоступно, когда включено время по вибрации</string>
   <string name="shortcut_next">Следующий объект</string>

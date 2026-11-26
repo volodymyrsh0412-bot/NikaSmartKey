@@ -1821,7 +1821,7 @@ Description: Explain that the feature is enabled for all images. [CHAR_LIMIT=NON
     <string name="shortcut_title_special_features">Other</string>
 
     <!-- Label for a shortcut that is not assigned and does nothing. [CHAR_LIMIT=40] -->
-    <string name="shortcut_unassigned">Tap to assign</string>
+    <string name="shortcut_unassigned">Not assigned</string>
 
     <!-- Label for a shortcut that is not customizable. [CHAR_LIMIT=40] -->
     <string name="shortcut_not_customizable"><xliff:g id="shortcut" example="Scroll down">%1$s</xliff:g>, not customizable</string>

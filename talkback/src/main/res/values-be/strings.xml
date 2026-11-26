@@ -418,7 +418,7 @@
   <string name="shortcut_title_menu_control">Меню і элементы кіравання</string>
   <string name="shortcut_title_text_editing">Рэдагаванне тэксту</string>
   <string name="shortcut_title_special_features">Іншае</string>
-  <string name="shortcut_unassigned">Націсніце, каб прызначыць</string>
+  <string name="shortcut_unassigned">Не прызначана</string>
   <string name="shortcut_not_customizable">%1$s, не наладжваецца</string>
   <string name="shortcut_disabled_due_to_vibration_watch">Недаступна пры ўключанай вібрацыі гадзінніка</string>
   <string name="shortcut_next">Наступны элемент</string>

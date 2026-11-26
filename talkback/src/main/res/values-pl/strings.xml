@@ -422,7 +422,7 @@ Wybranie opóźnienia poniżej 0,3 sekundy spowoduje zmianę sposobu aktywowani
   <string name="shortcut_title_menu_control">Menu i elementy sterujące</string>
   <string name="shortcut_title_text_editing">Edytowanie tekstu</string>
   <string name="shortcut_title_special_features">Inne</string>
-  <string name="shortcut_unassigned">Kliknij, by przypisać</string>
+  <string name="shortcut_unassigned">Nie przypisano</string>
   <string name="shortcut_not_customizable">%1$s, nie można dostosować</string>
   <string name="shortcut_disabled_due_to_vibration_watch">Niedostępne, gdy zegarek wibracyjny jest włączony</string>
   <string name="shortcut_next">Następny element</string>

@@ -48,6 +48,7 @@ object NikaMacroActions {
       Fixed(REC_CLICK, R.string.nika_act_mac_rec),
       Fixed(REC_HOLD, R.string.nika_act_mac_rec_hold),
       Fixed(REC_STOP, R.string.nika_act_mac_stop),
+      Fixed(NikaCallActions.ACTION, R.string.nika_act_call),
       Fixed(HELP, R.string.nika_act_help),
     )
 
@@ -86,6 +87,7 @@ object NikaMacroActions {
           say(service, service.getString(R.string.nika_mac_rec_stopped))
         }
         value == HELP -> NikaHelpMode.toggle(service)
+        value == NikaCallActions.ACTION -> NikaCallActions.perform(service)
         NikaVoiceCmds.isCmdAction(value) -> NikaVoiceCmds.performCmd(service, value)
         value.startsWith(PREFIX) -> start(service, value.removePrefix(PREFIX))
         else -> return false

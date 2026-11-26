@@ -420,7 +420,7 @@
   <string name="shortcut_title_menu_control">Меню й елементи керування</string>
   <string name="shortcut_title_text_editing">Редагування тексту</string>
   <string name="shortcut_title_special_features">Інше</string>
-  <string name="shortcut_unassigned">Натисніть, щоб призначити</string>
+  <string name="shortcut_unassigned">Не призначено</string>
   <string name="shortcut_not_customizable">%1$s, не можна налаштувати</string>
   <string name="shortcut_disabled_due_to_vibration_watch">Недоступно, коли ввімкнено вібрацію годинника</string>
   <string name="shortcut_next">Наступний елемент</string>

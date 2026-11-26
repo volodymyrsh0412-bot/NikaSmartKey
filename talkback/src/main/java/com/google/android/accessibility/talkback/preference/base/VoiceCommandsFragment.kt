@@ -133,7 +133,15 @@ class VoiceCommandsFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) 
 
   /** A folding header: it says whether the group below is open. */
   private fun toggle(group: PreferenceGroup, title: String, open: Boolean, click: () -> Unit) {
-    row(group, title, getString(if (open) R.string.nika_vc_expanded else R.string.nika_vc_collapsed), click)
+    val p = NikaHeadingPreference(group.context)
+    p.title = title
+    p.summary = getString(if (open) R.string.nika_vc_expanded else R.string.nika_vc_collapsed)
+    p.isPersistent = false
+    p.setOnPreferenceClickListener {
+      click()
+      true
+    }
+    group.addPreference(p)
   }
 
   private fun pref() = SharedPreferencesUtils.getSharedPreferences(requireContext())
