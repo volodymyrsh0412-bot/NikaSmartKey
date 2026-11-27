@@ -53,7 +53,6 @@ object NikaMacroActions {
 
   @JvmField
   val CALLS: List<Fixed> = listOf(
-      Fixed(NikaCallActions.ACTION, R.string.nika_act_call),
       Fixed(NikaCallActions.DECLINE, R.string.nika_act_call_decline),
       Fixed(NikaCallActions.QUICK, R.string.nika_act_call_quick),
     )
