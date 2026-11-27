@@ -285,6 +285,7 @@ object Updater {
   @JvmStatic
   fun install(context: Context, downloadUrl: String) {
     val appContext = context.applicationContext
+    appContext.getSharedPreferences("nika_update", Context.MODE_PRIVATE).edit().putLong("started", System.currentTimeMillis()).apply() // nika-abort-fix
     if (!appContext.packageManager.canRequestPackageInstalls()) {
       val intent =
         Intent(
@@ -484,7 +485,22 @@ object Updater {
           onMoved(appContext, installed)
         }
       }
-      PackageInstaller.STATUS_FAILURE_ABORTED -> toast(appContext, R.string.update_install_canceled)
+      PackageInstaller.STATUS_FAILURE_ABORTED ->
+        mainHandler.postDelayed(
+          {
+            val started = appContext.getSharedPreferences("nika_update", Context.MODE_PRIVATE).getLong("started", 0L)
+            val updated =
+              try {
+                appContext.packageManager.getPackageInfo(appContext.packageName, 0).lastUpdateTime
+              } catch (e: Exception) {
+                0L
+              }
+            if (started == 0L || updated < started) {
+              toast(appContext, R.string.update_install_canceled)
+            }
+          },
+          3000,
+        )
       else -> {
         LogUtils.e(
           TAG,

@@ -56,7 +56,7 @@ data class UpdateInfo(
  */
 object UpdateChecker {
   private const val TAG = "UpdateChecker"
-  private const val RELEASES_URL = "https://api.github.com/repos/volodymyrsh0412-bot/Nika/releases/tags/"
+  private const val RELEASES_URL = "https://api.github.com/repos/volodymyrsh0412-bot/NikaSmartKey/releases/tags/"
 
   /** The pre-release for the old app ID com.android.talkback. */
   const val OLD_CHANNEL = "latest"
@@ -96,7 +96,7 @@ object UpdateChecker {
       } else {
         NEW_CHANNEL
       }
-    val json = fetchRelease(context, channel) ?: throw IOException("GitHub has no $channel release")
+    val json = fetchRelease(context, channel) ?: throw IOException("GitHub has no $channel release: " + RELEASES_URL + channel)
     return parseRelease(json, BuildConfig.COMMIT_COUNT, BuildConfig.COMMIT_HASH, apkName())
   }
 
