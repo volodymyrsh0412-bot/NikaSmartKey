@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_tap_finger">Touch the focused item like a finger</string>
+    <string name="nika_act_toggle_single_tap">Switch: activate with one tap</string>
+    <string name="nika_act_toggle_direct_click">Switch: direct touch click</string>
+    <string name="nika_tap_on">%1$s: on</string>
+    <string name="nika_tap_off">%1$s: off</string>
+</resources>

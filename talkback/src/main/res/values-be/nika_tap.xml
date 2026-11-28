@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_tap_finger">Націснуць як пальцам: элемент у фокусе</string>
+    <string name="nika_act_toggle_single_tap">Пераключыць: актывацыя адным націскам</string>
+    <string name="nika_act_toggle_direct_click">Пераключыць: прамы дотык-клік</string>
+    <string name="nika_tap_on">%1$s: уключана</string>
+    <string name="nika_tap_off">%1$s: выключана</string>
+</resources>

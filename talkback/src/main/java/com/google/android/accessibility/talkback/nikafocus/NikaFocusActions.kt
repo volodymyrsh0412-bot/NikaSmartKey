@@ -34,6 +34,9 @@ object NikaFocusActions {
   val ACTIONS: List<Action> =
     listOf(
       Action("nika_focus_toggle", R.string.nika_act_focus_toggle),
+      Action(NikaTapActions.TAP, R.string.nika_act_tap_finger),
+      Action(NikaTapActions.SINGLE, R.string.nika_act_toggle_single_tap),
+      Action(NikaTapActions.DIRECT, R.string.nika_act_toggle_direct_click),
       Action(NikaVoiceCmds.ACTION_LISTEN, R.string.nika_act_vc_listen),
       Action(NikaValueActions.SETTING_NEXT, R.string.nika_act_setting_next),
       Action(NikaValueActions.SETTING_PREV, R.string.nika_act_setting_prev),
@@ -60,6 +63,7 @@ object NikaFocusActions {
       NikaVoiceCmds.listen(service)
       return true
     }
+    if (NikaTapActions.isAction(value)) return NikaTapActions.perform(service, value)
     if (value != "nika_focus_toggle") return false
     try {
       toggle(service)
