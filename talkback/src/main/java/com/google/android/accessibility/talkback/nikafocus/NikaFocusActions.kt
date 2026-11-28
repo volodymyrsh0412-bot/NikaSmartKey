@@ -74,6 +74,7 @@ object NikaFocusActions {
    * other case it goes to the keyboard.
    */
   private fun toggle(service: TalkBackService) {
+    holdToken++
     var keyboard: AccessibilityWindowInfo? = null
     var app: AccessibilityWindowInfo? = null
     for (w in service.windows) {
@@ -91,9 +92,63 @@ object NikaFocusActions {
           ?: return
       field.performAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS)
     } else {
+      val prevFocus = appRoot?.findFocus(AccessibilityNodeInfo.FOCUS_ACCESSIBILITY)
+      val prevKey = prevFocus?.let { nodeKey(it) }
       val key = firstKey(keyboardRoot) ?: return
       key.performAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS)
+      hold(service, prevKey) // nika-focus-hold
     }
+  }
+
+  private val holdHandler = android.os.Handler(android.os.Looper.getMainLooper())
+  private var holdToken = 0
+
+  private fun nodeKey(n: AccessibilityNodeInfo): String {
+    val r = android.graphics.Rect()
+    n.getBoundsInScreen(r)
+    return "" + n.className + "|" + n.text + "|" + r.flattenToString()
+  }
+
+  /**
+   * Some applications (Telegram) take the focus back to the old place about 3 seconds after it
+   * moved to the keyboard. If it is the same old place, the focus goes to the keyboard again,
+   * up to 3 times. Any other place means the user moved the focus, so it is left alone.
+   */
+  private fun hold(service: TalkBackService, prevKey: String?) {
+    if (prevKey == null) return
+    val token = ++holdToken
+    val end = android.os.SystemClock.uptimeMillis() + 9000
+    var left = 3
+    val check =
+      object : Runnable {
+        override fun run() {
+          if (token != holdToken) return
+          try {
+            var keyboard: AccessibilityWindowInfo? = null
+            var app: AccessibilityWindowInfo? = null
+            for (w in service.windows) {
+              if (w.type == AccessibilityWindowInfo.TYPE_INPUT_METHOD) keyboard = w
+              if (w.type == AccessibilityWindowInfo.TYPE_APPLICATION && (app == null || w.isActive)) app = w
+            }
+            val kRoot = keyboard?.root ?: return
+            if (kRoot.findFocus(AccessibilityNodeInfo.FOCUS_ACCESSIBILITY) == null) {
+              val cur = app?.root?.findFocus(AccessibilityNodeInfo.FOCUS_ACCESSIBILITY)
+              if (cur != null && nodeKey(cur) == prevKey && left > 0) {
+                left--
+                firstKey(kRoot)?.performAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS)
+              } else if (cur != null) {
+                return
+              }
+            }
+          } catch (e: RuntimeException) {
+            return
+          }
+          if (left > 0 && android.os.SystemClock.uptimeMillis() < end) {
+            holdHandler.postDelayed(this, 600)
+          }
+        }
+      }
+    holdHandler.postDelayed(check, 2500)
   }
 
   private fun firstEditable(root: AccessibilityNodeInfo): AccessibilityNodeInfo? {
