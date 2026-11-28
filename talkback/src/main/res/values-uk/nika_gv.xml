@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual">Gemini: візуальний помічник (почати / завершити)</string>
+    <string name="nika_gv_missing">Gemini не встановлено. Встановіть застосунок Gemini з Google Play.</string>
+    <string name="nika_gv_starting">Запускаю візуального помічника</string>
+    <string name="nika_gv_started">Візуального помічника запущено</string>
+    <string name="nika_gv_ended">Візуального помічника завершено</string>
+    <string name="nika_gv_notfound">Не знайшла кнопку в Gemini. Спробуйте ще раз або відкрийте Live вручну.</string>
+</resources>

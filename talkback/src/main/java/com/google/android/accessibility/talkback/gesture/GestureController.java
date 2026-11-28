@@ -290,6 +290,11 @@ public class GestureController {
       accessibilityFocusInterpreter.performSplitTap(EVENT_ID_UNTRACKED);
     } else if (action.equals(service.getString(R.string.shortcut_value_unassigned))) {
       // Do Nothing
+    } else if ((action.equals(service.getString(R.string.shortcut_value_previous))
+            || action.equals(service.getString(R.string.shortcut_value_next)))
+        && com.google.android.accessibility.talkback.nikafocus.NikaKeyboardNav.step(
+            service, action.equals(service.getString(R.string.shortcut_value_next)))) {
+      // Nika: the focus moved to the next or the previous key of the keyboard.
     } else if (action.equals(service.getString(R.string.shortcut_value_previous))) {
       result =
           pipeline.returnFeedback(

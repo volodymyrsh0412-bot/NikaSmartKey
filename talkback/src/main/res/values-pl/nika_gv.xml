@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual">Gemini: pomocnik wizualny (start / koniec)</string>
+    <string name="nika_gv_missing">Gemini nie jest zainstalowany. Zainstaluj aplikację Gemini z Google Play.</string>
+    <string name="nika_gv_starting">Uruchamiam pomocnika wizualnego</string>
+    <string name="nika_gv_started">Pomocnik wizualny uruchomiony</string>
+    <string name="nika_gv_ended">Pomocnik wizualny zakończony</string>
+    <string name="nika_gv_notfound">Nie znalazłam przycisku w Gemini. Spróbuj ponownie lub otwórz Live ręcznie.</string>
+</resources>

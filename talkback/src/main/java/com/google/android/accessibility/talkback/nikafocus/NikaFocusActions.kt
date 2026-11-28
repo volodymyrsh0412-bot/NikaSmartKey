@@ -35,6 +35,7 @@ object NikaFocusActions {
     listOf(
       Action("nika_focus_toggle", R.string.nika_act_focus_toggle),
       Action(NikaTapActions.TAP, R.string.nika_act_tap_finger),
+      Action(NikaGeminiVisual.VALUE, R.string.nika_act_gem_visual),
       Action(NikaTapActions.SINGLE, R.string.nika_act_toggle_single_tap),
       Action(NikaTapActions.DIRECT, R.string.nika_act_toggle_direct_click),
       Action(NikaVoiceCmds.ACTION_LISTEN, R.string.nika_act_vc_listen),
@@ -63,6 +64,7 @@ object NikaFocusActions {
       NikaVoiceCmds.listen(service)
       return true
     }
+    if (value == NikaGeminiVisual.VALUE) return NikaGeminiVisual.perform(service)
     if (NikaTapActions.isAction(value)) return NikaTapActions.perform(service, value)
     if (value != "nika_focus_toggle") return false
     try {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual">Gemini: візуальны памочнік (пачаць / завяршыць)</string>
+    <string name="nika_gv_missing">Gemini не ўсталяваны. Усталюйце праграму Gemini з Google Play.</string>
+    <string name="nika_gv_starting">Запускаю візуальнага памочніка</string>
+    <string name="nika_gv_started">Візуальны памочнік запушчаны</string>
+    <string name="nika_gv_ended">Візуальны памочнік завершаны</string>
+    <string name="nika_gv_notfound">Не знайшла кнопку ў Gemini. Паспрабуйце яшчэ раз або адкрыйце Live ўручную.</string>
+</resources>

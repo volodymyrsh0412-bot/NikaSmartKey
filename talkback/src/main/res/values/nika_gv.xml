@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual">Gemini: visual helper (start / end)</string>
+    <string name="nika_gv_missing">Gemini is not installed. Install the Gemini app from Google Play.</string>
+    <string name="nika_gv_starting">Starting the visual helper</string>
+    <string name="nika_gv_started">Visual helper started</string>
+    <string name="nika_gv_ended">Visual helper ended</string>
+    <string name="nika_gv_notfound">I could not find the button in Gemini. Try again or open Live by hand.</string>
+</resources>
