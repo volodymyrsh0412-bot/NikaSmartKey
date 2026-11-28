@@ -310,6 +310,7 @@ object Updater {
       return
     }
     installing = true
+    nikaWait(appContext) // nika-wait
     val wifi = if (FormFactorUtils.isAndroidWear()) downloadNetwork(appContext) else null
     if (wifi == null) {
       downloadAndInstall(appContext, downloadUrl, network = null)
@@ -550,6 +551,33 @@ object Updater {
       { toast(context, R.string.update_move_turn_on, Toast.LENGTH_LONG) },
       TOAST_AFTER_SCREEN_DELAY_MS,
     )
+  }
+
+  /** Says "please wait" every 5 seconds while the update downloads and installs. */
+  private fun nikaWait(context: Context) {
+    val step =
+      object : Runnable {
+        override fun run() {
+          if (!installing) return
+          try {
+            val name = context.applicationInfo.loadLabel(context.packageManager).toString()
+            com.google.android.accessibility.talkback.TalkBackService.getInstance()
+              ?.speechController
+              ?.speak(
+                context.getString(R.string.nika_update_wait, name),
+                com.google.android.accessibility.utils.output.SpeechController.QUEUE_MODE_QUEUE,
+                com.google.android.accessibility.utils.output.FeedbackItem.FLAG_NO_HISTORY or
+                  com.google.android.accessibility.utils.output.FeedbackItem.FLAG_FORCE_FEEDBACK_ALL,
+                null,
+                com.google.android.accessibility.utils.Performance.EVENT_ID_UNTRACKED,
+              )
+          } catch (e: RuntimeException) {
+            // skip
+          }
+          mainHandler.postDelayed(this, 5000L)
+        }
+      }
+    mainHandler.postDelayed(step, 2500L)
   }
 
   private fun toast(context: Context, @StringRes message: Int, duration: Int = Toast.LENGTH_SHORT) {

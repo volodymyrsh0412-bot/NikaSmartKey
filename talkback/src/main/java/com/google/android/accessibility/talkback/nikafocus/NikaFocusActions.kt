@@ -168,20 +168,33 @@ object NikaFocusActions {
     return null
   }
 
-  private fun firstKey(root: AccessibilityNodeInfo): AccessibilityNodeInfo? {
+  private fun firstKey(root: AccessibilityNodeInfo): AccessibilityNodeInfo? { // nika-first-letter
     val stack = ArrayDeque<AccessibilityNodeInfo>()
     stack.addLast(root)
     var n = 0
+    var any: AccessibilityNodeInfo? = null
+    var letter: AccessibilityNodeInfo? = null
+    var letterPos = Long.MAX_VALUE
+    val r = android.graphics.Rect()
     while (stack.isNotEmpty() && n < 1500) {
       val node = stack.removeFirst()
       n++
       if (node.isVisibleToUser && node.childCount == 0 &&
         (node.isClickable || node.isLongClickable) &&
         node.isImportantForAccessibility) {
-        return node
+        if (any == null) any = node
+        val label = (node.text ?: node.contentDescription)?.toString() ?: ""
+        if (label.length == 1 && label[0].isLetter()) {
+          node.getBoundsInScreen(r)
+          val pos = r.top.toLong() * 100000L + r.left
+          if (pos < letterPos) {
+            letterPos = pos
+            letter = node
+          }
+        }
       }
       for (i in 0 until node.childCount) node.getChild(i)?.let { stack.addLast(it) }
     }
-    return null
+    return letter ?: any
   }
 }

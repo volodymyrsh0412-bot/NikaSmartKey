@@ -3,4 +3,5 @@
     <string name="nika_updated_notice">%1$s абноўлена да версіі %2$d. Прыемнага карыстання!</string>
     <string name="nika_changes_title">Апошнія змены</string>
     <string name="nika_changes_empty">Спіс змен пакуль пусты.</string>
+    <string name="nika_update_wait">Пачакайце, калі ласка. %1$s абнаўляецца.</string>
 </resources>
