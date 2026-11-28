@@ -2095,6 +2095,7 @@ public class TalkBackService extends AccessibilityServiceCompat
     Updater.startAutomaticChecks(this);
     // Turns Backtalk under its old app ID off, before this one says it is on.
     AppIdHandOver.onServiceConnected(this, this::refreshGestureDetection);
+    com.google.android.accessibility.talkback.nikafocus.NikaUpdateNotice.check(this);
     com.google.android.accessibility.talkback.macros.NikaKeepAlive.apply(this);
 
     compositor.handleEvent(Compositor.EVENT_SPOKEN_FEEDBACK_ON, talkbackOnEventId);

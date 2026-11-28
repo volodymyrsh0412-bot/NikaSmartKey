@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_updated_notice">%1$s updated to version %2$d. Enjoy!</string>
+    <string name="nika_changes_title">Latest changes</string>
+    <string name="nika_changes_empty">No changes listed yet.</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_updated_notice">%1$s абноўлена да версіі %2$d. Прыемнага карыстання!</string>
+    <string name="nika_changes_title">Апошнія змены</string>
+    <string name="nika_changes_empty">Спіс змен пакуль пусты.</string>
+</resources>

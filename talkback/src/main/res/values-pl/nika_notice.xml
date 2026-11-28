@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_updated_notice">%1$s zaktualizowano do wersji %2$d. Miłego korzystania!</string>
+    <string name="nika_changes_title">Ostatnie zmiany</string>
+    <string name="nika_changes_empty">Lista zmian jest na razie pusta.</string>
+</resources>
