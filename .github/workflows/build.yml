@@ -46,7 +46,7 @@ jobs:
       - name: List of changes for the screen What is new
         run: |
           mkdir -p talkback/src/main/assets
-          git log -n 80 --pretty=format:%s | { LC_ALL=C grep -P '[\xD0\xD1]' || true; } | head -n 25 > talkback/src/main/assets/nika_changes.txt
+          python3 .github/nika_changes.py smartkey
 
       - name: Build debug APKs
         run: bash ./gradlew assembleDebug --console=plain

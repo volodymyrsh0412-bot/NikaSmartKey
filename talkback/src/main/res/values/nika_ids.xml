@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nika_gv_toggle" type="id" />
+    <item name="nika_gv_start" type="id" />
+    <item name="nika_gv_end" type="id" />
+</resources>

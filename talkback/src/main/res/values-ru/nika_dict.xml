@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_dictate">Голосовой ввод Google (в текстовое поле)</string>
+    <string name="nika_dict_speak">Говорите</string>
+    <string name="nika_dict_nofield">Нет текстового поля</string>
+    <string name="nika_dict_nospeech">Распознавание речи недоступно</string>
+    <string name="nika_dict_fail">Не распознано</string>
+    <string name="nika_dict_done">Вставлено: %1$s</string>
+</resources>

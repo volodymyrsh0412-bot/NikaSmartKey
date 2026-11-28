@@ -107,6 +107,11 @@
         android:summary="@string/nika_mac_summary"
         android:title="@string/nika_mac_title" />
     <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.GeminiAppFragment"
+        android:key="pref_nika_gemini_app"
+        android:summary="@string/nika_gv_app_menu_summary"
+        android:title="@string/nika_gv_app_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
         android:fragment="com.google.android.accessibility.talkback.preference.base.DiagnosticsFragment"
         android:key="pref_nika_diag"
         android:summary="@string/nika_diag_summary"
@@ -164,11 +169,6 @@
         android:fragment="com.google.android.accessibility.talkback.backup.BackupRestoreFragment"
         android:key="@string/pref_backup_restore_key"
         android:title="@string/settings_backup_title" />
-    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
-        android:fragment="com.google.android.accessibility.talkback.preference.base.GeminiAppFragment"
-        android:key="pref_nika_gemini_app"
-        android:summary="@string/nika_gv_app_menu_summary"
-        android:title="@string/nika_gv_app_title" />
     <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
         android:fragment="com.google.android.accessibility.talkback.preference.base.HelpFeedbackFragment"
         android:key="pref_nika_help_feedback"

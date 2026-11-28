@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_dictate">Voice typing with Google (into a text field)</string>
+    <string name="nika_dict_speak">Speak</string>
+    <string name="nika_dict_nofield">There is no text field</string>
+    <string name="nika_dict_nospeech">Speech recognition is not available</string>
+    <string name="nika_dict_fail">Not recognized</string>
+    <string name="nika_dict_done">Inserted: %1$s</string>
+</resources>

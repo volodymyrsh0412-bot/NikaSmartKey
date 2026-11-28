@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_dictate">Галасавы ўвод Google (у тэкставае поле)</string>
+    <string name="nika_dict_speak">Гаварыце</string>
+    <string name="nika_dict_nofield">Няма тэкставага поля</string>
+    <string name="nika_dict_nospeech">Распазнаванне маўлення недаступнае</string>
+    <string name="nika_dict_fail">Не распазнана</string>
+    <string name="nika_dict_done">Устаўлена: %1$s</string>
+</resources>

@@ -37,7 +37,7 @@ class WhatsNewFragment : TalkbackBaseFragment(R.xml.whats_new_preferences) {
     val lines =
       try {
         appContext.assets.open("nika_changes.txt").bufferedReader().use { it.readLines() }
-          .map { it.trim() }.filter { it.isNotEmpty() }
+          .map { com.google.android.accessibility.talkback.nikafocus.NikaChangeLine.pick(appContext, it) }.filter { it.isNotEmpty() }.distinct()
       } catch (e: Exception) {
         emptyList()
       }

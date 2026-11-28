@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_dictate">Pisanie głosem Google (w polu tekstowym)</string>
+    <string name="nika_dict_speak">Mów</string>
+    <string name="nika_dict_nofield">Brak pola tekstowego</string>
+    <string name="nika_dict_nospeech">Rozpoznawanie mowy jest niedostępne</string>
+    <string name="nika_dict_fail">Nie rozpoznano</string>
+    <string name="nika_dict_done">Wstawiono: %1$s</string>
+</resources>

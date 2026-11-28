@@ -95,13 +95,36 @@ object NikaGeminiVisual {
     )
   }
 
+  private var launched = ""
+
+  /** The app with the name Gemini among the apps of the launcher. */
+  private fun findGemini(service: TalkBackService): Intent? =
+    try {
+      val pm = service.packageManager
+      val hit =
+        pm.queryIntentActivities(Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER), 0)
+          .firstOrNull { it.loadLabel(pm).toString().trim().equals("Gemini", ignoreCase = true) }
+      if (hit == null) {
+        null
+      } else {
+        launched = hit.activityInfo.packageName
+        Intent(Intent.ACTION_MAIN)
+          .setClassName(hit.activityInfo.packageName, hit.activityInfo.name)
+          .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+      }
+    } catch (e: RuntimeException) {
+      null
+    }
+
   private fun begin(service: TalkBackService, token: Int) {
     val chosen = chosenApp(service)
+    launched = chosen
     val intent =
       if (chosen.isNotEmpty()) {
         service.packageManager.getLaunchIntentForPackage(chosen)?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
       } else {
-        Intent(Intent.ACTION_MAIN).setClassName(GOOGLE, GEMINI_ACTIVITY).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        findGemini(service)
+          ?: Intent(Intent.ACTION_MAIN).setClassName(GOOGLE, GEMINI_ACTIVITY).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
       }
     if (intent == null) {
       say(service, R.string.nika_gv_missing)
@@ -161,7 +184,7 @@ object NikaGeminiVisual {
     for (w in service.windows) {
       val r = w.root ?: continue
       val pkg = r.packageName?.toString()
-      if (PACKAGES.contains(pkg) || (chosen.isNotEmpty() && pkg == chosen)) result.add(r)
+      if (PACKAGES.contains(pkg) || (chosen.isNotEmpty() && pkg == chosen) || (launched.isNotEmpty() && pkg == launched)) result.add(r)
     }
     return result
   }

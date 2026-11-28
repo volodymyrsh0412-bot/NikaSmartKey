@@ -176,6 +176,21 @@ public class TalkbackMenuProcessor {
     // System Action
     addWindowActionMenu(menu);
     addScriptCommands(menu);
+    addAfterMenuCloses(menu, R.id.nika_gv_toggle, ORDER_SCRIPT_COMMANDS, service.getString(R.string.nika_act_gem_visual), node -> 
+com.google.android.accessibility.talkback.nikafocus.NikaGeminiVisual
+.perform(service, 
+com.google.android.accessibility.talkback.nikafocus.NikaGeminiVisual
+.VALUE));
+    addAfterMenuCloses(menu, R.id.nika_gv_start, ORDER_SCRIPT_COMMANDS, service.getString(R.string.nika_act_gem_visual_start), node -> 
+com.google.android.accessibility.talkback.nikafocus.NikaGeminiVisual
+.perform(service, 
+com.google.android.accessibility.talkback.nikafocus.NikaGeminiVisual
+.START));
+    addAfterMenuCloses(menu, R.id.nika_gv_end, ORDER_SCRIPT_COMMANDS, service.getString(R.string.nika_act_gem_visual_end), node -> 
+com.google.android.accessibility.talkback.nikafocus.NikaGeminiVisual
+.perform(service, 
+com.google.android.accessibility.talkback.nikafocus.NikaGeminiVisual
+.END_VALUE));
     addScriptTool(
         menu,
         R.id.inspect_item,
