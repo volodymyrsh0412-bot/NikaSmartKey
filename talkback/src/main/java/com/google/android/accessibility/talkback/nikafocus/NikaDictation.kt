@@ -104,16 +104,8 @@ object NikaDictation {
           .putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, false)
       val lang = NikaVoiceCmds.language(service)
       if (lang.isNotBlank()) intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, lang)
-      say(service, service.getString(R.string.nika_dict_speak))
-      handler.postDelayed(
-        {
-          if (listening && recognizer === r) {
-            started = true
-            r.startListening(intent)
-          }
-        },
-        900L,
-      )
+      started = true
+      r.startListening(intent)
     } catch (e: RuntimeException) {
       NikaDiag.log("dictate", "failed: $e")
       cleanup()

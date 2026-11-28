@@ -22,6 +22,10 @@ import android.content.Context
  * Russian, English. The text of the language of the phone is shown. A line without tabs is shown as it is.
  */
 object NikaChangeLine {
+  // Old lines that still use the old names of the app are hidden.
+  private val OLD_NAME = Regex("Нік(?![а-яіїєґ])|Ник(?![а-я])")
+
+  /** The text of the language of the phone only; an empty string when there is no text in that language. */
   @JvmStatic
   fun pick(context: Context, line: String): String {
     if (!line.contains("\t")) return line.trim()
@@ -35,10 +39,12 @@ object NikaChangeLine {
       } catch (e: RuntimeException) {
         "en"
       }
-    return when (lang) {
-      "uk", "be" -> uk.ifEmpty { en }
-      "ru" -> ru.ifEmpty { uk }
-      else -> en.ifEmpty { uk }
-    }
+    val text =
+      when (lang) {
+        "uk", "be" -> uk
+        "ru" -> ru
+        else -> en
+      }
+    return if (OLD_NAME.containsMatchIn(text)) "" else text
   }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_mo_in">У меню</string>
+    <string name="nika_mo_can_add">Можна дадаць</string>
+    <string name="nika_mo_add">Дадаць</string>
+    <string name="nika_mo_none">Тут пуста</string>
+    <string name="nika_extra_category">Дадаткова</string>
+</resources>

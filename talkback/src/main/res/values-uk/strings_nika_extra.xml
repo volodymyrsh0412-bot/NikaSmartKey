@@ -158,7 +158,7 @@
   <string name="title_pref_brightness">Яскравість</string>
   <string name="title_pref_category_apps">Додатки</string>
   <string name="title_pref_category_feedback">Зворотний зв’язок</string>
-  <string name="title_pref_category_more">Більше</string>
+  <string name="title_pref_category_more">Додатково</string>
   <string name="title_pref_category_typing_and_braille">Введення тексту та шрифт Брайля</string>
   <string name="title_pref_delete_voice_profile">Видалити голосовий профіль</string>
   <string name="title_pref_direct_click">Прямий дотик-клік</string>

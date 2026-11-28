@@ -17,6 +17,10 @@
 package com.google.android.accessibility.talkback.nikafocus
 
 import android.accessibilityservice.AccessibilityService
+import android.accessibilityservice.GestureDescription
+import android.graphics.Path
+import android.graphics.Rect
+import android.view.accessibility.AccessibilityWindowInfo
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -58,8 +62,8 @@ object NikaGeminiVisual {
       "включить или выключить камеру",
       "turn camera on or off",
       "toggle camera",
-      "камеру",
       "camera",
+      "камер",
     )
   private val END =
     listOf("завершити режим live", "завершити режим", "завершить режим", "end live", "завершити", "end")
@@ -87,7 +91,7 @@ object NikaGeminiVisual {
   }
 
   private fun finish(service: TalkBackService, end: AccessibilityNodeInfo, token: Int) {
-    end.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+    press(service, end)
     say(service, R.string.nika_gv_ended)
     handler.postDelayed(
       { if (token == run) service.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME) },
@@ -96,6 +100,7 @@ object NikaGeminiVisual {
   }
 
   private var launched = ""
+  private var backed = false
 
   /** The app with the name Gemini among the apps of the launcher. */
   private fun findGemini(service: TalkBackService): Intent? =
@@ -139,6 +144,7 @@ object NikaGeminiVisual {
       say(service, R.string.nika_gv_missing)
       return
     }
+    backed = false
     say(service, R.string.nika_gv_starting)
     poll(service, token, 0, false)
   }
@@ -149,7 +155,7 @@ object NikaGeminiVisual {
       val cam = find(service, CAMERA)
       if (cam != null) {
         // The camera button is a switch: a click on a switch that is already on would turn it off.
-        if (!isOn(cam)) cam.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+        if (!isOn(cam)) press(service, cam)
         say(service, R.string.nika_gv_started)
         return
       }
@@ -157,8 +163,12 @@ object NikaGeminiVisual {
       if (!clicked && find(service, END) == null) {
         val live = find(service, LIVE)
         if (live != null) {
-          live.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+          press(service, live)
           clicked = true
+        } else if (n >= 2 && !backed && keyboardOpen(service)) {
+          // The keyboard of the Gemini text field covers the buttons: close it once.
+          backed = true
+          service.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK)
         }
       }
       if (n >= 30) {
@@ -221,6 +231,7 @@ object NikaGeminiVisual {
   private fun find(service: TalkBackService, words: List<String>): AccessibilityNodeInfo? {
     val nodes = all(service)
     for (w in words) {
+      var plain: AccessibilityNodeInfo? = null
       for (node in nodes) {
         val l = label(node)
         if (l.isEmpty()) continue
@@ -228,17 +239,45 @@ object NikaGeminiVisual {
         if (hit) {
           val c = clickable(node)
           if (c != null) return c
+          if (plain == null) plain = node
         }
       }
+      // A label without a clickable parent is pressed with a tap on its place.
+      if (plain != null) return plain
     }
     return null
+  }
+
+  private fun keyboardOpen(service: TalkBackService): Boolean =
+    try {
+      service.windows.any { it.type == AccessibilityWindowInfo.TYPE_INPUT_METHOD }
+    } catch (e: RuntimeException) {
+      false
+    }
+
+  /** A click, or a tap in the middle of the node when it cannot be clicked. */
+  private fun press(service: TalkBackService, node: AccessibilityNodeInfo) {
+    if (node.isClickable && node.performAction(AccessibilityNodeInfo.ACTION_CLICK)) return
+    try {
+      val r = Rect()
+      node.getBoundsInScreen(r)
+      if (r.isEmpty) return
+      val path = Path()
+      path.moveTo(r.exactCenterX(), r.exactCenterY())
+      val g = GestureDescription.Builder().addStroke(GestureDescription.StrokeDescription(path, 0L, 60L)).build()
+      service.dispatchGesture(g, null, null)
+    } catch (e: RuntimeException) {
+      NikaDiag.log("gemini", "tap failed: " + e)
+    }
   }
 
   private fun labels(service: TalkBackService): String {
     val list = ArrayList<String>()
     for (node in all(service)) {
       val l = label(node)
-      if (l.isNotEmpty() && node.isClickable && list.size < 40) list.add(l)
+      if (l.isNotEmpty() && list.size < 60) {
+        list.add(l + " [" + (node.className?.toString()?.substringAfterLast('.') ?: "") + (if (node.isClickable) ",click" else "") + "]")
+      }
     }
     return list.joinToString(" | ")
   }

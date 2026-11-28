@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_mo_in">W menu</string>
+    <string name="nika_mo_can_add">Można dodać</string>
+    <string name="nika_mo_add">Dodaj</string>
+    <string name="nika_mo_none">Pusto</string>
+    <string name="nika_extra_category">Dodatkowe</string>
+</resources>

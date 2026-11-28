@@ -368,7 +368,7 @@
     <!-- Title of the settings screen for where focus goes while moving through the screen: wrap around, new windows, tables and browse mode. [CHAR LIMIT=40] -->
     <string name="title_pref_navigation">Navigation</string>
     <!-- Settings category for advanced settings, the tutorial, and help. [CHAR LIMIT=40] -->
-    <string name="title_pref_category_more">More</string>
+    <string name="title_pref_category_more">Additional</string>
     <!-- Title for preference that controls the volume of TalkBack's speech output. [CHAR LIMIT=25] -->
     <string name="title_pref_speech_volume">Speech volume</string>
     <!-- Title for preference that controls the speed of TalkBack's speech output. [CHAR LIMIT=25] -->

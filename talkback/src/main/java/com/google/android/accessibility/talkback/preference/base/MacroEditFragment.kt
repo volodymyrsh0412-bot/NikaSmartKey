@@ -329,6 +329,7 @@ class MacroEditFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) {
   }
 
   private fun chooseStepType() {
+    val shortSteps = intArrayOf(0, 1, 2, 3, 4, 5, 16)
     val act = activity ?: return
     val labels =
       arrayOf(
@@ -356,7 +357,8 @@ class MacroEditFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) {
       )
     AlertDialog.Builder(act)
       .setTitle(R.string.nika_mac_add_step)
-      .setItems(labels) { _, which ->
+      .setItems(Array(shortSteps.size) { labels[shortSteps[it]] }) { _, shortIndex ->
+        val which = shortSteps[shortIndex]
         when (which) {
           0 -> askText(labels[0], "2", true) { v -> add(NikaMacros.Step(NikaMacros.WAIT, n = v.toIntOrNull() ?: 1)) }
           1 -> askText(labels[1], "", false) { v -> add(NikaMacros.Step(NikaMacros.SAY, a = v)) }

@@ -58,7 +58,7 @@
   <string name="summary_pref_announce_ringer_mode">Informuj, gdy dzwonek jest ustawiony na wibracje lub wyciszony</string>
   <string name="title_pref_category_feedback">Informacje zwrotne</string>
   <string name="title_pref_category_typing_and_braille">Pisanie i brajl</string>
-  <string name="title_pref_category_more">Więcej</string>
+  <string name="title_pref_category_more">Dodatkowe</string>
   <string name="title_pref_reserve_vibration_watch_gestures">Zarezerwuj gesty dla zegara wibracyjnego</string>
   <string name="summary_pref_reserve_vibration_watch_gestures">Nika nie obsługuje pojedynczego ani dwukrotnego kliknięcia dwoma palcami, aby mogła ich używać funkcja „Zegar wibracyjny” firmy Samsung. Włącz ją w ustawieniach ułatwień dostępu zegarka.</string>
   <string name="shortcut_reserved_for_vibration_watch">Zarezerwowany dla zegara wibracyjnego w ustawieniach zaawansowanych</string>

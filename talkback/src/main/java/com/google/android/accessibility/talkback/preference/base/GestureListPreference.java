@@ -184,6 +184,7 @@ public final class GestureListPreference extends AccessibilitySuiteDialogPrefere
     addActionItemsToList(builder, createNikaVoiceCmdCategory());
     addActionItemsToList(builder, createNikaCallCategory());
     addActionItemsToList(builder, createNikaFocusCategory());
+    addActionItemsToList(builder, createNikaExtraCategory());
     addActionItemsToList(builder, createNikaTranslatorCategory());
     addActionItemsToList(builder, createSystemActions());
     addActionItemsToList(builder, createReadingControl());
@@ -338,11 +339,29 @@ public final class GestureListPreference extends AccessibilitySuiteDialogPrefere
     return builder.build();
   }
 
+  private ImmutableList<ActionItem> createNikaExtraCategory() {
+    ImmutableList.Builder<ActionItem> builder =
+        createActionListBuilder(R.string.nika_extra_category, 0, 0);
+    Resources resources = getContext().getResources();
+    for (com.google.android.accessibility.talkback.nikafocus.NikaFocusActions.Action action : com.google.android.accessibility.talkback.nikafocus.NikaFocusActions.ACTIONS) {
+      if (!com.google.android.accessibility.talkback.nikafocus.NikaExtraActions.isExtra(action.getValue())) {
+        continue;
+      }
+      builder.add(
+          new ActionItem(
+              resources.getString(action.getLabelRes()), action.getValue(), TYPE_ACTION_ITEM));
+    }
+    return builder.build();
+  }
+
   private ImmutableList<ActionItem> createNikaFocusCategory() {
     ImmutableList.Builder<ActionItem> builder =
         createActionListBuilder(R.string.nika_focus_category, 0, 0);
     Resources resources = getContext().getResources();
     for (com.google.android.accessibility.talkback.nikafocus.NikaFocusActions.Action action : com.google.android.accessibility.talkback.nikafocus.NikaFocusActions.ACTIONS) {
+      if (com.google.android.accessibility.talkback.nikafocus.NikaExtraActions.isExtra(action.getValue())) {
+        continue;
+      }
       builder.add(
           new ActionItem(
               resources.getString(action.getLabelRes()), action.getValue(), TYPE_ACTION_ITEM));

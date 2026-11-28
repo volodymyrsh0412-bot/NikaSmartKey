@@ -1501,7 +1501,7 @@
   <string name="summary_pref_announce_ringer_mode">Сообщать о включении вибровызова или беззвучного режима</string>
   <string name="title_pref_category_feedback">Отклик</string>
   <string name="title_pref_category_typing_and_braille">Ввод текста и шрифт Брайля</string>
-  <string name="title_pref_category_more">Ещё</string>
+  <string name="title_pref_category_more">Дополнительно</string>
   <string name="title_pref_reserve_vibration_watch_gestures">Зарезервировать жесты для Vibration Watch</string>
   <string name="summary_pref_reserve_vibration_watch_gestures">Nika не будет обрабатывать одиночные и двойные нажатия двумя пальцами, чтобы их могла использовать функция Samsung Vibration Watch для определения времени вибрацией. Включите её в настройках специальных возможностей часов.</string>
   <string name="shortcut_reserved_for_vibration_watch">Зарезервировано для Vibration Watch в расширенных настройках</string>
