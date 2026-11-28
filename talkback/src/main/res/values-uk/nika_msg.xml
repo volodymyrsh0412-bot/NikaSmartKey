@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_kind_viber">Подзвонити у Viber</string>
+    <string name="nika_vc_kind_telegram">Подзвонити в Telegram</string>
+    <string name="nika_vc_kind_whatsapp">Подзвонити у WhatsApp</string>
+    <string name="nika_vc_msg_hint">Viber і WhatsApp: номер з кодом країни. Telegram: @імʼя, посилання або номер</string>
+    <string name="nika_vc_msg_label">Дзвінок %1$s: %2$s</string>
+    <string name="nika_vc_msg_bad">Номер або посилання не підходить</string>
+    <string name="nika_vc_msg_noapp">Програму не встановлено</string>
+    <string name="nika_vc_msg_nobutton">Кнопку дзвінка не знайдено</string>
+    <string name="nika_vc_msg_calling">Дзвоню</string>
+</resources>

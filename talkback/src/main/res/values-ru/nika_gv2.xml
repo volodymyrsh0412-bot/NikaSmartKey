@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual_start">Gemini: начать визуального помощника</string>
+    <string name="nika_act_gem_visual_end">Gemini: завершить визуального помощника</string>
+    <string name="nika_gv_notrunning">Визуальный помощник не запущен</string>
+    <string name="nika_gv_already">Визуальный помощник уже работает</string>
+</resources>

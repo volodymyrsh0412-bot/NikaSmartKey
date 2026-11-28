@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual_start">Gemini: start the visual helper</string>
+    <string name="nika_act_gem_visual_end">Gemini: end the visual helper</string>
+    <string name="nika_gv_notrunning">The visual helper is not running</string>
+    <string name="nika_gv_already">The visual helper is already running</string>
+</resources>

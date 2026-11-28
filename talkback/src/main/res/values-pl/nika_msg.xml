@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_kind_viber">Zadzwoń przez Viber</string>
+    <string name="nika_vc_kind_telegram">Zadzwoń przez Telegram</string>
+    <string name="nika_vc_kind_whatsapp">Zadzwoń przez WhatsApp</string>
+    <string name="nika_vc_msg_hint">Viber i WhatsApp: numer z kodem kraju. Telegram: @nazwa, link lub numer</string>
+    <string name="nika_vc_msg_label">Połączenie %1$s: %2$s</string>
+    <string name="nika_vc_msg_bad">Numer lub link jest nieprawidłowy</string>
+    <string name="nika_vc_msg_noapp">Aplikacja nie jest zainstalowana</string>
+    <string name="nika_vc_msg_nobutton">Nie znaleziono przycisku połączenia</string>
+    <string name="nika_vc_msg_calling">Dzwonię</string>
+</resources>

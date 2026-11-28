@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_act_gem_visual_start">Gemini: пачаць візуальнага памочніка</string>
+    <string name="nika_act_gem_visual_end">Gemini: завяршыць візуальнага памочніка</string>
+    <string name="nika_gv_notrunning">Візуальны памочнік не запушчаны</string>
+    <string name="nika_gv_already">Візуальны памочнік ужо працуе</string>
+</resources>

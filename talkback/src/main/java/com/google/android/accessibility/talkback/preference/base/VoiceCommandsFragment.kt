@@ -283,6 +283,9 @@ class VoiceCommandsFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) 
         getString(R.string.nika_vc_kind_macro),
         getString(R.string.nika_vc_kind_app),
         getString(R.string.nika_vc_kind_call),
+        getString(R.string.nika_vc_kind_viber),
+        getString(R.string.nika_vc_kind_telegram),
+        getString(R.string.nika_vc_kind_whatsapp),
       )
     AlertDialog.Builder(act)
       .setTitle(R.string.nika_vc_kind)
@@ -291,7 +294,10 @@ class VoiceCommandsFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) 
           0 -> pickAction(old, phrases)
           1 -> pickMacro(old, phrases)
           2 -> pickApp(old, phrases)
-          else -> askNumber(old, phrases)
+          3 -> askNumber(old, phrases)
+          4 -> askMessenger(old, phrases, com.google.android.accessibility.talkback.macros.NikaMessengerCall.KIND_VIBER, "Viber")
+          5 -> askMessenger(old, phrases, com.google.android.accessibility.talkback.macros.NikaMessengerCall.KIND_TELEGRAM, "Telegram")
+          else -> askMessenger(old, phrases, com.google.android.accessibility.talkback.macros.NikaMessengerCall.KIND_WHATSAPP, "WhatsApp")
         }
       }
       .setNegativeButton(android.R.string.cancel, null)
@@ -328,6 +334,12 @@ class VoiceCommandsFragment : NikaKeysBaseFragment(R.xml.nika_list_preferences) 
       }
     }
 
+  private fun askMessenger(old: NikaVoiceCmds.Cmd?, phrases: List<String>, kind: String, app: String) {
+    askText(R.string.nika_vc_msg_hint, "") { text ->
+      val v = text.trim()
+      if (v.isNotEmpty()) finish(old, phrases, kind, v, getString(R.string.nika_vc_msg_label, app, v))
+    }
+  }
   private fun askNumber(old: NikaVoiceCmds.Cmd?, phrases: List<String>) {
     val act = activity ?: return
     AlertDialog.Builder(act)

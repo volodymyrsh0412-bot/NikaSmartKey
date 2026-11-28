@@ -16,6 +16,8 @@
 
 package com.google.android.accessibility.talkback.nikafocus
 
+import android.accessibilityservice.AccessibilityService
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
@@ -27,45 +29,77 @@ import com.google.android.accessibility.utils.Performance
 import com.google.android.accessibility.utils.output.FeedbackItem
 import com.google.android.accessibility.utils.output.SpeechController
 
-/** Nika: one action starts the visual helper (Gemini Live with the camera) and the next one ends it. */
+/**
+ * Nika: the visual helper is Gemini Live with the camera. It lives in the Google app. The buttons are
+ * found by their labels, as the diary of a real phone shows them: "Open Gemini Live", "Увімкнути або
+ * вимкнути камеру" (a switch), "Завершити режим Live".
+ */
 object NikaGeminiVisual {
   const val VALUE = "nika_gem_visual"
-  private const val BARD = "com.google.android.apps.bard"
-  private val PACKAGES = setOf(BARD, "com.google.android.googlequicksearchbox")
-  private val LIVE = listOf("live", "лайв", "наживо")
-  private val CAMERA = listOf("камер", "camera", "відео", "видео", "video")
-  private val END = listOf("завершити", "закінчити", "зупинити", "завершить", "закончить", "end", "stop")
+  const val START = "nika_gem_visual_start"
+  const val END_VALUE = "nika_gem_visual_end"
+  private const val GOOGLE = "com.google.android.googlequicksearchbox"
+  private const val GEMINI_ACTIVITY =
+    "com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity"
+  private val PACKAGES = setOf(GOOGLE, "com.google.android.apps.bard")
+  // The words are tried in this order: the exact labels first, then the short words.
+  private val LIVE = listOf("open gemini live", "відкрити gemini live", "открыть gemini live", "gemini live", "live", "лайв")
+  private val CAMERA =
+    listOf(
+      "увімкнути або вимкнути камеру",
+      "включить или выключить камеру",
+      "turn camera on or off",
+      "toggle camera",
+      "камеру",
+      "camera",
+    )
+  private val END =
+    listOf("завершити режим live", "завершити режим", "завершить режим", "end live", "завершити", "end")
   private val handler = Handler(Looper.getMainLooper())
   private var run = 0
 
   @JvmStatic
-  fun perform(service: TalkBackService): Boolean {
+  fun isAction(value: String?): Boolean = value == VALUE || value == START || value == END_VALUE
+
+  @JvmStatic
+  fun perform(service: TalkBackService, value: String): Boolean {
     run++
     val token = run
     try {
-      val launch = service.packageManager.getLaunchIntentForPackage(BARD)
-      if (launch == null) {
-        say(service, R.string.nika_gv_missing)
-        return true
-      }
       val end = find(service, END)
-      if (end != null) {
-        end.performAction(AccessibilityNodeInfo.ACTION_CLICK)
-        say(service, R.string.nika_gv_ended)
-        handler.postDelayed(
-          { if (token == run) service.performGlobalAction(android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_HOME) },
-          1500L,
-        )
-        return true
+      when (value) {
+        END_VALUE -> if (end != null) finish(service, end, token) else say(service, R.string.nika_gv_notrunning)
+        START -> if (end != null) say(service, R.string.nika_gv_already) else begin(service, token)
+        else -> if (end != null) finish(service, end, token) else begin(service, token)
       }
-      say(service, R.string.nika_gv_starting)
-      launch.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-      service.startActivity(launch)
-      poll(service, token, 0, false)
     } catch (e: RuntimeException) {
       NikaDiag.log("gemini", "visual helper: " + e)
     }
     return true
+  }
+
+  private fun finish(service: TalkBackService, end: AccessibilityNodeInfo, token: Int) {
+    end.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+    say(service, R.string.nika_gv_ended)
+    handler.postDelayed(
+      { if (token == run) service.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME) },
+      1500L,
+    )
+  }
+
+  private fun begin(service: TalkBackService, token: Int) {
+    val intent = Intent(Intent.ACTION_MAIN).setClassName(GOOGLE, GEMINI_ACTIVITY).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    try {
+      service.startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+      say(service, R.string.nika_gv_missing)
+      return
+    } catch (e: SecurityException) {
+      say(service, R.string.nika_gv_missing)
+      return
+    }
+    say(service, R.string.nika_gv_starting)
+    poll(service, token, 0, false)
   }
 
   private fun poll(service: TalkBackService, token: Int, n: Int, liveClicked: Boolean) {
@@ -73,12 +107,13 @@ object NikaGeminiVisual {
     try {
       val cam = find(service, CAMERA)
       if (cam != null) {
-        cam.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+        // The camera button is a switch: a click on a switch that is already on would turn it off.
+        if (!isOn(cam)) cam.performAction(AccessibilityNodeInfo.ACTION_CLICK)
         say(service, R.string.nika_gv_started)
         return
       }
       var clicked = liveClicked
-      if (!clicked) {
+      if (!clicked && find(service, END) == null) {
         val live = find(service, LIVE)
         if (live != null) {
           live.performAction(AccessibilityNodeInfo.ACTION_CLICK)
@@ -96,6 +131,12 @@ object NikaGeminiVisual {
     }
   }
 
+  private fun isOn(node: AccessibilityNodeInfo): Boolean {
+    if (node.isChecked) return true
+    val state = node.stateDescription?.toString()?.lowercase() ?: return false
+    return state == "увімкнено" || state == "включено" || state == "on" || state == "enabled"
+  }
+
   private fun roots(service: TalkBackService): List<AccessibilityNodeInfo> {
     val result = ArrayList<AccessibilityNodeInfo>()
     for (w in service.windows) {
@@ -108,16 +149,18 @@ object NikaGeminiVisual {
   private fun label(n: AccessibilityNodeInfo): String =
     ((n.text?.toString() ?: "") + " " + (n.contentDescription?.toString() ?: "")).trim().lowercase()
 
-  private fun walk(service: TalkBackService, visit: (AccessibilityNodeInfo) -> Boolean) {
+  private fun all(service: TalkBackService): List<AccessibilityNodeInfo> {
+    val list = ArrayList<AccessibilityNodeInfo>()
     val stack = ArrayDeque<AccessibilityNodeInfo>()
     for (r in roots(service)) stack.addLast(r)
     var n = 0
     while (stack.isNotEmpty() && n < 3000) {
       val node = stack.removeFirst()
       n++
-      if (node.isVisibleToUser && visit(node)) return
+      if (node.isVisibleToUser) list.add(node)
       for (i in 0 until node.childCount) node.getChild(i)?.let { stack.addLast(it) }
     }
+    return list
   }
 
   private fun clickable(node: AccessibilityNodeInfo): AccessibilityNodeInfo? {
@@ -131,24 +174,28 @@ object NikaGeminiVisual {
     return null
   }
 
+  /** The words are tried one after another, so the exact label wins over a short word. */
   private fun find(service: TalkBackService, words: List<String>): AccessibilityNodeInfo? {
-    var found: AccessibilityNodeInfo? = null
-    walk(service) { node ->
-      val l = label(node)
-      if (l.isNotEmpty() && words.any { w -> l == w || l.startsWith(w) || l.contains(" " + w) || (w.length > 3 && l.contains(w)) }) {
-        found = clickable(node)
+    val nodes = all(service)
+    for (w in words) {
+      for (node in nodes) {
+        val l = label(node)
+        if (l.isEmpty()) continue
+        val hit = if (w.length <= 4) (l == w || l.startsWith("$w ") || l.endsWith(" $w") || l.contains(" $w ")) else l.contains(w)
+        if (hit) {
+          val c = clickable(node)
+          if (c != null) return c
+        }
       }
-      found != null
     }
-    return found
+    return null
   }
 
   private fun labels(service: TalkBackService): String {
     val list = ArrayList<String>()
-    walk(service) { node ->
+    for (node in all(service)) {
       val l = label(node)
       if (l.isNotEmpty() && node.isClickable && list.size < 40) list.add(l)
-      false
     }
     return list.joinToString(" | ")
   }

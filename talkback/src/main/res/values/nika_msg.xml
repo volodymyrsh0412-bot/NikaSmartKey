@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_vc_kind_viber">Call on Viber</string>
+    <string name="nika_vc_kind_telegram">Call on Telegram</string>
+    <string name="nika_vc_kind_whatsapp">Call on WhatsApp</string>
+    <string name="nika_vc_msg_hint">Viber and WhatsApp: number with country code. Telegram: @name, link or number</string>
+    <string name="nika_vc_msg_label">Call %1$s: %2$s</string>
+    <string name="nika_vc_msg_bad">This number or link is not valid</string>
+    <string name="nika_vc_msg_noapp">The app is not installed</string>
+    <string name="nika_vc_msg_nobutton">The call button was not found</string>
+    <string name="nika_vc_msg_calling">Calling</string>
+</resources>

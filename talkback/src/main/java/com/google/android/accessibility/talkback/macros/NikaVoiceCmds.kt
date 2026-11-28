@@ -334,6 +334,7 @@ object NikaVoiceCmds {
             service.startActivity(intent)
           }
         }
+        NikaMessengerCall.KIND_VIBER, NikaMessengerCall.KIND_TELEGRAM, NikaMessengerCall.KIND_WHATSAPP -> NikaMessengerCall.run(service, cmd.kind, cmd.value)
         KIND_CALL_PHONE -> {
           val uri = Uri.parse("tel:" + Uri.encode(cmd.value))
           try {
