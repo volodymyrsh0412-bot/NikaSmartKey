@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_gv_app_title">Праграма Gemini</string>
+    <string name="nika_gv_app_menu_summary">Якую праграму адкрывае візуальны памочнік</string>
+    <string name="nika_gv_app_choose">Выбраць праграму</string>
+    <string name="nika_gv_app_auto">Шукаць аўтаматычна</string>
+</resources>

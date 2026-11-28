@@ -43,6 +43,10 @@ object NikaMessengerCall {
       "voice call", "audio call", "free call", "call", "голосовий виклик", "аудіодзвінок", "аудіовиклик",
       "безкоштовний дзвінок", "зателефонувати", "подзвонити", "дзвінок", "голосовой вызов", "позвонить", "звонок",
     )
+  // Short labels that are only taken when they are the whole label (a message bubble says "Вихідні виклики").
+  private val CALL_EXACT = setOf("виклик", "вызов")
+  // The button of the question "Start an audio call?" (WhatsApp), found by its text.
+  private val CONFIRM = setOf("дзвінок", "call", "звонок", "позвонить", "подзвонити", "зателефонувати")
   private val NOT_WORDS = listOf("video", "відео", "видео", "end", "заверш", "recent", "history", "історі")
   private val handler = Handler(Looper.getMainLooper())
   private var run = 0
@@ -114,12 +118,17 @@ object NikaMessengerCall {
       for (node in nodes) {
         val l = label(node)
         if (l.isEmpty() || l.length > 40) continue
+        // The call button is in the top bar. A message about a call in the chat is not it.
+        val box = android.graphics.Rect()
+        node.getBoundsInScreen(box)
+        if (box.top > service.resources.displayMetrics.heightPixels * 22 / 100) continue
         if (NOT_WORDS.any { l.contains(it) }) continue
-        if (CALL_WORDS.none { l.contains(it) }) continue
+        if (CALL_WORDS.none { l.contains(it) } && !CALL_EXACT.contains(l)) continue
         val c = clickable(node) ?: continue
         if (c.performAction(AccessibilityNodeInfo.ACTION_CLICK)) {
           NikaDiag.log("messenger", "call button: $l")
           say(service, R.string.nika_vc_msg_calling)
+          handler.postDelayed({ confirm(service, pkg, token, 0) }, 800L)
           return
         }
       }
@@ -136,6 +145,24 @@ object NikaMessengerCall {
       handler.postDelayed({ poll(service, pkg, token, n + 1) }, 700L)
     } catch (e: RuntimeException) {
       NikaDiag.log("messenger", "failed: $e")
+    }
+  }
+
+  /** WhatsApp asks "Start an audio call?": the button with the text "Дзвінок" is pressed. */
+  private fun confirm(service: TalkBackService, pkg: String, token: Int, n: Int) {
+    if (token != run) return
+    try {
+      for (node in nodes(service, pkg)) {
+        val t = node.text?.toString()?.trim()?.lowercase() ?: continue
+        if (!CONFIRM.contains(t) || !node.isClickable) continue
+        if (node.performAction(AccessibilityNodeInfo.ACTION_CLICK)) {
+          NikaDiag.log("messenger", "confirmed: $t")
+          return
+        }
+      }
+      if (n < 4) handler.postDelayed({ confirm(service, pkg, token, n + 1) }, 500L)
+    } catch (e: RuntimeException) {
+      NikaDiag.log("messenger", "confirm failed: $e")
     }
   }
 

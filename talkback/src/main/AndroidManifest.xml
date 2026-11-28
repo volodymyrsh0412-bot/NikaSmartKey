@@ -533,5 +533,17 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+        <service
+            android:name="com.google.android.accessibility.talkback.macros.NikaT9Ime"
+            android:label="@string/nika_t9_name"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/nika_t9_method" />
+        </service>
     </application>
 </manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_t9_name">Nika: number buttons</string>
+    <string name="nika_t9_m_uk">Ukrainian</string>
+    <string name="nika_t9_m_en">English</string>
+    <string name="nika_t9_m_dg">Digits</string>
+    <string name="nika_t9_cap1">Capital letter</string>
+    <string name="nika_t9_cap2">All capitals</string>
+    <string name="nika_t9_cap0">Small letters</string>
+    <string name="nika_t9_space">Space</string>
+</resources>

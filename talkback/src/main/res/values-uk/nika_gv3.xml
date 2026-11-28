@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_gv_app_title">Додаток Gemini</string>
+    <string name="nika_gv_app_menu_summary">Який додаток відкриває візуальний помічник</string>
+    <string name="nika_gv_app_choose">Вибрати додаток</string>
+    <string name="nika_gv_app_auto">Шукати автоматично</string>
+</resources>

@@ -165,6 +165,11 @@
         android:key="@string/pref_backup_restore_key"
         android:title="@string/settings_backup_title" />
     <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
+        android:fragment="com.google.android.accessibility.talkback.preference.base.GeminiAppFragment"
+        android:key="pref_nika_gemini_app"
+        android:summary="@string/nika_gv_app_menu_summary"
+        android:title="@string/nika_gv_app_title" />
+    <com.google.android.accessibility.material.preference.AccessibilitySuitePreference
         android:fragment="com.google.android.accessibility.talkback.preference.base.HelpFeedbackFragment"
         android:key="pref_nika_help_feedback"
         android:summary="@string/nika_hf_summary"

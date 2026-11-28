@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_t9_name">Nika: przyciski cyfr</string>
+    <string name="nika_t9_m_uk">Ukraiński</string>
+    <string name="nika_t9_m_en">English</string>
+    <string name="nika_t9_m_dg">Cyfry</string>
+    <string name="nika_t9_cap1">Wielka litera</string>
+    <string name="nika_t9_cap2">Wszystkie wielkie</string>
+    <string name="nika_t9_cap0">Małe litery</string>
+    <string name="nika_t9_space">Spacja</string>
+</resources>

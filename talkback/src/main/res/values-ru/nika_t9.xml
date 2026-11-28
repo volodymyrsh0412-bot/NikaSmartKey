@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_t9_name">Ника: цифровые кнопки</string>
+    <string name="nika_t9_m_uk">Украинский</string>
+    <string name="nika_t9_m_en">English</string>
+    <string name="nika_t9_m_dg">Цифры</string>
+    <string name="nika_t9_cap1">Заглавная буква</string>
+    <string name="nika_t9_cap2">Все заглавные</string>
+    <string name="nika_t9_cap0">Строчные буквы</string>
+    <string name="nika_t9_space">Пробел</string>
+</resources>

@@ -18,6 +18,7 @@ package com.google.android.accessibility.talkback.nikafocus
 
 import android.accessibilityservice.AccessibilityService
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
@@ -26,6 +27,7 @@ import com.google.android.accessibility.talkback.R
 import com.google.android.accessibility.talkback.TalkBackService
 import com.google.android.accessibility.utils.NikaDiag
 import com.google.android.accessibility.utils.Performance
+import com.google.android.accessibility.utils.SharedPreferencesUtils
 import com.google.android.accessibility.utils.output.FeedbackItem
 import com.google.android.accessibility.utils.output.SpeechController
 
@@ -41,7 +43,13 @@ object NikaGeminiVisual {
   private const val GOOGLE = "com.google.android.googlequicksearchbox"
   private const val GEMINI_ACTIVITY =
     "com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity"
+  const val PREF_APP = "nika_gv_app"
   private val PACKAGES = setOf(GOOGLE, "com.google.android.apps.bard")
+
+  /** The app that the person chose for the visual helper, or an empty text if Nika must find it. */
+  @JvmStatic
+  fun chosenApp(context: Context): String =
+    SharedPreferencesUtils.getSharedPreferences(context).getString(PREF_APP, "") ?: ""
   // The words are tried in this order: the exact labels first, then the short words.
   private val LIVE = listOf("open gemini live", "відкрити gemini live", "открыть gemini live", "gemini live", "live", "лайв")
   private val CAMERA =
@@ -88,7 +96,17 @@ object NikaGeminiVisual {
   }
 
   private fun begin(service: TalkBackService, token: Int) {
-    val intent = Intent(Intent.ACTION_MAIN).setClassName(GOOGLE, GEMINI_ACTIVITY).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    val chosen = chosenApp(service)
+    val intent =
+      if (chosen.isNotEmpty()) {
+        service.packageManager.getLaunchIntentForPackage(chosen)?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+      } else {
+        Intent(Intent.ACTION_MAIN).setClassName(GOOGLE, GEMINI_ACTIVITY).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+      }
+    if (intent == null) {
+      say(service, R.string.nika_gv_missing)
+      return
+    }
     try {
       service.startActivity(intent)
     } catch (e: ActivityNotFoundException) {
@@ -139,9 +157,11 @@ object NikaGeminiVisual {
 
   private fun roots(service: TalkBackService): List<AccessibilityNodeInfo> {
     val result = ArrayList<AccessibilityNodeInfo>()
+    val chosen = chosenApp(service)
     for (w in service.windows) {
       val r = w.root ?: continue
-      if (PACKAGES.contains(r.packageName?.toString())) result.add(r)
+      val pkg = r.packageName?.toString()
+      if (PACKAGES.contains(pkg) || (chosen.isNotEmpty() && pkg == chosen)) result.add(r)
     }
     return result
   }

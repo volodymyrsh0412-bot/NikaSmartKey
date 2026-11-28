@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_t9_name">Ніка: лічбавыя кнопкі</string>
+    <string name="nika_t9_m_uk">Украінская</string>
+    <string name="nika_t9_m_en">English</string>
+    <string name="nika_t9_m_dg">Лічбы</string>
+    <string name="nika_t9_cap1">Вялікая літара</string>
+    <string name="nika_t9_cap2">Усе вялікія</string>
+    <string name="nika_t9_cap0">Малыя літары</string>
+    <string name="nika_t9_space">Прабел</string>
+</resources>

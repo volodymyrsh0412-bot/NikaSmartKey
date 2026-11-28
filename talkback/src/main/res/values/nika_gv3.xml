@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nika_gv_app_title">Gemini app</string>
+    <string name="nika_gv_app_menu_summary">Which app the visual helper opens</string>
+    <string name="nika_gv_app_choose">Choose the app</string>
+    <string name="nika_gv_app_auto">Find it automatically</string>
+</resources>
